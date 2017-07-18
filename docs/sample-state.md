@@ -35,7 +35,7 @@
         title: "Stealth Suit",
         url: "http://www.artstation.com/",
         image_url: "http://www.artstation.com/image",
-        description: "Game assests for art",
+        description: "Game asset for art",
         user_id: 5
       },
       2: {
@@ -43,7 +43,7 @@
         title: "Vehicle Modeling",
         url: "http://www.artstation.com",
         image_url: "http://www.artstation.com/image",
-        description: "Game assest for vehicle",
+        description: "Game asset for vehicle",
         user_id: 4
       },
       3: {

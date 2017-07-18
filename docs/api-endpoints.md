@@ -29,7 +29,7 @@
 
 - `GET /api/boards` - Open Boards
 - `POST /api/boards` - Create new boards
-- `GET /api/boards/:id` - Open single board// return all the pins in the boards
+- `GET /api/boards/:id` - Open single board // return all the pins in the boards
 - `DELETE /api/boards/:id` - Delete single board
 
 ### Follows

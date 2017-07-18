@@ -1,8 +1,9 @@
-# PinMyCG
+# Pinalchemist
 
 Link to Live Site
 
 [Heroku](https://enigmatic-harbor-70284.herokuapp.com/) -- Sample Site
+
 [Trello](https://trello.com/b/0EtXvDZi/pinmycg) -- Planner
 
 ## Minimum Viable Product
