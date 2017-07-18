@@ -4,7 +4,9 @@ Link to Live Site
 
 [Heroku](https://enigmatic-harbor-70284.herokuapp.com/) -- Sample Site
 
-[Trello](https://trello.com/b/0EtXvDZi/pinmycg) -- Planner
+[Trello](
+    
+) -- Planner
 
 ## Minimum Viable Product
 
@@ -50,9 +52,9 @@ By the end of July, this app will satistiff the following criteria with smooth, 
 
 **Objective:** Allow Boards to be created, show, edit and destroy through the API. Style Boards.
 
-### Phase 4: Discover Artist, Infinite Scroll, Back to Top (2 day)
+### Phase 4: Explore, Infinite Scroll, Back to Top (2 day)
 
-**Objective:** Add a Discover Artist to home page, add infinite scroll and back to top to Pins in My Library. Style Main Page components (Navigation Bar, pins, Footer).
+**Objective:** Add a Explore to home page, add infinite scroll and back to top to Pins in My Library. Style Main Page components (Navigation Bar, pins, Footer).
 
 ### Phase 5: Follows and User Profile (1 days)
 

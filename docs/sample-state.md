@@ -12,7 +12,7 @@
     1: {
       id: 1,
       username: "Leo",
-      image_url: "/assets/Leo.png",
+      image_url: "https://cloudinary.com/console/welcome",
       description: "artists",
       pins: [1, 2, 4, 7],
       boards: [1, 2, 3],

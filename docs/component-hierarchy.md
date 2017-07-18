@@ -9,7 +9,7 @@
   - **NavBar**
     + HomePage (Logo)
     + Search Bar
-    + ExploreArtists
+    + Explore
     + MyLibrary
     + LogOut
 
