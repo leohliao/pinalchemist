@@ -34,7 +34,7 @@
         id: 2,
         title: "Stealth Suit",
         url: "http://www.artstation.com/",
-        image_url: "http://www.artstation.com/image",
+        image_url: "https://cloudinary.com/console/welcome",
         description: "Game asset for art",
         user_id: 5
       },
@@ -42,7 +42,7 @@
         id 3:,
         title: "Vehicle Modeling",
         url: "http://www.artstation.com",
-        image_url: "http://www.artstation.com/image",
+        image_url: "https://cloudinary.com/console/welcome",
         description: "Game asset for vehicle",
         user_id: 4
       },
