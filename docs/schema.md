@@ -24,18 +24,18 @@ user_id       | integer   | not null, foreign key (references users), indexed
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | string    | not null
+board_name  | string    | not null
 description | text      |
 user_id     | integer   | not null, foreign key (references users), indexed
 
-## pinning
+## pinnings
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 board_id    | integer   | not null, foreign key (references boards), indexed
 pin_id      | integer   | not null, foreign key (references pins), indexed
 
-## following
+## followings
 column name    | data type | details
 ---------------|-----------|-----------------------
 id             | integer   | not null, primary key

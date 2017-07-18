@@ -1,0 +1,5 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "ruby.rubocop.executePath": "/Users/leol/.rbenv/shims/",
+    "ruby.rubocop.configFilePath": "/Users/leol/.rubocop.yml"
+}

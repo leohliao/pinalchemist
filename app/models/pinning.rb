@@ -1,0 +1,2 @@
+class Pinning < ApplicationRecord
+end
