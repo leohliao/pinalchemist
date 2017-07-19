@@ -23,6 +23,7 @@ class SessionForm extends React.Component {
         password: ""
       };
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.ghostLogin = this.ghostLogin.bind(this);
     }
 
     //this ensure that we will constantly receive log-in information
@@ -64,6 +65,12 @@ class SessionForm extends React.Component {
       );
       }
     }//navLink
+
+    //demo Login
+    ghostLogin(e) {
+      e.preventDefault();
+      this.props.ghostLogin( {user: {username:"guest", password:"iamdemo"}} );
+    }
 
     renderErrors(){
       return (
@@ -113,12 +120,15 @@ class SessionForm extends React.Component {
                 <button type="submit"
                        className="session-form-submit-button"><span>{submitText}</span></button>
 
-              <h3 className="message">Please {this.props.formType} or {this.navLink()}</h3>
+                     <h4 className="message">Please {this.props.formType} or {this.navLink()}</h4>
               {this.renderErrors()}
               </div>
 
-            </form>
+              <div>
+                <button onClick={this.ghostLogin}><span>Demo</span></button>
+              </div>
 
+            </form>
           </section>
         </main>
       );//return end

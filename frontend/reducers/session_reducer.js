@@ -7,7 +7,7 @@
 
 // Remember to use both Object.freeze() and Object.assign or lodash/merge to prevent the state from being accidentally mutated.
 
-import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, USER_LOG_OUT } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 
@@ -28,7 +28,12 @@ const SessionReducer = (state = defaultState, action) => {
 
         case RECEIVE_ERRORS:
             const errors = action.errors;
-            return merge({}, defaultState, {errors});
+            return merge({}, defaultState);
+
+        case USER_LOG_OUT:
+          console.log("current user logs out " + currentUser);
+          return merge({}, defaultState);
+
         default:
             return state;
     } //switch

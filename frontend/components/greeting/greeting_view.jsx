@@ -22,11 +22,7 @@ const userGreeting = (currentUser, logout) => (
 const linkToSessions = () => (
   <nav>
     <Link to="/login">Log In</Link>
-    <br />
-    <br />
-    <span>Or</span>
-    <br />
-    <br />
+    &nbsp;or&nbsp;
     <Link to="/signup">Sign Up</Link>
   </nav>
 );
