@@ -1,3 +1,19 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.session-form-view {
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ background: linear-gradient(white, teal);
+ background-image: url('http://res.cloudinary.com/dfazwubvc/image/upload/v1478883156/pinspiration/seed/desk-office-pen-ruler.jpg');
+ background-size: cover;
+ text-align: center;
+ z-index: 0;
+ display: flex;
+ justify-content: center;
+ #app-name {
+   font-size: 50px;
+   display: none;
+}

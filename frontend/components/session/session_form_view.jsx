@@ -48,6 +48,7 @@ class SessionForm extends React.Component {
       if (this.props.formType === 'login') {
         return (
           <div>
+            <h3>Sign Up</h3>
             <h3>Don't Have An Account Yet? Create Here</h3>
             <Link to="/signup">Sign Up</Link>
           </div>
@@ -55,6 +56,7 @@ class SessionForm extends React.Component {
       } else {
         return (
           <div>
+            <h3>Log In</h3>
             <h3>Already Have An Account? Login In Here</h3>
             <Link to="/login">Log In</Link>
           </div>
@@ -75,31 +77,43 @@ class SessionForm extends React.Component {
     }//renderErrors
 
     render(){
+
+      const usernamePlaceholder = (this.props.formType === 'login') ? "Username" : "Create Username";
+      const passwordPlaceholder = (this.props.formType === 'login') ? "Password" : "Create Password";
+      const submitText = (this.props.formType === 'login') ? "Log Me In" : "Sign Me Up";
+
       return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <h1>Log In</h1>
-            <br />
-            Please {this.props.formType} or {this.navLink()}
-            {this.renderErrors()}
-            <div>
+        <main className="session-form-view">
+          <div className="session-form">
+            <form onSubmit={this.handleSubmit}>
+            <img src="http://static.wixstatic.com/media/ba40b7_89ab330a007230369ecc01f5556cf588.png"
+                 className="session-form-logo" />
+                <div>
+                <br />
+                <label>Username:
+                  <input type="text"
+                         value={this.state.username}
+                         placeholder={usernamePlaceholder}
+                         onChange={this.update(`username`)} />
+                </label>
+                <br />
+                <label>Password:
+                  <input type="password"
+                         value={this.state.password}
+                         placeholder={passwordPlaceholder}
+                         onChange={this.update(`password`)} />
+                </label>
+                <br />
+                <input type="submit"
+                       value={submitText} />
+                </div>
               <br />
-              <label>Username:
-                <input type="text"
-                       value={this.state.username}
-                       onChange={this.update(`username`)} />
-              </label>
               <br />
-              <label>Password:
-                <input type="password"
-                       value={this.state.password}
-                       onChange={this.update(`password`)} />
-              </label>
-              <br />
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
-        </div>
+              <h3>Please {this.props.formType} or {this.navLink()}</h3>
+              {this.renderErrors()}
+            </form>
+          </div>
+        </main>
       );//return end
     }//render end
 }//class end

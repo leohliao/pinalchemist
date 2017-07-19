@@ -10,21 +10,23 @@
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions';
 import { merge } from 'lodash/merge';
 
-const nullUser = Object.freeze({
+const defaultState = Object.freeze({
     currentUser: null,
     errors: []
 });
 
-const SessionReducer = (state = nullUser, action) => {
+const SessionReducer = (state = defaultState, action) => {
     Object.freeze(state);
     switch (action.type) {
 
         case RECEIVE_CURRENT_USER:
-            const currentUser = action.currentUser;
-            return merge({}, state, { currentUser });
+          debugger;
+            const currentUser = action.user;
+            return merge({}, state, {currentUser} );
+
         case RECEIVE_ERRORS:
             const errors = action.errors;
-            return merge({}, state, { errors });
+            return merge({}, defaultState, {errors});
         default:
             return state;
     } //switch

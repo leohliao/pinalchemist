@@ -8,29 +8,30 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 // thunk action
 export const login = user => dispatch => (
-    sessionAPIUtil.login(user)
+  sessionAPIUtil.login(user)
     .then(user => (
-        dispatch(receiveCurrentUser(user))
+      dispatch(receiveCurrentUser(user))
     ), err => (
-        dispatch(RECEIVE_ERRORS(err.responseJSON))
-    ))
-);
-
-//logout won't take an argument, upon success dispatch receiveCurrentUser(null) to remove the currentUser
-export const logout = () => dispatch => (
-    sessionAPIUtil.logout()
-    .then(user => (
-        dispatch(receiveCurrentUser(null))
+      dispatch(receiveErrors(err.responseJSON))
     ))
 );
 
 export const signup = user => dispatch => (
-    sessionAPIUtil.signup(user)
-    .then(user => (
-        dispatch(receiveCurrentUser(user))
-    ), err => (
-        dispatch(RECEIVE_ERRORS(err.responseJSON))
-    ))
+  sessionAPIUtil.signup(user)
+  .then(user => (
+    dispatch(receiveCurrentUser(user))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
+
+//logout won't take an argument, upon success dispatch
+//receiveCurrentUser(null) to remove the currentUser
+export const logout = () => dispatch => (
+  sessionAPIUtil.logout()
+  .then(user => (
+    dispatch(receiveCurrentUser(null))
+  ))
 );
 
 //action creator

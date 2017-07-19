@@ -1,17 +1,17 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <div>
     <header>
-    <h1> This is the app Component </h1>
-    <GreetingContainer />
+      <GreetingContainer />
     </header>
-
-    <Route path="/login" component={ SessionFormContainer } />
-    <Route path="/signup" component={ SessionFormContainer } />
+    <Switch>
+      <Route exact path="/login" component={ SessionFormContainer } />
+      <Route exact path="/signup" component={ SessionFormContainer } />
+    </Switch>
   </div>
 );
 
