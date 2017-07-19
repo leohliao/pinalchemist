@@ -5,6 +5,8 @@ class Api::SessionsController < ApplicationController
       params[:user][:username],
       params[:user][:password]
     )
+    
+    p @user
 
     if @user
       login(@user)

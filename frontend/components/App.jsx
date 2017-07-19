@@ -5,9 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <header>
-      <GreetingContainer />
-    </header>
     <Switch>
       <Route exact path="/login" component={ SessionFormContainer } />
       <Route exact path="/signup" component={ SessionFormContainer } />

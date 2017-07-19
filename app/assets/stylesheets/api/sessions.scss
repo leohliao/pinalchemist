@@ -1,19 +1,101 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .session-form-view {
- position: absolute;
- top: 0;
- height: 100%;
- width: 100%;
- background: linear-gradient(white, teal);
- background-image: url('http://res.cloudinary.com/dfazwubvc/image/upload/v1478883156/pinspiration/seed/desk-office-pen-ruler.jpg');
- background-size: cover;
- text-align: center;
- z-index: 0;
- display: flex;
- justify-content: center;
- #app-name {
-   font-size: 50px;
-   display: none;
+  text-align: center;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #C0D6BF;
+} // the whole sign in form
+
+.session-form-container {
+  margin-top: 10%;
+  border-radius: 15px;
+  box-shadow: 0 0 0 2px #A19A8F,
+              5px 5px 10px #888888;
+  background-color: #18B5A6;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+} //sign-in box
+
+.session-form {
 }
+
+.session-form-logo-image {
+  height: 100% auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.session-credential-form {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+
+} // my sign in
+
+.session-form-logo-image img {
+  width: 70%;
+  margin: 20px 0px -35px 0px;
+}
+
+.session-input {
+  margin: 7px;
+  width: 50%;
+}
+
+.session-form-submit-button {
+  display: inherit;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+// .button {
+//   display: inline-block;
+//   border-radius: 4px;
+//   background-color: #f4511e;
+//   border: none;
+//   color: #FFFFFF;
+//   text-align: center;
+//   font-size: 28px;
+//   padding: 20px;
+//   width: 200px;
+//   transition: all 0.5s;
+//   cursor: pointer;
+//   margin: 5px;
+// }
+//
+// .button span {
+//   cursor: pointer;
+//   display: inline-block;
+//   position: relative;
+//   transition: 0.5s;
+// }
+//
+// .button span:after {
+//   content: '\00bb';
+//   position: absolute;
+//   opacity: 0;
+//   top: 0;
+//   right: -20px;
+//   transition: 0.5s;
+// }
+//
+// .button:hover span {
+//   padding-right: 25px;
+// }
+//
+// .button:hover span:after {
+//   opacity: 1;
+//   right: 0;
+// }

@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       const user = Object.assign({}, this.state);
-      this.props.processForm(user);
+      this.props.processForm({user});
     }
 
     navLink() {
@@ -49,16 +49,16 @@ class SessionForm extends React.Component {
         return (
           <div>
             <h3>Sign Up</h3>
-            <h3>Don't Have An Account Yet? Create Here</h3>
-            <Link to="/signup">Sign Up</Link>
+            <h3>Don't Have An Account Yet? </h3>
+            <Link to="/signup">Sign Up Here</Link>
           </div>
         );
       } else {
         return (
           <div>
             <h3>Log In</h3>
-            <h3>Already Have An Account? Login In Here</h3>
-            <Link to="/login">Log In</Link>
+            <h3>Already Have An Account? </h3>
+            <Link to="/login">Log In Here</Link>
           </div>
       );
       }
@@ -84,35 +84,39 @@ class SessionForm extends React.Component {
 
       return (
         <main className="session-form-view">
-          <div className="session-form">
-            <form onSubmit={this.handleSubmit}>
-            <img src="http://static.wixstatic.com/media/ba40b7_89ab330a007230369ecc01f5556cf588.png"
-                 className="session-form-logo" />
-                <div>
-                <br />
-                <label>Username:
+          <section className="session-form-container">
+
+            <form className="session-form" onSubmit={this.handleSubmit}>
+
+            <div className="session-form-logo-image">
+              <img src="https://cdn.shopify.com/s/files/1/0739/1565/files/auto-alchemist-logo-circle-500px_large.png?6691131145183734122" />
+            </div>
+
+            <div className="session-credential-form">
+                <label>
                   <input type="text"
                          value={this.state.username}
                          placeholder={usernamePlaceholder}
-                         onChange={this.update(`username`)} />
+                         onChange={this.update(`username`)}
+                         className="session-input"/>
                 </label>
-                <br />
-                <label>Password:
+                <label>
                   <input type="password"
                          value={this.state.password}
                          placeholder={passwordPlaceholder}
-                         onChange={this.update(`password`)} />
+                         onChange={this.update(`password`)}
+                         className="session-input"/>
                 </label>
-                <br />
-                <input type="submit"
-                       value={submitText} />
-                </div>
-              <br />
-              <br />
-              <h3>Please {this.props.formType} or {this.navLink()}</h3>
+                <button type="submit"
+                       className="session-form-submit-button">{submitText}</button>
+
+              <h3 className="message">Please {this.props.formType} or {this.navLink()}</h3>
               {this.renderErrors()}
+              </div>
+
             </form>
-          </div>
+
+          </section>
         </main>
       );//return end
     }//render end
