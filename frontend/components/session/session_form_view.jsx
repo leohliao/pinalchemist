@@ -27,6 +27,7 @@ class SessionForm extends React.Component {
 
     //this ensure that we will constantly receive log-in information
     componentWillReceiveProps(nextProps) {
+      console.log("session-form-view" + nextProps);
       if (nextProps.loggedIn) {
         this.props.history.push('/');
       }
@@ -82,6 +83,9 @@ class SessionForm extends React.Component {
       const passwordPlaceholder = (this.props.formType === 'login') ? "Password" : "Create Password";
       const submitText = (this.props.formType === 'login') ? "Log Me In" : "Sign Me Up";
 
+      console.log("this.state.username = " + this.props);
+      console.log("this.props.formType = " + this.props.formType);
+
       return (
         <main className="session-form-view">
           <section className="session-form-container">
@@ -91,7 +95,6 @@ class SessionForm extends React.Component {
             <div className="session-form-logo-image">
               <img src="https://cdn.shopify.com/s/files/1/0739/1565/files/auto-alchemist-logo-circle-500px_large.png?6691131145183734122" />
             </div>
-
             <div className="session-credential-form">
                 <label>
                   <input type="text"
@@ -108,7 +111,7 @@ class SessionForm extends React.Component {
                          className="session-input"/>
                 </label>
                 <button type="submit"
-                       className="session-form-submit-button">{submitText}</button>
+                       className="session-form-submit-button"><span>{submitText}</span></button>
 
               <h3 className="message">Please {this.props.formType} or {this.navLink()}</h3>
               {this.renderErrors()}
