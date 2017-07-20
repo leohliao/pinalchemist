@@ -3,24 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .session-form-view {
-  text-align: center;
+
   z-index: 0;
   display: flex;
   justify-content: center;
-  background-color: #C0D6BF;
+  background-image: url("http://www.laphamsquarterly.org/sites/default/files/styles/thumbnail/public/images/roundtable/rt_main_alchemist.jpg?itok=Aro1L2fG");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-y: 80px;
+  background-size: 100%;
 } // the whole sign in form
 
 .session-form-container {
-  margin-top: 10%;
+  margin-top: 5%;
   border-radius: 15px;
   box-shadow: 0 0 0 2px #A19A8F,
               5px 5px 10px #888888;
-  background-color: #18B5A6;
+  // background-color: #18B5A6;
+  background-color: white;
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 400px;
-  height: 500px;
+  width: 380px;
+  height: 540px;
   opacity: 0.9;
   filter: alpha(opacity=90);
 } //sign-in box
@@ -41,7 +46,6 @@
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
-
 } // my sign in
 
 .session-form-logo-image img {
@@ -56,18 +60,27 @@
 }
 
 .session-form-submit-button {
-  // display: inline-block;
-  // border-radius: 4px;
-  // background-color: #f4511e;
-  // border: none;
-  // color: #FFFFFF;
-  // text-align: center;
-  // font-size: 28px;
-  // padding: 20px;
-  // width: 200px;
-  // transition: all 0.5s;
-  // cursor: pointer;
-  // margin: 5px;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  padding: 7px;
+  border-radius: 2px;
+  width: 150px;
+  border: none;
+  margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+  // background-color:rgb(124,214,181);
+  background-color: #015249;
+  color: #FFFFFF;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.session-form-submit-button:hover {
+  background-color: #017366;
 }
 
 .session-form-submit-button span {
@@ -75,7 +88,6 @@
   position: relative;
   transition: 0.5s;
   cursor: pointer;
-
 }
 
 .session-form-submit-button span:after {
@@ -94,4 +106,31 @@
 .session-form-submit-button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+button.session-form-demo {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.session-form-message {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.session-form-nav {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.session-form-nav-link {
+  margin-top: 15px;
+  font-size: 14px;
 }

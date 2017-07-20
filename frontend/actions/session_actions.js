@@ -9,7 +9,6 @@ export const USER_LOG_OUT = 'USER_LOG_OUT';
 
 // thunk action
 export const login = user => dispatch => {
-  console.log(user);
   return (sessionAPIUtil.login(user)
     .then(user => (
       dispatch(receiveCurrentUser(user))
@@ -35,8 +34,6 @@ window.signup = signup;
 //logout won't take an argument, upon success dispatch
 //receiveCurrentUser(null) to remove the currentUser
 export const logout = () => dispatch => {
-  console.log("logout action");
-  debugger;
  return (
   sessionAPIUtil.logout()
   .then(() => (

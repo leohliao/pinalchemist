@@ -15,7 +15,6 @@ const userGreeting = (currentUser, logout) => (
   <section className="greeting-section">
     <h2 className="greeting-name">Good to see you! {currentUser.username}!</h2>
      <button className="greeting-button" onClick={logout}>Log Out</button>
-
   </section>
 );
 

@@ -22,8 +22,6 @@ const SessionReducer = (state = defaultState, action) => {
 
         case RECEIVE_CURRENT_USER:
             const currentUser = action.currentUser;
-            // console.log("current user is " + currentUser);
-            // debugger;
             return merge({}, state, { currentUser } );
 
         case RECEIVE_ERRORS:

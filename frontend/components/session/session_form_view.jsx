@@ -49,18 +49,18 @@ class SessionForm extends React.Component {
     navLink() {
       if (this.props.formType === 'login') {
         return (
-          <div>
-            <h3>Sign Up</h3>
+          <div className="session-form-nav">
+            <br />
             <h3>Don't Have An Account Yet? </h3>
-            <Link to="/signup">Sign Up Here</Link>
+            <Link className="session-form-nav-link" to="/signup">Sign Up Here</Link>
           </div>
         );
       } else {
         return (
-          <div>
-            <h3>Log In</h3>
+          <div className="session-form-nav">
+            <br />
             <h3>Already Have An Account? </h3>
-            <Link to="/login">Log In Here</Link>
+            <Link className="session-form-nav-link" to="/login">Log In Here</Link>
           </div>
       );
       }
@@ -88,7 +88,9 @@ class SessionForm extends React.Component {
 
       const usernamePlaceholder = (this.props.formType === 'login') ? "Username" : "Create Username";
       const passwordPlaceholder = (this.props.formType === 'login') ? "Password" : "Create Password";
-      const submitText = (this.props.formType === 'login') ? "Log Me In" : "Sign Me Up";
+      const messageConvert = (this.props.formType === 'login') ? "log in" : "sign up";
+      const navConvert = (this.props.formType === 'login') ? "sign up" : "log in";
+      const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
 
       console.log("this.state.username = " + this.props);
       console.log("this.props.formType = " + this.props.formType);
@@ -118,14 +120,15 @@ class SessionForm extends React.Component {
                          className="session-input"/>
                 </label>
                 <button type="submit"
-                       className="session-form-submit-button"><span>{submitText}</span></button>
+                        className="session-form-submit-button"><span>{submitText}</span></button>
 
-                     <h4 className="message">Please {this.props.formType} or {this.navLink()}</h4>
+                      <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
+                      <div>{this.navLink()}</div>
               {this.renderErrors()}
               </div>
 
               <div>
-                <button onClick={this.ghostLogin}><span>Demo</span></button>
+                <button className="session-form-demo" onClick={this.ghostLogin}><span>Demo</span></button>
               </div>
 
             </form>

@@ -15,8 +15,6 @@ export const login = (user) => {
 };
 
 export const logout = (user) => {
-  console.log("ajax logout");
-  debugger;
     return $.ajax({
         method: "DELETE",
         url: "/api/session"
