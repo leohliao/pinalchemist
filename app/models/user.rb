@@ -17,6 +17,12 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :boards
+  has_many :pins
+  has_many :following
+  has_many :followee
+
+
   attr_reader :password
 
   after_initialize :ensure_token

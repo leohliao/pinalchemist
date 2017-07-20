@@ -24,15 +24,21 @@ class SessionForm extends React.Component {
       };
       this.handleSubmit = this.handleSubmit.bind(this);
       this.ghostLogin = this.ghostLogin.bind(this);
+      this.removeErrors = this.removeErrors.bind(this);
     }
 
     //this ensure that we will constantly receive log-in information
     componentWillReceiveProps(nextProps) {
-      console.log("session-form-view" + nextProps);
       if (nextProps.loggedIn) {
         this.props.history.push('/');
       }
     }//componentWillReceiveProps
+
+    removeErrors() {
+
+        this.props.clearErrors();
+
+    }
 
     update(field) {
       return event => this.setState({
@@ -47,12 +53,13 @@ class SessionForm extends React.Component {
     }
 
     navLink() {
+      // this.props.clearErrors();
       if (this.props.formType === 'login') {
         return (
           <div className="session-form-nav">
             <br />
             <h3>Don't Have An Account Yet? </h3>
-            <Link className="session-form-nav-link" to="/signup">Sign Up Here</Link>
+            <Link onClick={this.removeErrors} className="session-form-nav-link" to="/signup">Sign Up Here</Link>
           </div>
         );
       } else {
@@ -60,7 +67,7 @@ class SessionForm extends React.Component {
           <div className="session-form-nav">
             <br />
             <h3>Already Have An Account? </h3>
-            <Link className="session-form-nav-link" to="/login">Log In Here</Link>
+            <Link onClick={this.removeErrors} className="session-form-nav-link" to="/login">Log In Here</Link>
           </div>
       );
       }
@@ -73,6 +80,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors(){
+      console.log(this.props);
       return (
       <ul>
         {this.props.errors.map((error, idx) => (
@@ -92,8 +100,8 @@ class SessionForm extends React.Component {
       const navConvert = (this.props.formType === 'login') ? "sign up" : "log in";
       const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
 
-      console.log("this.state.username = " + this.props);
-      console.log("this.props.formType = " + this.props.formType);
+      // console.log("this.state.username = " + this.props);
+      // console.log("this.props.formType = " + this.props.formType);
 
       return (
         <main className="session-form-view">
@@ -104,6 +112,7 @@ class SessionForm extends React.Component {
             <div className="session-form-logo-image">
               <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" />
             </div>
+
             <div className="session-credential-form">
                 <label>
                   <input type="text"
@@ -124,11 +133,13 @@ class SessionForm extends React.Component {
 
                       <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
                       <div>{this.navLink()}</div>
-              {this.renderErrors()}
               </div>
-
               <div>
                 <button className="session-form-demo" onClick={this.ghostLogin}><span>Demo</span></button>
+              </div>
+
+              <div className="session-form-errors">
+                {this.renderErrors()}
               </div>
 
             </form>

@@ -12,4 +12,10 @@
 #
 
 class Pin < ApplicationRecord
+  validates :title, :image_url, :user_id, presence: true
+  validates :description
+
+  belongs_to :user
+  belongs_to :board
+
 end

@@ -10,6 +10,7 @@
     background-size: auto;
     background-position-y: 80px;
     background-size: 100%;
+    height: 100vh;
 } // the whole sign in form
 .session-form-container {
     margin-top: 5%;
@@ -21,12 +22,14 @@
     justify-content: center;
     text-align: center;
     width: 350px;
-    height: 540px;
+    height: 550px;
     opacity: 0.9;
     filter: alpha(opacity=90);
 } //sign-in box
 //height: 100vh
-.session-form {}
+.session-form {
+
+}
 
 .session-form-logo-image {
     height: 100% auto;
@@ -102,7 +105,7 @@
 }
 
 button.session-form-demo {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 5px;
     border-radius: 3px;
     background-color: white;
@@ -124,6 +127,13 @@ button.session-form-demo {
 }
 
 .session-form-nav-link {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 15px;
+}
+
+.session-form-errors {
+
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
 }

@@ -5,7 +5,8 @@ import * as sessionAPIUtil from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const USER_LOG_OUT = 'USER_LOG_OUT';
-
+export const RECEIVE_USER = 'RECEIVE_USER';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 // thunk action
 export const login = user => dispatch => {
@@ -50,6 +51,16 @@ export const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
+export const receiveUser = user => ({
+    type: RECEIVE_USER,
+    user
+});
+
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+});
+window.clearErrors = clearErrors;
+
 //receives an array of errors
 export const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
@@ -57,5 +68,5 @@ export const receiveErrors = errors => ({
 });
 
 export const receiveLogOut = () => ({
-  type: USER_LOG_OUT,
+  type: USER_LOG_OUT
 });
