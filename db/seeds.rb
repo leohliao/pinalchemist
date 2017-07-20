@@ -7,4 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-guest = User.create({user: {username:"guest", password:"iamdemo"}});
+User.create!(username: "guest", password: "iamdemo")

@@ -35,9 +35,7 @@ class SessionForm extends React.Component {
     }//componentWillReceiveProps
 
     removeErrors() {
-
         this.props.clearErrors();
-
     }
 
     update(field) {
