@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
             <form className="session-form" onSubmit={this.handleSubmit}>
 
             <div className="session-form-logo-image">
-              <img src="https://cdn.shopify.com/s/files/1/0739/1565/files/auto-alchemist-logo-circle-500px_large.png?6691131145183734122" />
+              <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" />
             </div>
             <div className="session-credential-form">
                 <label>
