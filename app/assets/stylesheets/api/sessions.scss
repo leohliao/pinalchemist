@@ -7,9 +7,7 @@
     justify-content: center;
     background-image: url("http://res.cloudinary.com/leosoba/image/upload/v1500561725/rt_main_alchemist_qdtwqv.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position-y: 20px;
-    background-size: 100%;
+    background-size: cover;
     height: 100vh;
 } // the whole sign in form
 
@@ -20,7 +18,7 @@
     // background-color: #18B5A6;
     background-color: white;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     text-align: center;
     width: 350px;
     height: 550px;
@@ -33,18 +31,21 @@
 }
 
 .session-form-logo-image {
+    margin-top: 25px;
+    margin-bottom: -15px;
     height: 100% auto;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .session-credential-form {
-    margin-top: 35px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
 } // my sign in
+
 .session-form-logo-image img {
     width: 70%;
     margin: -10px 0px -20px 0px;
@@ -52,8 +53,9 @@
 
 .session-input {
     margin: 7px;
-    width: 50%;
-    height: 23px;
+    width: 55%;
+    height: 25px;
+    font-size: 13px;
 }
 
 .session-form-submit-button {
@@ -61,7 +63,7 @@
     justify-content: center;
     text-align: center;
     padding: 7px;
-    border-radius: 2px;
+    border-radius: 3px;
     width: 150px;
     border: none;
     margin-top: 8px;
@@ -133,8 +135,15 @@ button.session-form-demo {
 }
 
 .session-form-errors {
-
     color: red;
     font-size: 14px;
-    margin-top: 8px;
+    position: relative;
+}
+
+.session-form-errors span {
+  position: absolute;
+  margin-top: -20px;
+  right: 25%;
+  width: 300px;
+  margin-right: -60px;
 }

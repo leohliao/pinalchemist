@@ -29,7 +29,7 @@ const SessionReducer = (state = defaultState, action) => {
         case sessionActions.RECEIVE_USER:
             return merge({}, {currentUser: state.currentUser}, {user: action.user} );
 
-        case sessionActions.RECEIVE_ERRORS:
+        case sessionActions.RECEIVE_SESSION_ERRORS:
             const errors = action.errors;
             return merge({}, defaultState, { errors } );
 
@@ -37,7 +37,7 @@ const SessionReducer = (state = defaultState, action) => {
             return merge({}, defaultState, {errors: [] } );
 
         case sessionActions.USER_LOG_OUT:
-          console.log("current user logs out " + currentUser);
+          // console.log("current user logs out " + currentUser);
           return merge({}, defaultState);
 
         default:

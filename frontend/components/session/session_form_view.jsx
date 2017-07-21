@@ -111,6 +111,10 @@ class SessionForm extends React.Component {
               <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" />
             </div>
 
+            <div className="session-form-errors">
+              <span>{this.renderErrors()}</span>
+            </div>
+
             <div className="session-credential-form">
                 <label>
                   <input type="text"
@@ -131,14 +135,12 @@ class SessionForm extends React.Component {
 
                       <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
                       <div>{this.navLink()}</div>
-              </div>
+              </div>{/* session-credential-form */}
+
               <div>
                 <button className="session-form-demo" onClick={this.ghostLogin}><span>Demo</span></button>
               </div>
 
-              <div className="session-form-errors">
-                {this.renderErrors()}
-              </div>
 
             </form>
           </section>

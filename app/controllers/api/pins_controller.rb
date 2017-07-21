@@ -1,5 +1,7 @@
 class Api::PinsController < ApplicationController
 
+before_action :required_logged_in
+
   def index
     @pins = Pin.all
     render 'api/pins/index'
