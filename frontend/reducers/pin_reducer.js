@@ -16,7 +16,13 @@ const PinReducer = (state = defaultState, action) => {
 
     case pinActions.RECEIVE_SINGLE_PIN:
       const pin = action.pin;
-      return merge({}, state, { pin });
+      const pinId = action.pin.id;
+      return merge({}, state, { pins: {[pinId]: pin }});
+
+    case pinActions.REMOVE_PIN:
+      const newState = merge({}, state);
+      delete newState.pins[action.pin.id];
+      return newState;
 
     case pinActions.RECEIVE_PIN_ERRORS:
       const errors = action.errors;
