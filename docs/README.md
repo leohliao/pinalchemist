@@ -5,7 +5,7 @@ Link to Live Site
 [Heroku](https://enigmatic-harbor-70284.herokuapp.com/) -- Sample Site
 
 [Trello](
-    
+
 ) -- Planner
 
 ## Minimum Viable Product

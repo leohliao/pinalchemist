@@ -55,4 +55,13 @@ class User < ApplicationRecord
   def generate_token
     SecureRandom.urlsafe_base64
   end
+
+#to ensure you can still update your currentUser status
+  def ensure_token_uniqueness
+    self.session_token = generate_token
+    while User.find_by(session_token: self.session_token)
+      self.session_token = generate_token
+    end
+    self.session_token
+  end
 end

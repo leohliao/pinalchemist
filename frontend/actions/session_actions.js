@@ -8,6 +8,32 @@ export const USER_LOG_OUT = 'USER_LOG_OUT';
 export const RECEIVE_USER = 'RECEIVE_USER';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
+//action creator
+export const receiveCurrentUser = currentUser => ({
+    type: RECEIVE_CURRENT_USER,
+    currentUser
+});
+
+export const receiveUser = user => ({
+    type: RECEIVE_USER,
+    user
+});
+
+export const clearErrors = () => ({
+    type: CLEAR_ERRORS
+});
+window.clearErrors = clearErrors;
+
+//receives an array of errors
+export const receiveErrors = errors => ({
+    type: RECEIVE_ERRORS,
+    errors
+});
+
+export const receiveLogOut = () => ({
+  type: USER_LOG_OUT
+});
+
 // thunk action
 export const login = user => dispatch => {
   return (sessionAPIUtil.login(user)
@@ -44,29 +70,3 @@ export const logout = () => dispatch => {
 };
 ///test
 window.logout = logout;
-
-//action creator
-export const receiveCurrentUser = currentUser => ({
-    type: RECEIVE_CURRENT_USER,
-    currentUser
-});
-
-export const receiveUser = user => ({
-    type: RECEIVE_USER,
-    user
-});
-
-export const clearErrors = () => ({
-    type: CLEAR_ERRORS
-});
-window.clearErrors = clearErrors;
-
-//receives an array of errors
-export const receiveErrors = errors => ({
-    type: RECEIVE_ERRORS,
-    errors
-});
-
-export const receiveLogOut = () => ({
-  type: USER_LOG_OUT
-});
