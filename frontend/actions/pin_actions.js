@@ -50,6 +50,16 @@ export const requestSinglePin = (id) => dispatch => {
 };
 window.requestSinglePin = requestSinglePin;
 
+export const createPin = (pin) => dispatch => {
+  return (pinAPIUtil.createPin(pin)
+    .then(pin => dispatch(receiveSinglePin(pin)
+  )), error => (
+    dispatch(receivePinErrors(error.responseJSON))
+  )
+  );
+};
+window.createPin = createPin;
+
 export const editPin = (pin) => dispatch => {
   return(pinAPIUtil.updatePin(pin)
     .then(pin => dispatch(receiveSinglePin(pin)
