@@ -16,40 +16,29 @@ class NavBarForm extends React.Component {
 
     return (
       <section className="nav-bar-all">
-        <br />
 
-        <div>
-          <Link className="nav-bar-home-page" to="/">
-            <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" alt="Home" />
-          </Link>
-          &nbsp;
-        </div>
+        <Link className="nav-bar-home-page" to="/">
+        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
+        </Link>
 
-        <div> {/*Search Start*/}
-          <input className="nav-bar-search-input"
-                 type="text"
-                 autoComplete="off"
-                 name="search"
-                 placeholder="Search"/>
-        </div>{/*Search End*/}
-
-
-        <br />
+        <input className="nav-bar-search-input"
+               type="text"
+               autoComplete="off"
+               name="search"
+               placeholder="Search"/>
 
         <div className="nav-bar-discover-ideas">
-          <p>Discover Ideas</p>
+        <p>Discover Ideas</p>
         </div>
 
         <div className="nav-bar-my-board">
-          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500783568/my_board_tzeliu.png" alt="My Boards" />
+        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
         </div>
 
-        <div
-          className="nav-bar-log-out"
-          onClick={this.currentUserLogOut}>
-          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500781700/log_out_z9akfd.png" alt="Log Out" />
+        <div className="nav-bar-log-out"
+             onClick={this.currentUserLogOut}>
+        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795169/log_out_omgkze.png" alt="Log Out" />
         </div>
-
 
       </section>
     );//end return
