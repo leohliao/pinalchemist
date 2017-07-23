@@ -1,3 +1,26 @@
+section {
+
+}
+
+section .nav-bar-all {
+  height: 64px;
+  width: auto;
+}
+
+.nav-bar-home-page img {
+  width: 60px;
+  height: auto;
+  padding: 10px;
+}
+
+.nav-bar-home-page img:hover {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 65px;
+  height: auto;
+}
+
 .nav-bar-search-input {
     width: 20%;
     height: 40px;
@@ -21,5 +44,33 @@
 }
 
 .nav-bar-search-input:focus {
-    width: 30%;
+    width: 40%;
+}
+
+.nav-bar-my-board img {
+  height: 55px;
+  width: auto;
+  padding: 10px;
+}
+
+.nav-bar-my-board img:hover {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 60px;
+  width: auto;
+}
+
+.nav-bar-log-out img {
+  height: 40px;
+  width: auto;
+  padding: 10px;
+}
+
+.nav-bar-log-out img:hover {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 45px;
+  width: auto;
 }

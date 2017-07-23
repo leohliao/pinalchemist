@@ -15,11 +15,13 @@ class NavBarForm extends React.Component {
   render(){
 
     return (
-      <div>
+      <section className="nav-bar-all">
         <br />
 
         <div>
-          <Link to="/"></Link>
+          <Link className="nav-bar-home-page" to="/">
+            <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" alt="Home" />
+          </Link>
           &nbsp;
         </div>
 
@@ -34,14 +36,22 @@ class NavBarForm extends React.Component {
 
         <br />
 
-        <button
-          className="greeting-button"
+        <div className="nav-bar-discover-ideas">
+          <p>Discover Ideas</p>
+        </div>
+
+        <div className="nav-bar-my-board">
+          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500783568/my_board_tzeliu.png" alt="My Boards" />
+        </div>
+
+        <div
+          className="nav-bar-log-out"
           onClick={this.currentUserLogOut}>
-          Log Out
-        </button>
+          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500781700/log_out_z9akfd.png" alt="Log Out" />
+        </div>
 
 
-      </div>
+      </section>
     );//end return
   }//end render
 }//end NavBarform
