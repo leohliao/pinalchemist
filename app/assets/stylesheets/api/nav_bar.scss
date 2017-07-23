@@ -18,12 +18,12 @@ section .nav-bar-all {
 .nav-bar-home-page img {
   width: 80px;
   height: auto;
-  padding: 12px 12px 12px 12px;
-  margin-left: 20px;
+  padding: 4px 4px 4px 4px;
+  margin: 12px 28px 12px 28px;
 }
 
 .nav-bar-home-page img:hover {
-  // background-color: #f0f0f0;
+  background-color: #f0f0f0;
   border-radius: 10px;
   cursor: pointer;
   -webkit-transform: scale(1.1);
