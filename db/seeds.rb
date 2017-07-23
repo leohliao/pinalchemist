@@ -8,22 +8,42 @@
 
 User.destroy_all
 # This is used for demo account
-User.create!(username: "guest", password: "iamdemo")
 # ------ DONT DELETE -------------
+User.create!(username: "guest", password: "iamdemo")
 
-leol1 = User.create!({username: "leol1", password: "password"})
-leol2 = User.create!({username: "leol2", password: "password"})
-leol3 = User.create!({username: "leol3", password: "password"})
-leol4 = User.create!({username: "leol4", password: "password"})
-leol5 = User.create!({username: "leol5", password: "password"})
+User.create!({username: "leol1", password: "password"})
+User.create!({username: "leol2", password: "password"})
+User.create!({username: "leol3", password: "password"})
+User.create!({username: "leol4", password: "password"})
+User.create!({username: "leol5", password: "password"})
 
 Pin.destroy_all
-Pin.create!({title: 'A Bottle of Wine', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg", user_id: 1  })
-Pin.create!({title: 'Another Bottle of Wine', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg" , user_id: 1})
-Pin.create!({title: 'The Hunger Games', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg", user_id: 2})
-Pin.create!({title: 'Baseball Glove', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg", user_id: 2})
-Pin.create!({title: 'Basketball Tickets', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg", user_id: 3})
-Pin.create!({title: 'Hawaiian Getaway', image_url: "https://3.bp.blogspot.com/-oSviehsK-9A/WPVF6p6j90I/AAAAAAAAAPM/dOQxbuAlezk-gNl5E4A9PJyTZBXBhgg-gCLcB/s1600/Gamera.jpg", user_id: 4 })
+Pin.create!({title: 'Gamera Remake',
+             image_url: "https://www.yahoo.com",
+             user_id: User.find_by_username("leol1").id,
+             description: "Gamera",
+             image: File.open("app/assets/images/Gamera.jpg")})
+Pin.create!({title: 'Tanks And Airplane',
+             image_url: "https://leoliao.net",
+             user_id: User.find_by_username("leol1").id,
+             description: "none",
+             image: File.open("app/assets/images/TnP_01.jpg")})
+Pin.create!({title: 'Plants',
+             image_url: "https://www.cgsociety.com",
+             user_id: User.find_by_username("leol2").id,
+             image: File.open("app/assets/images/Plants_01.jpg")})
+Pin.create!({title: 'Airplanes',
+             image_url: "https://www.google.com",
+             user_id: User.find_by_username("leol3").id,
+             image: File.open("app/assets/images/TnP_02.jpg")})
+Pin.create!({title: 'A Train Sketch',
+             image_url: "https://www.blogspot.com",
+             user_id: User.find_by_username("leol4").id,
+             image: File.open("app/assets/images/Train_01.jpg")})
+Pin.create!({title: 'Magnodente',
+             image_url: "https://www.artstation.com",
+             user_id: User.find_by_username("leol5").id,
+             image: File.open("app/assets/images/Magnodente.jpg")})
 
 # sse = Party.create!({name: "Secret Santa Extravaganza", location: "Portland"})
 # ccp = Party.create!({name: "Charles' Christmas Party", location: "San Francisco"})
