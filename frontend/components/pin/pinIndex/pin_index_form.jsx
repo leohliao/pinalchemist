@@ -8,9 +8,7 @@ class PinIndexForm extends React.Component {
 
   }//end constructor
 
-  componentDidMount(){
-    this.props.requestAllPins();
-  }//end componentDidMount
+
 
   render(){
     const { pins } = this.props;
@@ -18,9 +16,7 @@ class PinIndexForm extends React.Component {
       <div>
         <h1>this is PinIndex</h1>
         <ul>
-          { pins.map(pin => (
-            <li>pin</li>
-          ))}
+
         </ul>
       </div>
     );//rend return

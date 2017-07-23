@@ -35,3 +35,5 @@ const PinReducer = (state = defaultState, action) => {
       return state;
   }//switch
 };//PinReducer
+
+export default PinReducer;

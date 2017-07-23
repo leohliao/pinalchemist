@@ -7,15 +7,17 @@ const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
 const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 //action creators
-export const receivePins = (pins) => ({
+export const receiveAllPins = (pins) => ({
   type: RECEIVE_ALL_PINS,
   pins
 });
+window.receiveAllPins = receiveAllPins;
 
 export const receiveSinglePin = (pin) => ({
   type: RECEIVE_SINGLE_PIN,
   pin
 });
+window.receiveSinglePin = receiveSinglePin;
 
 export const removePin = (pin) => ({
   type: REMOVE_PIN,

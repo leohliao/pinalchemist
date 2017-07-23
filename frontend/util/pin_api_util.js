@@ -4,13 +4,15 @@ export const fetchAllPins = () => {
     url: "/api/pins"
   });
 };
+window.fetchAllPins = fetchAllPins;
 
 export const fetchSinglePin = (id) => {
   return $.ajax ({
     method: "GET",
-    url: "/api/pins/`${id}`",
+    url: `/api/pins/${id}`,
   });
 };
+window.fetchSinglePin = fetchSinglePin;
 
 export const createPin = (pin) => {
   return $.ajax ({
@@ -23,7 +25,7 @@ export const createPin = (pin) => {
 export const updatePin = (pin) => {
   return $.ajax ({
     method: "PATCH",
-    url: "/api/pins/`${pin.id}`",
+    url: `/api/pins/${pin.id}`,
     data: { pin }
   });
 };
@@ -31,6 +33,6 @@ export const updatePin = (pin) => {
 export const deletePin = (id) => {
   return $.ajax ({
     method: "DELETE",
-    url: "/api/pins/`${id}`"
+    url: `/api/pins/${id}`
   });
 };

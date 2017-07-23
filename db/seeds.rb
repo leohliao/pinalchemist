@@ -19,31 +19,31 @@ User.create!({username: "leol5", password: "password"})
 
 Pin.destroy_all
 Pin.create!({title: 'Gamera Remake',
-             image_url: "https://www.yahoo.com",
+            #  image_url: "https://www.yahoo.com",
              user_id: User.find_by_username("leol1").id,
              description: "Gamera",
-             image: File.open("app/assets/images/Gamera.jpg")})
+             image_url: File.open("app/assets/images/Gamera.jpg")})
 Pin.create!({title: 'Tanks And Airplane',
-             image_url: "https://leoliao.net",
+            #  image_url: "https://leoliao.net",
              user_id: User.find_by_username("leol1").id,
              description: "none",
-             image: File.open("app/assets/images/TnP_01.jpg")})
-Pin.create!({title: 'Plants',
-             image_url: "https://www.cgsociety.com",
-             user_id: User.find_by_username("leol2").id,
-             image: File.open("app/assets/images/Plants_01.jpg")})
-Pin.create!({title: 'Airplanes',
-             image_url: "https://www.google.com",
-             user_id: User.find_by_username("leol3").id,
-             image: File.open("app/assets/images/TnP_02.jpg")})
-Pin.create!({title: 'A Train Sketch',
-             image_url: "https://www.blogspot.com",
-             user_id: User.find_by_username("leol4").id,
-             image: File.open("app/assets/images/Train_01.jpg")})
-Pin.create!({title: 'Magnodente',
-             image_url: "https://www.artstation.com",
-             user_id: User.find_by_username("leol5").id,
-             image: File.open("app/assets/images/Magnodente.jpg")})
+             image_url: "https://4.bp.blogspot.com/-HxXQBqJGcmM/WILmLQJjOlI/AAAAAAAAAJ0/GAs9Vc4Hko0IblDl0b8aY2h84a1r_yaDwCLcB/s1600/TnP_01.jpg"})
+# Pin.create!({title: 'Plants',
+#              image_url: "https://www.cgsociety.com",
+#              user_id: User.find_by_username("leol2").id,
+#              image: File.open("app/assets/images/Plants_01.jpg")})
+# Pin.create!({title: 'Airplanes',
+#              image_url: "https://www.google.com",
+#              user_id: User.find_by_username("leol3").id,
+#              image: File.open("app/assets/images/TnP_02.jpg")})
+# Pin.create!({title: 'A Train Sketch',
+#              image_url: "https://www.blogspot.com",
+#              user_id: User.find_by_username("leol4").id,
+#              image: File.open("app/assets/images/Train_01.jpg")})
+# Pin.create!({title: 'Magnodente',
+#              image_url: "https://www.artstation.com",
+#              user_id: User.find_by_username("leol5").id,
+#              image: File.open("app/assets/images/Magnodente.jpg")})
 
 # sse = Party.create!({name: "Secret Santa Extravaganza", location: "Portland"})
 # ccp = Party.create!({name: "Charles' Christmas Party", location: "San Francisco"})
