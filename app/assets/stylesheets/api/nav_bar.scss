@@ -31,6 +31,11 @@ section .nav-bar-all {
   transform: scale(1.1);
 }
 
+.nav-bar-home-page img:active {
+  box-shadow: 0 0 0 5px white,
+              0 0 0 7px #57b38d;
+}
+
 input .nav-bar-search-input {
     flex: 2; // .nav-bar-home-page
 }
@@ -63,7 +68,8 @@ input .nav-bar-search-input {
 }
 
 .nav-bar-discover-ideas p {
-    padding: 10px 40px 10px 40px;
+    margin: 6px 36px 6px 36px;
+    padding: 4px 4px 4px 4px;
     font-family: sans-serif;
     color: #57b38d;
     font-size: 22px;
@@ -78,11 +84,17 @@ input .nav-bar-search-input {
   animation-iteration-count: 1;
 }
 
+.nav-bar-discover-ideas:active {
+  box-shadow: 0 0 0 5px white,
+              0 0 0 7px #57b38d;
+  border-radius: 5px;
+}
+
 .nav-bar-my-board img {
-  height: 50px;
+  height: 46px;
   width: auto;
   padding: 10px 10px 10px 10px;
-  margin: 0px 20px 0px 20px;
+  margin: 4px 20px 0px 20px;
 }
 
 .nav-bar-my-board {
@@ -97,6 +109,11 @@ input .nav-bar-search-input {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.nav-bar-my-board img:active {
+  box-shadow: 0 0 0 5px white,
+              0 0 0 7px #57b38d;
 }
 
 .nav-bar-log-out {
@@ -118,4 +135,9 @@ input .nav-bar-search-input {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.nav-bar-log-out img:active {
+  box-shadow: 0 0 0 5px white,
+              0 0 0 7px #57b38d;
 }
