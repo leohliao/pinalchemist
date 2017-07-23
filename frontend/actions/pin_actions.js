@@ -1,4 +1,4 @@
-import * as pinAPIUtil from '../util/pin_actions.js';
+import * as pinAPIUtil from '../util/pin_api_util';
 
 const RECEIVE_SINGLE_PIN = "RECEIVE_SINGLE_PIN";
 const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";

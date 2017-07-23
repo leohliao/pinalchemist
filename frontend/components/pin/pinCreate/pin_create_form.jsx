@@ -9,8 +9,10 @@ class PinCreateForm extends React.Component {
   render(){
     return(
       <div>
-
+        <h1> I am Pin Container</h1>
       </div>
     );
   }//end render
 }//end PinCreateForm
+
+export default PinCreateForm;
