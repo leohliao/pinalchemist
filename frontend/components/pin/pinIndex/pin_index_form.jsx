@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PinIndexItem from './pin_index_item';
 import NavBarForm from '../../navbar/nav_bar_container';
 import PinCreateForm from '../pinCreate/pin_create_container';
+import ModalPinCreate from '../../modal/modal_pin_create';
 
 class PinIndexForm extends React.Component {
   constructor(props){
@@ -26,6 +27,7 @@ class PinIndexForm extends React.Component {
         <br />
         <PinCreateForm />
         <br />
+        <ModalPinCreate />
         <ul>
           { allThePins }
         </ul>
