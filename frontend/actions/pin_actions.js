@@ -43,7 +43,7 @@ export const requestAllPins = () => dispatch => {
 window.requestAllPins = requestAllPins;
 
 export const requestSinglePin = (id) => dispatch => {
-  return (pinAPIUtil.fetchSinglePins(id)
+  return (pinAPIUtil.fetchSinglePin(id)
     .then(pin => dispatch(receiveSinglePin(pin)
   )), error => (
     dispatch(receivePinErrors(error.responseJSON))

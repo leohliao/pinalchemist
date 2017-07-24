@@ -11,10 +11,7 @@ const PinReducer = (state = defaultState, action) => {
   switch(action.type) {
 
     case pinActions.RECEIVE_ALL_PINS:
-      debugger;
       const pins = action.pins;
-      console.log("this is actionPins" + pins);
-      console.log(action);
       return merge({}, state, { pins } );
 
     case pinActions.RECEIVE_SINGLE_PIN:
