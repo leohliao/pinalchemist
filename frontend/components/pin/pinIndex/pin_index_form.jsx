@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PinIndexItem from './pin_index_item';
+import NavBarForm from '../../navbar/nav_bar_container';
+import PinCreateForm from '../pinCreate/pin_create_container';
 
 class PinIndexForm extends React.Component {
   constructor(props){
@@ -20,7 +22,10 @@ class PinIndexForm extends React.Component {
     ));
     return(
       <div>
-        <h1>this is PinIndex</h1>
+        <NavBarForm />
+        <br />
+        <PinCreateForm />
+        <br />
         <ul>
           { allThePins }
         </ul>

@@ -12,7 +12,7 @@ return (
   <div>
     <Switch>
       <ProtectedRoute exact path="/" component={NavBarFormContainer} />
-      <ProtectedRoute exact path="/mylibrary/pin_create" component={PinCreateContainer} />
+      <ProtectedRoute exact path="/pin_create" component={PinCreateContainer} />
       <ProtectedRoute exact path="/index" component={PinIndexContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
