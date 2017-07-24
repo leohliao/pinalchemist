@@ -1,6 +1,6 @@
 import * as pinActions from '../actions/pin_actions';
 import merge from 'lodash/merge';
-
+// import { RECEIVE_ALL_PINS } from '../actions/pin_actions';
 const defaultState = Object.freeze({
   pins: {},
   errors: []
@@ -11,7 +11,10 @@ const PinReducer = (state = defaultState, action) => {
   switch(action.type) {
 
     case pinActions.RECEIVE_ALL_PINS:
+      debugger;
       const pins = action.pins;
+      console.log("this is actionPins" + pins);
+      console.log(action);
       return merge({}, state, { pins } );
 
     case pinActions.RECEIVE_SINGLE_PIN:

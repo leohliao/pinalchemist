@@ -25,4 +25,11 @@ export default rootReducer;
 //     currentUser: null,
 //     errors: []
 //   }
+    // pins: {
+    //   1: {
+    //     id: 1,
+    //     title: "Asurada",
+    //     image_url: "2asad"
+    //   }
+    // }
 // }

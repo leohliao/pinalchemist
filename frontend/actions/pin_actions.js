@@ -1,10 +1,10 @@
 import * as pinAPIUtil from '../util/pin_api_util';
 
-const RECEIVE_SINGLE_PIN = "RECEIVE_SINGLE_PIN";
-const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
-const REMOVE_PIN = "REMOVE_PIN";
-const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
-const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const RECEIVE_SINGLE_PIN = "RECEIVE_SINGLE_PIN";
+export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
+export const REMOVE_PIN = "REMOVE_PIN";
+export const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
 //action creators
 export const receiveAllPins = (pins) => ({
@@ -36,7 +36,7 @@ export const clearErrors = () => ({
 //thunk Actions
 export const requestAllPins = () => dispatch => {
   return (pinAPIUtil.fetchAllPins()
-    .then(pins => dispatch(receivePins(pins)
+    .then(pins => dispatch(receiveAllPins(pins)
   ))
   );
 };
