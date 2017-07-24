@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import PinIndexItem from './pin_index_item';
 
 class PinIndexForm extends React.Component {
   constructor(props){
@@ -15,7 +16,7 @@ class PinIndexForm extends React.Component {
     const { pins } = this.props;
     console.log("pins are " + pins);
     const allThePins = pins.map((pin,idx) => (
-      <li key={idx}><img ng-src="{pin.image_url}" alt=""/>{pin.image_url}</li>
+      <PinIndexItem key={pin.id} pin={pin} />
     ));
     return(
       <div>
