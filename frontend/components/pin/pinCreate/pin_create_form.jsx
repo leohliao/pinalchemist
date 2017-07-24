@@ -49,6 +49,7 @@ class PinCreateForm extends React.Component {
     e.preventDefault();
     const pin = this.state;
     this.props.createPin(pin);
+    this.props.modalSwitch();
   }
 
   render(){

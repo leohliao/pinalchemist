@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import PinCreateContainer from '../pin/pinCreate/pin_create_container.js';
 
 const style = {
   overlay : {
@@ -8,19 +9,22 @@ const style = {
     left            : 0,
     right           : 0,
     bottom          : 0,
-    backgroundColor : 'rgba(0, 0, 0, 0.8)',
+    backgroundColor : 'rgba(100, 100, 100, 0.8)',
     zIndex          : 10
   },
   content : {
-    display         : 'flex',
+    position        : 'fixed',
     justifyContent  : 'center',
-    left            : '32%',
-    right           : '32%',
-    border          : '1px solid #ccc',
-    padding         : '10px',
+    top             : '15%',
+    left            : '25%',
+    right           : '25%',
+    bottom          : '25%',
+    border          : '2px solid white',
+    background      : '#57bc90',
+    borderRadius    : '25px',
+    padding         : '35px',
     zIndex          : 11,
-    opacity         : 0,
-    transition      : 'opacity 0.4s'
+    overflow        : 'auto',
   }
 };
 
@@ -30,6 +34,7 @@ class ModalPinCreate extends React.Component {
     this.state = {
       modalOpen: false
     };
+    this.modalSwitch = this.modalSwitch.bind(this);
   }//constructor
 
   modalSwitch(){
@@ -40,8 +45,15 @@ class ModalPinCreate extends React.Component {
     console.log(this.state);
     return (
       <div>
-        <h1>my modal</h1>
-        <button onClick={this.modalSwitch}></button>
+        <button onClick={this.modalSwitch}>Create Pin</button>
+        <Modal className="modal-pin-create"
+               isOpen={this.state.modalOpen}
+               onRequestClose={this.modalSwitch}
+               style={style}
+               contentLabel="Modal Pin Create">
+               <PinCreateContainer modalSwitch={this.modalSwitch}/>
+          <button onClick={this.modalSwitch}>Close</button>
+        </Modal>
       </div>
     );
   }//end render

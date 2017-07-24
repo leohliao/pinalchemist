@@ -25,8 +25,6 @@ class PinIndexForm extends React.Component {
       <div>
         <NavBarForm />
         <br />
-        <PinCreateForm />
-        <br />
         <ModalPinCreate />
         <ul>
           { allThePins }
