@@ -19,6 +19,10 @@ class PinEditForm extends React.Component {
     return e => this.setState({[field]: e.currentTarget.value});
   }//end update
 
+  removePin(pin){
+    this.props.deletePin(this.props.pin.id);
+  }
+
   handleSubmit(e){
     e.preventDefault();
     const pin = this.state;

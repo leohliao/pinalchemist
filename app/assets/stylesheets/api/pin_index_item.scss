@@ -1,14 +1,31 @@
-li .pin-index-item {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.pin-index-item-div {
-  display: flex;
+// li .pin-index-item {
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+// }
+// .pin-index-item-div {
+//   display: flex;
+// }
+//
+// .pin-index-item-div img {
+//   width: 40%;
+//   height: auto;
+// }
 
+.pins-index-form {
+  padding-top: 30px;
+  margin: 0 auto;
 }
 
-.pin-index-item-div img {
-  width: 40%;
-  height: auto;
+.modal-pin-item-button {
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.modal-pin-item-button:hover {
+  opacity: 0.6;
+}
+
+.modal-pin-item-img {
+  border-radius: 5px;
 }
