@@ -1,5 +1,50 @@
+.pin-show-all {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-show-all h1 {
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: white;
+}
+
+.pin-show-all h3 {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+img.pin-show-form-delete-all {
+  position: relative;
+  width: 45vw;
+  height: 70vh;
+  background-color: red;
+}
+
 .pin-show-form-img {
-  // border-radius: 3px;
-  // width: auto;
-  // height: 90%;
+  position: relative;
+  margin: 15px auto;
+  border-radius: 5px;
+  width: 90vh;
+  height: 50vh auto;
+}
+
+img.pin-show-form-delete {
+  position: absolute;
+  top: 24vh;
+  right: 33vw;
+  width: 3vw;
+  opacity: 0.3;
+}
+
+img.pin-show-form-delete:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }

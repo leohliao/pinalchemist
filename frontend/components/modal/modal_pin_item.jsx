@@ -15,7 +15,7 @@ const style = {
   content : {
     position        : 'flex',
     margin          : '35px auto 15px auto',
-    width           : '65%',
+    width           : '45%',
     height          : '70%',
     border          : '2px solid white',
     background      : '#57bc90',
@@ -24,7 +24,7 @@ const style = {
     zIndex          : 11,
     overflow        : 'auto',
     opacity         : 0,
-    transition      :'opacity 0.4s'
+    transition      : 'opacity 0.2s'
   }
 };
 
@@ -61,7 +61,9 @@ class ModalPinItem extends React.Component {
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Pin Item">
-               <button onClick={this.modalSwitch}>Close</button>
+               <img className="modal-pin-create-img-close"
+                    src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
+                    onClick={this.modalSwitch} />
                <PinShowContainer modalSwitch={this.modalSwitch}
                                  id={pin.id}
                                  className="modal-pin-show"/>
