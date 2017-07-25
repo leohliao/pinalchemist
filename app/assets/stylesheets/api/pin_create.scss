@@ -1,7 +1,35 @@
+div .modal-pin-create-button-home {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  right: 35px;
+  bottom: 65px;
+  width: 45px;
+  height: auto;
+}
+
+.modal-pin-create-button-home img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-pin-create-button-home:hover{
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px rgb(159,57,52),
+              0 0 0 6px white;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .pin-create-form-all {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  vertical-align: middle;
 }
 
 .pin-create-form-all h1 {
@@ -11,10 +39,10 @@
 }
 
 .modal-pin-create-img-close {
-  width: 7%;
+  width: 5%;
   display: block;
   margin-left: 90%;
-  margin-bottom: 1%
+  margin-bottom: 10px;
 }
 
 .modal-pin-create-img-close:hover{
@@ -25,12 +53,19 @@
 }
 
 .pin-create-form-dropzone {
-  height: 100px;
+  height: 200px;
+  max-height: 400px;
   width: 300px;
   border: 3px dashed white;
   border-radius: 10px;
   margin: 15px 0 10px 0;
   align-self: center;
+  vertical-align: middle;
+}
+
+.pin-create-form-dropzone div {
+    vertical-align: middle;
+    justify-content: center;
 }
 
 .pin-create-form-dropzone-form {
@@ -42,17 +77,18 @@
   font-family: sans-serif;
   text-align: center;
   color: white;
-  margin-top: 14%;
+  margin: 28% auto;
+  vertical-align: middle;
 }
 
-.pin-create-form-dropzone-image {
+.pin-create-form-dropzone img {
   max-width: 300px;
-  height: auto;
-  align-self: center;
+  max-height: 400px;
+  padding: auto;
 }
 
 .pin-create-form-label {
-  align-items: flex-start;
+  display: flex;
 }
 
 .pin-create-form-label h3 {

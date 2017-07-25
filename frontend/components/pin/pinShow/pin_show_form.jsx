@@ -5,22 +5,21 @@ class PinShowForm extends React.Component {
     super(props);
 
     this.state = {
-      pin: this.props.pin,
-      pinID: this.props.pinID
+      pin: this.props.pin
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }//end constructor
-
-  componentDidMount(){
-    this.props.requestSinglePin(this.props.match.params.id);
-  }
 
   componentWillReceiveProps(nextProps){
     if (this.props.match.params.id !== nextProps.match.params.id){
       this.props.requestSinglePin(nextProps.match.params.id);
     }
   }//end componentWillReceiveProps
+  
+  removePin(pin){
+    this.props.deletePin(this.props.pin.id);
+  }
 
   handleSubmit(e){
     e.preventDefault();

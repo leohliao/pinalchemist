@@ -57,8 +57,10 @@ class PinCreateForm extends React.Component {
         <h2>Drag and Drop or Click Here!</h2>
       </div>
     ) : (
-      <img className="pin-create-form-dropzone-image"
+      <div className="pin-create-form-dropzone-div">
+        <img className="pin-create-form-dropzone-image"
            src={this.state.image_url} />
+      </div>
     );
 
     return(
@@ -75,13 +77,13 @@ class PinCreateForm extends React.Component {
         <form className="pin-create-form-dropzone-form"
               onSubmit={this.handleSubmit}>
               <label className="pin-create-form-label" >
-                <h3>Title</h3>
+                <h3>Title</h3><br />
                 <input type="text"
                        onChange={this.update('title')}
                        value={this.state.title}/>
               </label>
               <label className="pin-create-form-label">
-                <h3>Description</h3>
+                <h3>Description</h3><br />
                 <input type="textarea"
                        onChange={this.update('description')}
                        value={this.state.description}/>

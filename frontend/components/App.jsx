@@ -14,7 +14,6 @@ return (
     <Switch>
       <ProtectedRoute exact path="/" component={NavBarFormContainer} />
       <ProtectedRoute exact path="/pins" component={PinIndexContainer} />
-      <ProtectedRoute exact path="/pins/:id" component={PinShowContainer} />
       <ProtectedRoute exact path="/pins" component={PinCreateContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
