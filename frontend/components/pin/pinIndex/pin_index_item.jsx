@@ -14,3 +14,5 @@ const PinIndexItem = ({ pin }) => (
 );// end PinIndexItem
 
 export default PinIndexItem;
+
+///make this into class, apply modal logic in here.

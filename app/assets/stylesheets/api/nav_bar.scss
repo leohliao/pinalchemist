@@ -1,7 +1,7 @@
 section {
   display: flex;
-  padding: 6px 10px 6px 10px;
-  height: 70px;
+  padding: 7px 10px 6px 10px;
+  height: 78px;
   align-items: center;
   border-bottom: 2px solid #74edbb;
 }
@@ -32,8 +32,8 @@ section .nav-bar-all {
 }
 
 .nav-bar-home-page img:active {
-  box-shadow: 0 0 0 5px white,
-              0 0 0 7px #57b38d;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px #57b38d;
 }
 
 input .nav-bar-search-input {
@@ -85,8 +85,8 @@ input .nav-bar-search-input {
 }
 
 .nav-bar-discover-ideas:active {
-  box-shadow: 0 0 0 5px white,
-              0 0 0 7px #57b38d;
+  box-shadow: 0 0 0 1px white,
+              0 0 0 3px #57b38d;
   border-radius: 5px;
 }
 
@@ -112,8 +112,8 @@ input .nav-bar-search-input {
 }
 
 .nav-bar-my-board img:active {
-  box-shadow: 0 0 0 5px white,
-              0 0 0 7px #57b38d;
+  box-shadow: 0 0 0 1px white,
+              0 0 0 3px #57b38d;
 }
 
 .nav-bar-log-out {
@@ -138,6 +138,6 @@ input .nav-bar-search-input {
 }
 
 .nav-bar-log-out img:active {
-  box-shadow: 0 0 0 5px white,
-              0 0 0 7px #57b38d;
+  box-shadow: 0 0 0 1px white,
+              0 0 0 3px #57b38d;
 }

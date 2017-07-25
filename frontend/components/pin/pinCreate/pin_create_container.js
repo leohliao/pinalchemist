@@ -4,8 +4,8 @@ import PinCreateForm from './pin_create_form';
 
 const mapStateToProps = ({ session, pins }) => {
   return ({
-    currentUser: session.currentUser,
-    errors: pins.errors,
+    currentUser: session.currentUser.username,
+    errors: pins.errors
   });
 };
 
