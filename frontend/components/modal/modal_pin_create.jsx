@@ -15,14 +15,14 @@ const style = {
   content : {
     position        : 'fixed',
     justifyContent  : 'center',
-    top             : '15%',
-    left            : '25%',
-    right           : '25%',
-    bottom          : '25%',
+    top             : '10%',
+    left            : '30%',
+    right           : '30%',
+    // bottom          : '15%',
     border          : '2px solid white',
     background      : '#57bc90',
     borderRadius    : '25px',
-    padding         : '35px',
+    padding         : '20px',
     zIndex          : 11,
     overflow        : 'auto',
   }
@@ -46,13 +46,15 @@ class ModalPinCreate extends React.Component {
     return (
       <div>
         <button onClick={this.modalSwitch}>Create Pin</button>
-        <Modal className="modal-pin-create"
+        <Modal className="modal-pin-create-all"
                isOpen={this.state.modalOpen}
                onRequestClose={this.modalSwitch}
                style={style}
                contentLabel="Modal Pin Create">
-               <PinCreateContainer modalSwitch={this.modalSwitch}/>
-          <button onClick={this.modalSwitch}>Close</button>
+            <img className="modal-pin-create-img-close"
+                 src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
+                 onClick={this.modalSwitch} />
+            <PinCreateContainer modalSwitch={this.modalSwitch}/>
         </Modal>
       </div>
     );

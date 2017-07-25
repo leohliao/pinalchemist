@@ -9,7 +9,7 @@ class PinCreateForm extends React.Component {
     this.state = {
       title: "",
       image_url: "",
-      description: ""
+      description: "",
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,7 +37,7 @@ class PinCreateForm extends React.Component {
     upload.end((err, response) => {
       if(response.body.secure_url !== ""){
         this.setState({
-          image_url: response.body.secure_url
+          image_url: response.body.secure_url,
         });
       }
     });
@@ -57,11 +57,12 @@ class PinCreateForm extends React.Component {
         <h2>Drag and Drop or Click Here!</h2>
       </div>
     ) : (
-      <img src={this.state.image_url} />
+      <img className="pin-create-form-dropzone-image"
+           src={this.state.image_url} />
     );
 
     return(
-      <div>
+      <div className="pin-create-form-all">
         <h1>Create Pin</h1>
         <Dropzone
             className="pin-create-form-dropzone"
@@ -73,12 +74,14 @@ class PinCreateForm extends React.Component {
 
         <form className="pin-create-form-dropzone-form"
               onSubmit={this.handleSubmit}>
-              <label>Title
+              <label className="pin-create-form-label" >
+                <h3>Title</h3>
                 <input type="text"
                        onChange={this.update('title')}
                        value={this.state.title}/>
               </label>
-              <label>Description
+              <label className="pin-create-form-label">
+                <h3>Description</h3>
                 <input type="textarea"
                        onChange={this.update('description')}
                        value={this.state.description}/>

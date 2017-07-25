@@ -2,12 +2,11 @@ import { connect } from 'react-redux';
 import { requestSinglePin } from '../../../actions/pin_actions';
 import PinShowForm from './pin_show_form';
 
-const mapStateToProps = ({ session, pins }, { match }) => {
-  const pinID = match.params.id;
+const mapStateToProps = ({ session, pins }) => {
   return ({
     currentUser: session.currentUser.username,
     errors: pins.errors,
-    pin: pins.pins[pinID],
+    pin: pins.pins[pins.match.params.id]
   });
 };
 

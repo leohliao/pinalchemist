@@ -1,0 +1,21 @@
+.modal-pin-item-img {
+  width: inherit;
+  height: inherit;
+  border-radius: 3px;
+}
+
+.modal-pin-item-button {
+  width: 300px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.modal-pin-item-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}

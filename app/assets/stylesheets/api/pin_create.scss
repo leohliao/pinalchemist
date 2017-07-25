@@ -1,0 +1,79 @@
+.pin-create-form-all {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.pin-create-form-all h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.modal-pin-create-img-close {
+  width: 7%;
+  display: block;
+  margin-left: 90%;
+  margin-bottom: 1%
+}
+
+.modal-pin-create-img-close:hover{
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.pin-create-form-dropzone {
+  height: 100px;
+  width: 300px;
+  border: 3px dashed white;
+  border-radius: 10px;
+  margin: 15px 0 10px 0;
+  align-self: center;
+}
+
+.pin-create-form-dropzone-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pin-create-form-dropzone-innertext h2 {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  margin-top: 14%;
+}
+
+.pin-create-form-dropzone-image {
+  max-width: 300px;
+  height: auto;
+  align-self: center;
+}
+
+.pin-create-form-label {
+  align-items: flex-start;
+}
+
+.pin-create-form-label h3 {
+  font-family: sans-serif;
+  color: white;
+  margin: 10px 0 3px 0;
+}
+
+.pin-create-form-label input {
+  font-size: 14px;
+  width: 200%;
+  height: 20px;
+  border-radius: 4px;
+  align-self: baseline;
+  align-content: baseline;
+}
+
+.pin-create-form-label input[type=textarea] {
+  height: 40px;
+}
+
+.pin-create-form-dropzone-submit {
+  margin-top: 20px;
+}

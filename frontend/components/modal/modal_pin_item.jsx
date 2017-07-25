@@ -48,25 +48,25 @@ class ModalPinItem extends React.Component {
 }
   render(){
     const { pin } = this.props;
-
+    console.log(this.state.modalOpen);
     return (
       <div>
-        <button onClick={this.modalSwitch}
+        <div onClick={this.modalSwitch}
                 className="modal-pin-item-button">
           <img src={pin.image_url}
                className="modal-pin-item-img">
           </img>
-        </button>
+        </div>
         <Modal className="modal-pin-item"
                isOpen={this.state.modalOpen}
                onRequestClose={this.modalSwitch}
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Pin Item">
+               <button onClick={this.modalSwitch}>Close</button>
                <PinShowContainer modalSwitch={this.modalSwitch}
                                  id={pin.id}
                                  className="modal-pin-show"/>
-          <button onClick={this.modalSwitch}>Close</button>
         </Modal>
       </div>
     );
