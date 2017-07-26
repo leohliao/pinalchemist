@@ -59,6 +59,31 @@ Pin.create!({title: 'Crane',
             user_id: User.find_by_username("leol2").id})
 
 
+Board.destroy_all
+Board.create!({board_name: 'My favorite',
+               description: "Collections of all my favorite",
+               user_id: User.find_by_username("leol1").id})
+Board.create!({board_name: 'Artistst That Inspires Me',
+               description: "Amazing artworks collection from artCenter",
+               user_id: User.find_by_username("leol1").id})
+Board.create!({board_name: 'Friends artwork',
+               description: "All my friends are amazing artists, I will be like them someday",
+               user_id: User.find_by_username("leol1").id})
+Board.create!({board_name: 'Incredible Illustration for Cats',
+               description: "Meow Meow",
+               user_id: User.find_by_username("leol1").id})
+Board.create!({board_name: 'What else is there?',
+               description: "Some cool arts I found",
+               user_id: User.find_by_username("leol1").id})
+Board.create!({board_name: 'Ideas',
+               description: "Images that inspires the heck outta me",
+               user_id: User.find_by_username("leol2").id})
+Board.create!({board_name: 'Freelance',
+               description: "All the cool stuff drawn by cool peole",
+               user_id: User.find_by_username("leol2").id})
+
+
+
 # sse = Party.create!({name: "Secret Santa Extravaganza", location: "Portland"})
 # ccp = Party.create!({name: "Charles' Christmas Party", location: "San Francisco"})
 #

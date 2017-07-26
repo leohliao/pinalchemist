@@ -54,9 +54,8 @@
   boards: {
     1: {
       id: 1,
-      name: "My CG Artist Collection",
+      board_name: "My CG Artist Collection",
       description: "Cool Game Assests",
-
       user_id: 1
     },
     2: {
