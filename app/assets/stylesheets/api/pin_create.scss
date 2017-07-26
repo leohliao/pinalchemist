@@ -6,6 +6,8 @@ div .modal-pin-create-button-home {
   bottom: 65px;
   width: 45px;
   height: auto;
+  box-shadow: 2px 2px 1px 0.5px gray;
+  border-radius: 50px;
 }
 
 .modal-pin-create-button-home img {
@@ -54,7 +56,6 @@ div .modal-pin-create-button-home {
 
 .pin-create-form-dropzone {
   height: 200px;
-  max-height: 400px;
   width: 300px;
   border: 3px dashed white;
   border-radius: 10px;
@@ -63,9 +64,10 @@ div .modal-pin-create-button-home {
   vertical-align: middle;
 }
 
-.pin-create-form-dropzone div {
-    vertical-align: middle;
-    justify-content: center;
+.pin-create-form-dropzone-div {
+  vertical-align: middle;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .pin-create-form-dropzone-form {
@@ -81,10 +83,11 @@ div .modal-pin-create-button-home {
   vertical-align: middle;
 }
 
-img .pin-create-form-dropzone-image {
-  max-width: 300px;
-  max-height: 400px;
+.pin-create-form-dropzone-image {
+  width: 300px;
+  max-height: 200px;
   padding: auto;
+  overflow: hidden;
 }
 
 .pin-create-form-label {

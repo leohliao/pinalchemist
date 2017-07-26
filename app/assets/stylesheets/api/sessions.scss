@@ -57,6 +57,23 @@
     width: 55%;
     height: 25px;
     font-size: 13px;
+    color: black;
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: pink;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: pink;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: pink;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: pink;
+    }
+}
+
+label input .session-input[placeholder] {
+  color: black;
 }
 
 .session-form-submit-button {

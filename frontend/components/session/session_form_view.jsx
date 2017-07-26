@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
     }
 
     renderErrors(){
-      console.log(this.props);
+      // console.log(this.props);
       return (
       <ul>
         {this.props.errors.map((error, idx) => (
@@ -98,8 +98,8 @@ class SessionForm extends React.Component {
       const navConvert = (this.props.formType === 'login') ? "sign up" : "log in";
       const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
 
-      // console.log("this.state.username = " + this.props);
-      // console.log("this.props.formType = " + this.props.formType);
+      console.log("this.state.username = " + this.props);
+      console.log("this.props.formType = " + this.props.formType);
 
       return (
         <main className="session-form-view">
@@ -119,14 +119,14 @@ class SessionForm extends React.Component {
                 <label>
                   <input type="text"
                          value={this.state.username}
-                         placeholder={usernamePlaceholder}
+                         placeholder={ usernamePlaceholder }
                          onChange={this.update(`username`)}
                          className="session-input"/>
                 </label>
                 <label>
                   <input type="password"
                          value={this.state.password}
-                         placeholder={passwordPlaceholder}
+                         placeholder={ passwordPlaceholder }
                          onChange={this.update(`password`)}
                          className="session-input"/>
                 </label>

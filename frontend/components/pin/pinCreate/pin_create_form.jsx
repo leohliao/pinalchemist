@@ -9,6 +9,7 @@ class PinCreateForm extends React.Component {
     this.state = {
       title: "",
       image_url: "",
+      thumbnail_url: "",
       description: "",
     };
 
@@ -36,6 +37,7 @@ class PinCreateForm extends React.Component {
 
     upload.end((err, response) => {
       if(response.body.secure_url !== ""){
+        console.log(response.body);
         this.setState({
           image_url: response.body.secure_url,
         });
@@ -47,8 +49,12 @@ class PinCreateForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     const pin = this.state;
-    this.props.createPin(pin);
-    this.props.modalSwitch();
+    if (pin.image_url !=="" && pin.title !== ""){
+      this.props.createPin(pin);
+      this.props.modalSwitch();
+    } else {
+      alert("You are missing title or actual image!");
+    }
   }
 
   render(){
@@ -71,7 +77,7 @@ class PinCreateForm extends React.Component {
             multiple={false}
             accept="image/*"
             onDrop={this.handleImageUpload}>
-            <div>{ dropZoneInnerText }</div>
+              { dropZoneInnerText }
         </Dropzone>
 
         <form className="pin-create-form-dropzone-form"
