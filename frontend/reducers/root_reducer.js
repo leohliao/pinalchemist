@@ -11,10 +11,12 @@
 import { combineReducers } from 'redux';
 import SessionReducer from './session_reducer';
 import PinReducer from './pin_reducer';
+import BoardReducer from './board_reducer';
 
 const rootReducer = combineReducers({
     session: SessionReducer,
-    pins: PinReducer
+    pins: PinReducer,
+    boards: BoardReducer
 });
 
 export default rootReducer;
