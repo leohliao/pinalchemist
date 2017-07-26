@@ -1,0 +1,31 @@
+.my-library-form-all {
+  margin: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin: 85px auto 0 auto;
+}
+
+.my-library-photo-user {
+  margin: auto;
+  width: 180px;
+  height: 180px;
+  box-shadow: 0 0 0 3px #a5a5af;
+  border-radius: 50vw;
+}
+
+.my-library-photo-user img {
+  border-radius: inherit;
+  width: inherit;
+  height: inherit;
+  image: cover;
+}
+
+.my-library-user-info {
+  margin: auto;
+}
+
+.my-library-follows {
+  margin: auto;
+  text-align: center;
+}

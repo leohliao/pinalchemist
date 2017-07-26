@@ -21,8 +21,4 @@ class Board < ApplicationRecord
     foreign_key: :user_id,
     class_name: "User"
 
-  has_many :pins,
-    through: :author,
-    source: :pins
-
 end

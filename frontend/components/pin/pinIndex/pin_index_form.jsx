@@ -4,10 +4,6 @@ import PinIndexItem from './pin_index_item';
 import Masonry from 'react-masonry-component';
 import ModalPinItem from '../../modal/modal_pin_item';
 
-//temp
-import NavBarForm from '../../navbar/nav_bar_container';
-import ModalPinCreate from '../../modal/modal_pin_create';
-
 class PinIndexForm extends React.Component {
   constructor(props){
     super(props);
@@ -38,10 +34,7 @@ class PinIndexForm extends React.Component {
     ));
     return(
       <div>
-        <NavBarForm />
-        <br />
-        <ModalPinCreate />
-        <br/>
+
           <Masonry className={'pins-index-form'}
                    elementType={'ul'}
                    options={masonryOptions}
@@ -55,3 +48,5 @@ class PinIndexForm extends React.Component {
 }//end PinIndexForm
 
 export default withRouter(PinIndexForm);
+// <NavBarForm />
+// <br />

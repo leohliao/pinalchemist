@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import ModalPinCreate from '../modal/modal_pin_create';
 
 class NavBarForm extends React.Component {
   constructor(props){
@@ -31,7 +32,7 @@ class NavBarForm extends React.Component {
         <p>Discover Ideas</p>
         </div>
 
-        <Link className="nav-bar-my-board" to="/pins">
+        <Link className="nav-bar-my-board" to="/mylibrary">
         <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
         </Link>
 
@@ -39,6 +40,8 @@ class NavBarForm extends React.Component {
              onClick={this.currentUserLogOut}>
         <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795169/log_out_omgkze.png" alt="Log Out" />
         </div>
+
+        <ModalPinCreate />
 
       </section>
     );//end return
