@@ -111,6 +111,10 @@ class SessionForm extends React.Component {
               <img src="http://res.cloudinary.com/leosoba/image/upload/v1500561470/pinalchemist_logo_xcqdgy.png" />
             </div>
 
+            <div className="session-form-slogan">
+              <h1>CHEMISTRY OF CREATIVITY STARTS HERE</h1>
+            </div>
+
             <div className="session-form-errors">
               <span>{this.renderErrors()}</span>
             </div>
@@ -130,6 +134,7 @@ class SessionForm extends React.Component {
                          onChange={this.update(`password`)}
                          className="session-input"/>
                 </label>
+
                 <button type="submit"
                         className="session-form-submit-button"><span>{submitText}</span></button>
 

@@ -15,8 +15,8 @@ const style = {
   content : {
     position        : 'flex',
     margin          : '35px auto 15px auto',
-    width           : '450px',
-    height          : '70%',
+    width           : '32vw',
+    height          : '70vh',
     border          : '2px solid white',
     background      : '#57bc90',
     borderRadius    : '25px',
