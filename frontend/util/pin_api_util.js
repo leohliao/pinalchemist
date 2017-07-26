@@ -9,7 +9,7 @@ window.fetchAllPins = fetchAllPins;
 export const fetchSinglePin = (id) => {
   return $.ajax ({
     method: "GET",
-    url: `/api/pins/${id}`,
+    url: `/api/pins/${id}`
   });
 };
 window.fetchSinglePin = fetchSinglePin;
