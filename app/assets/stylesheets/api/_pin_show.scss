@@ -1,15 +1,22 @@
 .pin-show-all {
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  // flex-flow: column;
+  flex-direction: column;
   align-items: center;
+  vertical-align: top;
+  background-color: #57bc90;
+  border-radius: 8px;
+  width: inherit;
+  height: inherit;
 }
 
 .pin-show-all h1 {
   font-family: sans-serif;
+  font-weight: bold;
   font-size: 24px;
   font-weight: 200;
   color: white;
+  margin-top: -20px;
 }
 
 .pin-show-all h3 {
@@ -18,33 +25,46 @@
   color: white;
 }
 
-img.pin-show-form-delete-all {
-  position: relative;
-  width: 45vw;
-  height: 70vh;
-  background-color: red;
-}
-
 .pin-show-form-img {
-  position: relative;
   margin: 15px auto;
   border-radius: 5px;
-  width: 90vh;
-  height: 50vh auto;
+  max-width: 48vw;
+  max-height: 60vh;
+
 }
 
-img.pin-show-form-delete {
-  position: absolute;
-  top: 24vh;
-  right: 33vw;
-  width: 3vw;
-  opacity: 0.3;
+.pin-show-form-delete {
+  display: flex;
+  align-self: flex-end;
+  vertical-align: middle;
+  margin: 5px 10px 10px auto;
 }
 
-img.pin-show-form-delete:hover {
+.pin-show-form-delete img {
+  height: 5vh;
+  align-self: center;
+}
+
+.pin-show-form-delete h6 {
+  color: white;
+  font-family: sans-serif;
+  background-color: #c92228;
+  font-size: 12px;
+  height: 8px;
+  padding: 8px 10px 10px 10px;
+  align-self: center;
+  border-radius: 8px;
+}
+
+.pin-show-form-delete:hover {
   opacity: 1;
   cursor: pointer;
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+.pin-show-all h3 {
+  padding: 5px auto 10px auto;
+  margin-bottom: 5px;
 }

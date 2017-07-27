@@ -15,6 +15,7 @@ class PinCreateForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleImageUpload = this.handleImageUpload.bind(this);
+    this.switchOff = this.switchOff.bind(this);
   }//end constructor
 
   //change the value of the input field
@@ -57,6 +58,10 @@ class PinCreateForm extends React.Component {
     }
   }
 
+  switchOff(){
+    this.props.modalSwitch();
+  }
+
   render(){
     const dropZoneInnerText = this.state.image_url === "" ? (
       <div className="pin-create-form-dropzone-innertext">
@@ -71,6 +76,9 @@ class PinCreateForm extends React.Component {
 
     return(
       <div className="pin-create-form-all">
+        <img className="modal-pin-create-img-close"
+             src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
+             onClick={this.switchOff} />
         <h1>Create Pin</h1>
         <Dropzone
             className="pin-create-form-dropzone"
@@ -83,20 +91,20 @@ class PinCreateForm extends React.Component {
         <form className="pin-create-form-dropzone-form"
               onSubmit={this.handleSubmit}>
               <label className="pin-create-form-label" >
-                <h3>Title</h3><br />
                 <input type="text"
+                       placeholder="Create A Title"
                        onChange={this.update('title')}
-                       value={this.state.title}/>
+                       value={this.state.title} required/>
               </label>
               <label className="pin-create-form-label">
-                <h3>Description</h3><br />
                 <input type="textarea"
+                       placeholder="Create A Description"
                        onChange={this.update('description')}
                        value={this.state.description}/>
               </label>
               <input className="pin-create-form-dropzone-submit"
                      type="submit"
-                     value="Create"/>
+                     value="CREATE!"/>
         </form>
 
       </div>

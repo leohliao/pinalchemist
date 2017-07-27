@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -53,6 +54,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rails_real_favicon'
   gem 'figaro'
+  gem 'guard', :require => false
+  gem 'guard-livereload', :require => false
+  gem 'rack-livereload'
+  gem 'rb-fsevent', :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

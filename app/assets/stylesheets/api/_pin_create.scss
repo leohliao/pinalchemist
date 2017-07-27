@@ -6,7 +6,7 @@ div .modal-pin-create-button-home {
   bottom: 65px;
   width: 45px;
   height: auto;
-  box-shadow: 2px 2px 1px 0.5px gray;
+  box-shadow: 1px 1px 1px 0.5px gray;
   border-radius: 50px;
 }
 
@@ -19,8 +19,8 @@ div .modal-pin-create-button-home {
   cursor: pointer;
   border-radius: 50px;
   box-shadow: 0 0 0 2px white,
-              0 0 0 4px rgb(159,57,52),
-              0 0 0 6px white;
+              0 0 0 4px #57bc90,//rgb(159,57,52),
+              0 0 0 5px white;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -32,31 +32,39 @@ div .modal-pin-create-button-home {
   flex-wrap: wrap;
   align-items: center;
   vertical-align: middle;
+  min-height: inherit;
+  background-color: #57bc90;
+  border-radius: 8px;
 }
 
 .pin-create-form-all h1 {
   font-size: 30px;
   font-family: sans-serif;
-  color: white;
+  font-weight: bold;
+  color: white;//#015249;
+  width: inherit;
+  margin: 15px auto 8px auto;
 }
 
 .modal-pin-create-img-close {
-  width: 5%;
+  width: 23px;
   display: block;
-  margin-left: 90%;
-  margin-bottom: 10px;
+  padding-top: 10px;
+  margin: auto auto auto 90%;
+  opacity: 0.7;
 }
 
 .modal-pin-create-img-close:hover{
   cursor: pointer;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+    opacity: 1;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .pin-create-form-dropzone {
+  width: 26vw;
   height: 200px;
-  width: 300px;
   border: 3px dashed white;
   border-radius: 10px;
   margin: 15px 0 10px 0;
@@ -80,14 +88,14 @@ div .modal-pin-create-button-home {
   text-align: center;
   color: white;
   margin: 28% auto;
-  vertical-align: middle;
 }
 
 .pin-create-form-dropzone-image {
-  width: 300px;
+  width: 26vw;
   max-height: 200px;
   padding: auto;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .pin-create-form-label {
@@ -102,9 +110,10 @@ div .modal-pin-create-button-home {
 
 .pin-create-form-label input {
   font-size: 14px;
-  width: 200%;
+  min-width: 25vw;
   height: 20px;
   border-radius: 4px;
+  margin: 5px auto 5px auto;
   align-self: baseline;
   align-content: baseline;
 }
@@ -115,20 +124,22 @@ div .modal-pin-create-button-home {
 
 .pin-create-form-dropzone-submit {
   font-family: 'Source Sans Pro', sans-serif;
-  margin-top: 20px;
   background-color: #4CAF50;
   border: 2px solid #015249;
+  border-radius: 8px;
+  width: 180px;
+  height: 55px;
   color: #015249;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  align-self: center;
   font-size: 16px;
   margin: 20px 2px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 8px;
 }
 
 .pin-create-form-dropzone-submit:hover {

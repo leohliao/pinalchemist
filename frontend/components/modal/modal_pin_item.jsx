@@ -15,16 +15,16 @@ const style = {
   content : {
     position        : 'flex',
     margin          : '35px auto 15px auto',
-    width           : '45%',
-    height          : '70%',
-    border          : '2px solid white',
-    background      : '#57bc90',
-    borderRadius    : '25px',
+    width           : '50vw',
+    height          : '80vh',
+    border          : '2px solid #57bc90',
+    background      : 'white',
+    borderRadius    : '8px',
     padding         : '15px',
     zIndex          : 11,
     overflow        : 'auto',
     opacity         : 0,
-    transition      : 'opacity 0.2s'
+    transition      : 'opacity 0.3s'
   }
 };
 
@@ -43,7 +43,8 @@ class ModalPinItem extends React.Component {
 
   onAfterOpen() {
   style.content.opacity = 100;
-}
+  }
+
   render(){
     const { pin } = this.props;
     console.log(this.state.modalOpen);
@@ -61,9 +62,7 @@ class ModalPinItem extends React.Component {
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Pin Item">
-               <img className="modal-pin-create-img-close"
-                    src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
-                    onClick={this.modalSwitch} />
+
                <PinShowContainer modalSwitch={this.modalSwitch}
                                  id={pin.id}
                                  className="modal-pin-show"/>
