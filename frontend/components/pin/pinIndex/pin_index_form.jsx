@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import PinIndexItem from './pin_index_item';
 import Masonry from 'react-masonry-component';
 import ModalPinItem from '../../modal/modal_pin_item';
 
@@ -34,7 +33,6 @@ class PinIndexForm extends React.Component {
     ));
     return(
       <div>
-
           <Masonry className={'pins-index-form'}
                    elementType={'ul'}
                    options={masonryOptions}

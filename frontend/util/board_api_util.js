@@ -21,7 +21,7 @@ export const createBoard = (board) => {
     data: { board }
   });
 };
-window.createBoard = createBoard;
+
 
 export const deleteBoard = (id) => {
   return $.ajax ({
@@ -29,4 +29,3 @@ export const deleteBoard = (id) => {
     url: `/api/boards/${id}`
   });
 };
-window.deleteBoard = deleteBoard;

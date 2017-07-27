@@ -9,16 +9,19 @@ export const receiveAllBoards = (boards) => ({
   type: RECEIVE_ALL_BOARDS,
   boards
 });
+window.receiveAllBoards = receiveAllBoards;
 
 export const receiveSingleBoard = (board) => ({
   type: RECEIVE_SINGLE_BOARD,
   board
 });
+window.receiveSingleBoard = receiveSingleBoard;
 
 export const deleteBoard = (board) => ({
   type: DELETE_BOARD,
   board
 });
+window.deleteBoard = deleteBoard;
 
 export const receiveBoardErrors = (errors) => ({
   type: RECEIVE_BOARD_ERRORS,
@@ -36,13 +39,15 @@ export const requestAllBoards = () => dispatch => {
   ))
   );
 };
+window.requestAllBoards = requestAllBoards;
 
-export const requestSingleBoard = () => dispatch => {
-  return (BoardAPIUtil.fetchSingleBoard()
+export const requestSingleBoard = (id) => dispatch => {
+  return (BoardAPIUtil.fetchSingleBoard(id)
     .then(board => dispatch(receiveSingleBoard(board)
   ))
   );
 };
+window.requestSingleBoard = requestSingleBoard;
 
 export const removeBoard = (id) => dispatch => {
   return (BoardAPIUtil.deleteBoard(id)
@@ -50,3 +55,4 @@ export const removeBoard = (id) => dispatch => {
   ))
   );
 };
+window.removeBoard = removeBoard;

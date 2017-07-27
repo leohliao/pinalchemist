@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import BoardIndex from '../board/boardIndex/board_index_container';
 
 class MyLibrary extends React.Component {
   constructor(props){
@@ -40,6 +40,10 @@ class MyLibrary extends React.Component {
             <h1>Followers</h1>
             <h3>#</h3>
           </div>
+        </div>
+
+        <div>
+          < BoardIndex />
         </div>
 
       </div>

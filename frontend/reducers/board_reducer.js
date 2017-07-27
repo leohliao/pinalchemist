@@ -21,7 +21,7 @@ const BoardReducer = (state = defaultState, action) => {
 
     case boardActions.DELETE_BOARD:
       const newState = merge({}, state);
-      delete newState.pins[action.board.id];
+      delete newState.boards[action.board.id];
       return newState;
 
     case boardActions.RECEIVE_BOARD_ERRORS:

@@ -23,7 +23,7 @@ class Api::BoardsController < ApplicationController
   def destroy
     @board = Board.find(params[:id])
     @board.destroy
-    render 'api/pins/show'
+    render 'api/boards/show'
   end
 
   private
