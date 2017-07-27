@@ -1,5 +1,4 @@
 .my-library-form-all {
-  
 }
 
 .my-library-form-user {
@@ -46,7 +45,7 @@
 
 .my-library-user-separator {
   height: 2px;
-  width: 35vw;
+  min-width: 35vw;
   background-color: #a5a5af;
   align-self: center;
   margin: 20px auto 20px auto;
@@ -75,3 +74,10 @@
   margin-top: 20px;
   vertical-align: super;
 }////child for .my-library-form-user
+
+.my-library-form-board-index {
+  margin: 30px auto;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+}

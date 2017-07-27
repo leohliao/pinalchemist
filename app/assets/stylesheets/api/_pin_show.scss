@@ -1,6 +1,5 @@
 .pin-show-all {
   display: flex;
-  // flex-flow: column;
   flex-direction: column;
   align-items: center;
   vertical-align: top;
@@ -26,16 +25,16 @@
 }
 
 .pin-show-form-img {
+  vertical-align: top;
   margin: 15px auto;
   border-radius: 5px;
   max-width: 48vw;
   max-height: 60vh;
-
 }
 
 .pin-show-form-delete {
   display: flex;
-  align-self: flex-end;
+  // align-self: flex-end;
   vertical-align: middle;
   margin: 5px 10px 10px auto;
 }

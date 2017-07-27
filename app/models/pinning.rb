@@ -10,4 +10,17 @@
 #
 
 class Pinning < ApplicationRecord
+  validates :board_id, :pin_id, presence: true
+  validates_uniqueness_of :board_id, :scope => :pin_id
+
+  belongs_to :board,
+    primary_key: :id,
+    foreign_key: :board_id,
+    class_name: "Board", dependent: :destroy
+
+  belongs_to :pin,
+    primary_key: :id,
+    foreign_key: :pin_id,
+    class_name: "Pin", dependent: :destroy
+
 end

@@ -9,7 +9,6 @@ class PinCreateForm extends React.Component {
     this.state = {
       title: "",
       image_url: "",
-      thumbnail_url: "",
       description: "",
     };
 

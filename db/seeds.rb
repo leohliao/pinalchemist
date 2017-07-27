@@ -18,49 +18,49 @@ User.create!({username: "leol4", password: "password"})
 User.create!({username: "leol5", password: "password"})
 
 Pin.destroy_all
-Pin.create!({title: 'Gamera Remake',
+pin1 = Pin.create!({title: 'Gamera Remake',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Gamera_hohult.jpg",
              user_id: User.find_by_username("leol1").id})
-Pin.create!({title: 'Tanks And Airplane',
+pin2 = Pin.create!({title: 'Tanks And Airplane',
              user_id: User.find_by_username("leol1").id,
              description: "none",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858054/TnP_01_d0f9qg.jpg"})
-Pin.create!({title: 'Plants',
+pin3 = Pin.create!({title: 'Plants',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Plants_01_ukeaoi.jpg",
              user_id: User.find_by_username("leol2").id})
-Pin.create!({title: 'Airplanes',
+pin4 = Pin.create!({title: 'Airplanes',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/TnP_02_eh9wap.jpg",
              user_id: User.find_by_username("leol3").id})
-Pin.create!({title: 'A Train Sketch',
+pin5 = Pin.create!({title: 'A Train Sketch',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858034/Train_01_k9orkg.jpg",
              user_id: User.find_by_username("leol4").id})
-Pin.create!({title: 'Magnodente',
+pin6 = Pin.create!({title: 'Magnodente',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Magnodente_vz47ci.jpg",
              user_id: User.find_by_username("leol5").id})
-Pin.create!({title: 'Imagery Car',
+pin7 = Pin.create!({title: 'Imagery Car',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500921017/ddioayzedr7ifigwky8w.jpg",
              description: "modeling done by Zack Cheng",
              user_id: User.find_by_username("leol2").id})
-Pin.create!({title: 'Girl Standing Against Wall',
+pin8 = Pin.create!({title: 'Girl Standing Against Wall',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500984079/ewnwmjrvlobmw3lkqza6.jpg",
             description: "digital paint by Ziwei Duanmu",
             user_id: User.find_by_username("leol4").id})
-Pin.create!({title: 'New Year Goal',
+pin9 = Pin.create!({title: 'New Year Goal',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501006952/woeqfbjgr8x4vb6hbppr.gif",
             description: "digital paint by Ziwei Duanmu",
             user_id: User.find_by_username("leol4").id})
-Pin.create!({title: 'Visual Development Project',
+pin10 = Pin.create!({title: 'Visual Development Project',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501007060/gl2qlxsf1kqdmqxkgufy.jpg",
             description: "digital paint by Ziwei Duanmu",
             user_id: User.find_by_username("leol1").id})
-Pin.create!({title: 'Crane',
+pin11 = Pin.create!({title: 'Crane',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501022171/qanjfdrxm4uzvuku7i1o.gif",
             description: "GIF animation, digital paint by Ziwei Duanmu",
             user_id: User.find_by_username("leol2").id})
 
 
 Board.destroy_all
-Board.create!({board_name: 'My favorite',
+board1 = Board.create!({board_name: 'My favorite',
                description: "Collections of all my favorite",
                user_id: User.find_by_username("leol1").id})
 Board.create!({board_name: 'Artistst That Inspires Me',
@@ -81,6 +81,9 @@ Board.create!({board_name: 'Ideas',
 Board.create!({board_name: 'Freelance',
                description: "All the cool stuff drawn by cool peole",
                user_id: User.find_by_username("leol2").id})
+
+board1.pin_ids = [pin1.id];
+board1.save!
 
 
 

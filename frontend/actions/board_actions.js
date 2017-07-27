@@ -1,15 +1,17 @@
+
 import * as BoardAPIUtil from '../util/board_api_util';
-export const RECEIVE_ALL_BOARDS = 'RECEIVE_ALL_BOARDS';
+import * as UserAPIUtil from '../util/user_api_util';
+export const RECEIVE_USER_BOARDS = 'RECEIVE_USER_BOARDS';
 export const RECEIVE_SINGLE_BOARD = 'RECEIVE_SINGLE_BOARD';
 export const DELETE_BOARD = 'DELETE_BOARD';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
 //action creators
-export const receiveAllBoards = (boards) => ({
-  type: RECEIVE_ALL_BOARDS,
+export const receiveUserBoards = (boards) => ({
+  type: RECEIVE_USER_BOARDS,
   boards
 });
-window.receiveAllBoards = receiveAllBoards;
+window.receiveUserBoards = receiveUserBoards;
 
 export const receiveSingleBoard = (board) => ({
   type: RECEIVE_SINGLE_BOARD,
@@ -33,13 +35,13 @@ export const clearBoardErrors = () => ({
 });
 
 //thunk actions
-export const requestAllBoards = () => dispatch => {
-  return (BoardAPIUtil.fetchAllBoards()
-    .then(boards => dispatch(receiveAllBoards(boards)
+export const requestUserBoards = (userId) => dispatch => {
+  return (UserAPIUtil.fetchUserBoards(userId)
+    .then(boards => dispatch(receiveUserBoards(boards)
   ))
   );
 };
-window.requestAllBoards = requestAllBoards;
+window.requestUserBoards = requestUserBoards;
 
 export const requestSingleBoard = (id) => dispatch => {
   return (BoardAPIUtil.fetchSingleBoard(id)
@@ -56,3 +58,11 @@ export const removeBoard = (id) => dispatch => {
   );
 };
 window.removeBoard = removeBoard;
+
+export const createBoard = (board) => dispatch => {
+  return (BoardAPIUtil.createBoard(board)
+    .then(board => dispatch(receiveSingleBoard(board)
+  ))
+  );
+};
+window.createBoard = createBoard;

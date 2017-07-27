@@ -44,7 +44,7 @@ class MyLibrary extends React.Component {
             </div>
         </div>
 
-        <div>
+        <div className="my-library-form-board-index">
           < BoardIndex />
         </div>
 

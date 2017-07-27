@@ -22,9 +22,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: "Pin"
 
-  has_many :boards
-  has_many :following
-  has_many :followee
+  has_many :boards,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: "Boards"
 
   attr_reader :password
 

@@ -1,7 +1,13 @@
 class Api::BoardsController < ApplicationController
   def index
-    @boards = Board.all
+    @boards = Board.includes(:pins).where(user_id: params[:user_id])
     render 'api/boards/index'
+  end
+
+  def show
+    # keeps us from using n+1
+    @board = Board.includes(:pins).find(params[:id])
+    render 'api/boards/show'
   end
 
   def create
@@ -15,19 +21,14 @@ class Api::BoardsController < ApplicationController
     end
   end
 
-  def show
-    @board = Board.find(params[:id])
-    render 'api/boards/show'
-  end
-
   def destroy
-    @board = Board.find(params[:id])
+    @board = Board.includes(:pins).find(params[:id])
     @board.destroy
     render 'api/boards/show'
   end
 
   private
   def board_params
-    params.require(:board).permit(:board, :user_id, :description)
+    params.require(:board).permit(:board_name, :user_id, :description)
   end
 end

@@ -56,6 +56,7 @@
       id: 1,
       board_name: "My CG Artist Collection",
       description: "Cool Game Assests",
+      pin_ids:[1, 2, 3, 4]
       user_id: 1
     },
     2: {

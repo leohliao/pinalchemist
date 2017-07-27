@@ -1,10 +1,9 @@
-export const fetchAllBoards = () => {
-  return $.ajax ({
-    method: 'GET',
-    url: '/api/boards'
-  });
-};
-window.fetchAllBoards = fetchAllBoards;
+// export const fetchAllBoards = () => {
+//   return $.ajax ({
+//     method: 'GET',
+//     url: `/api/boards`,
+//   })
+// }
 
 export const fetchSingleBoard = (id) => {
   return $.ajax ({
@@ -21,7 +20,6 @@ export const createBoard = (board) => {
     data: { board }
   });
 };
-
 
 export const deleteBoard = (id) => {
   return $.ajax ({
