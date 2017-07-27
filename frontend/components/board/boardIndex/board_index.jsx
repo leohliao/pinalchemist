@@ -26,9 +26,9 @@ class BoardIndex extends React.Component {
         };
 
     const allTheBoards = boards.reverse().map( board => (
-      <li className="board-index-masonry-element" key={board.id}>
+      <ul className="board-index-masonry-element" key={board.id}>
         <BoardItem board={board} />
-      </li>
+      </ul>
     ));
 
     return(

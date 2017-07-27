@@ -1,4 +1,8 @@
 .my-library-form-all {
+  
+}
+
+.my-library-form-user {
   margin: auto;
   display: flex;
   flex-flow: row;
@@ -8,14 +12,14 @@
   font-family: sans-serif;
 }
 
-////child for .my-library-form-all
+////child for .my-library-form-user
 .my-library-user-photo {
   margin: auto;
   width: 180px;
   height: 180px;
   box-shadow: 0 0 0 3px #a5a5af;
   border-radius: 50vw;
-}////child for .my-library-form-all
+}////child for .my-library-form-user
 
 .my-library-user-photo img {
   border-radius: inherit;
@@ -24,7 +28,7 @@
   image: cover;
 }
 
-////child for .my-library-form-all
+////child for .my-library-form-user
 .my-library-user-info {
   position: relative;
   margin: auto auto auto -100px;
@@ -59,9 +63,9 @@
 
 }
 
-////child for .my-library-form-all
+////child for .my-library-form-user
 
-////child for .my-library-form-all
+////child for .my-library-form-user
 .my-library-follows {
   margin: auto auto auto -100px;
   text-align: center;
@@ -70,4 +74,4 @@
 .my-library-follow-wrapper {
   margin-top: 20px;
   vertical-align: super;
-}////child for .my-library-form-all
+}////child for .my-library-form-user
