@@ -7,18 +7,17 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 ## Features
   - [ ] User Authentication: authentication is implemented both in the frontend and backend.
-    ![PinAlchemist Authentication](docs/screenshot/auth_01.png)
+    ![PinAlchemist Authentication](http://res.cloudinary.com/leosoba/image/upload/v1501283736/auth_01_z5nqko.png)
     * [ ] Users will not be able to enter the site unless they log in or sign up as new user.
     * [ ]Users will not be able to see the DELETE PIN icons unless if they are the author of the pin. (For convenient purpose of the inspector, I included a guest login, see DEMO button)
   - [ ] User can see all the pins available on the site, they can also create news pins (upload images), delete pins(only if they are authorized).
-    ![Pop Up](docs/screenshot/modal_04.png)
+    ![Pop Up](http://res.cloudinary.com/leosoba/image/upload/v1501283744/auth_04_dvplxu.png)
   - Major UI Components:
     * [ ] Interactive grids system: the arrangement of the pins will be varied according users' browser screen size when they enter the site. Masonry is implemented for the smooth transitioning of the images.
-      ![Interactive Grid](docs/screenshot/ui_01.png)
+      ![Interactive Grid](http://res.cloudinary.com/leosoba/image/upload/v1501283750/ui_01_zyepwg.png)
     * [ ] Pop up window: Creating a new pin, showing a single pin will be result in popping out a separate window for better viewing purposes. There is a close button on the window, but user can user also click area outside of the pop up window to close it.
-      ![Pop Up](docs/screenshot/modal_01.png)
-      ![Pop Up](docs/screenshot/modal_02.png)
-      ![Pop Up](docs/screenshot/modal_03.png)
+      ![Pop Up](http://res.cloudinary.com/leosoba/image/upload/v1501283761/modal_03_ol58lt.png)
+
 
 ## Implementation Style
 
