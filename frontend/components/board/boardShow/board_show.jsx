@@ -50,17 +50,17 @@ class BoardShow extends React.Component {
         filteredPins = filteringPins;
       }
     }
-
+    // <img src={pin.image_url} alt={pin.title} />
     const havePins = filteredPins.reverse().map( pin => (
       <div className="board-index-masonry-ul-li" key={pin.id} >
         <div className="modal-board-form-container" >
-          <div>
-            <div className="modal-board-thumbnail-container">
+
+            <div className="modal-board-thumbnail-container-show">
               <div>
-                  <img src={pin.image_url} alt={pin.title} />
+                <ModalPinItem pin={pin}/>
               </div>
             </div>
-          </div>
+
         </div>
       </div>
     ));
