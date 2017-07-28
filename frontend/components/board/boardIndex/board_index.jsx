@@ -27,11 +27,9 @@ class BoardIndex extends React.Component {
     const masonryOptions = {
           gutter: 25,
           fitWidth: true,
-          transitionDuration: 1,
-          percentPosition: true,
-          // postion: 'center',
-          // right: '10%',
-          // backgroundColor: 'red',
+          transitionDuration: 1.5,
+          postion: 'center',
+          // percentPosition: true,
         };
 
     const allTheBoards = boards.reverse().map( board => (
@@ -53,7 +51,6 @@ class BoardIndex extends React.Component {
             <ModalBoardForm />
           </div>
           { allTheBoards }
-
         </Masonry>
       </div>
     );//end return

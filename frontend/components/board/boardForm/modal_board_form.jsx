@@ -13,9 +13,9 @@ const style = {
   },
   content : {
     position        : 'flex',
-    margin          : '35px auto 15px auto',
+    margin          : '18vh auto 15px auto',
     width           : '30vw',
-    minHeight       : '70vh',
+    minHeight       : '55vh',
     border          : '2px solid #57bc90',
     background      : 'white',
     borderRadius    : '8px',
@@ -68,21 +68,26 @@ class ModalBoardForm extends React.Component {
   render(){
     return (
       <div className="modal-board-create-home-all">
-        <div className="modal-board-thumbnail-container"
+        <div className="modal-board-thumbnail-container-add"
              onClick={this.modalSwitch}  >
-             <div>
-           <h1> Create A New Board </h1>
+           <div>
            </div>
         </div>
+
         <Modal className="modal-board-create-all"
                isOpen={this.state.modalOpen}
                onRequestClose={this.modalSwitch}
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Board Create">
-
-               <form className="board-create-form-"
+               <h1>CREATE YOUR BOARD</h1>
+               <form className="board-create-form-all"
                      onSubmit={this.handleSubmit}>
+
+                     <div className="board-create-form-board-img">
+                       <img src="http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg" alt="user-photo" />
+                     </div>
+
                      <label className="board-create-form-label" >
                        <input type="text"
                               placeholder="Create A Name for Your Board"
