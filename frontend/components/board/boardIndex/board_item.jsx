@@ -2,11 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BoardItem = ({ board }) => (
+
+<div className="modal-board-form-container" >
     <Link to={`/boards/${board.id}`}>
-      <div className="board-index-masonry-item-grid">
-        <img src="http://res.cloudinary.com/leosoba/image/upload/v1501172669/board_item_backsize_nlrioy.png" alt="user-photo"/>
+      <div className="modal-board-thumbnail-container">
+        <div>
+          <h1>{board.board_name}</h1>
+        </div>
       </div>
     </Link>
+</div>
+
 );// end BoardItem
 
 export default BoardItem;

@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 import BoardItem from './board_item';
 import { Link } from 'react-router-dom';
+import ModalBoardForm from '../boardForm/board_form_container';
 
 class BoardIndex extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class BoardIndex extends React.Component {
     }
 
     const masonryOptions = {
-          gutter: 15,
+          gutter: 25,
           fitWidth: true,
           transitionDuration: 1,
           percentPosition: true,
@@ -48,6 +49,9 @@ class BoardIndex extends React.Component {
                  disableImagesLoaded={false}
                  updateOnEachImageLoad={false}>
 
+          <div className="modal-board-form-container">
+            <ModalBoardForm />
+          </div>
           { allTheBoards }
 
         </Masonry>
