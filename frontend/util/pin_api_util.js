@@ -4,7 +4,6 @@ export const fetchAllPins = () => {
     url: "/api/pins"
   });
 };
-window.fetchAllPins = fetchAllPins;
 
 export const fetchSinglePin = (id) => {
   return $.ajax ({
@@ -12,7 +11,6 @@ export const fetchSinglePin = (id) => {
     url: `/api/pins/${id}`
   });
 };
-window.fetchSinglePin = fetchSinglePin;
 
 export const createPin = (pin) => {
   return $.ajax ({

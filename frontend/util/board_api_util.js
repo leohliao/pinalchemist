@@ -11,7 +11,6 @@ export const fetchSingleBoard = (id) => {
     url: `/api/boards/${id}`
   });
 };
-window.fetchSingleBoard = fetchSingleBoard;
 
 export const createBoard = (board) => {
   return $.ajax ({

@@ -31,8 +31,6 @@ const mapDispatchToProps = (dispatch, { location } ) => {
     };
 };
 
-window.ghostLogin = login;
-
 export default connect(
     mapStateToProps,
     mapDispatchToProps

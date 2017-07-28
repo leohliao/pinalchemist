@@ -15,7 +15,6 @@ class BoardShow extends React.Component {
   }//end constructor
 
   componentDidMount(){
-    console.log(this.props.match.params.id);
     this.props.requestSingleBoard(this.props.match.params.id);
     this.props.requestAllPins();
   }//end componentDidMount

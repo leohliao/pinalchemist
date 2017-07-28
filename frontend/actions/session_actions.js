@@ -22,7 +22,6 @@ export const receiveUser = user => ({
 export const clearErrors = () => ({
     type: CLEAR_ERRORS
 });
-window.clearErrors = clearErrors;
 
 //receives an array of errors
 export const receiveSessionErrors = errors => ({
@@ -44,9 +43,6 @@ export const login = user => dispatch => {
     )));
 };
 
-//test
-window.login = login;
-
 export const signup = user => dispatch => (
   sessionAPIUtil.signup(user)
   .then(user => (
@@ -55,8 +51,6 @@ export const signup = user => dispatch => (
     dispatch(receiveSessionErrors(err.responseJSON))
   ))
 );
-///test
-window.signup = signup;
 
 //logout won't take an argument, upon success dispatch
 //receiveCurrentUser(null) to remove the currentUser
@@ -68,5 +62,3 @@ export const logout = () => dispatch => {
   ))
 );
 };
-///test
-window.logout = logout;

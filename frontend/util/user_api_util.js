@@ -4,4 +4,3 @@ export const fetchUserBoards = (userId) => {
     url: `/api/users/${userId}/boards`
   });
 };
-window.fetchUserBoards = fetchUserBoards;

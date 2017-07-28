@@ -11,13 +11,11 @@ export const receiveAllPins = (pins) => ({
   type: RECEIVE_ALL_PINS,
   pins
 });
-window.receiveAllPins = receiveAllPins;
 
 export const receiveSinglePin = (pin) => ({
   type: RECEIVE_SINGLE_PIN,
   pin
 });
-window.receiveSinglePin = receiveSinglePin;
 
 export const removePin = (pin) => ({
   type: REMOVE_PIN,
@@ -40,7 +38,6 @@ export const requestAllPins = () => dispatch => {
   ))
   );
 };
-window.requestAllPins = requestAllPins;
 
 export const requestSinglePin = (id) => dispatch => {
   return (pinAPIUtil.fetchSinglePin(id)
@@ -50,7 +47,6 @@ export const requestSinglePin = (id) => dispatch => {
   )
   );
 };
-window.requestSinglePin = requestSinglePin;
 
 export const createPin = (pin) => dispatch => {
   return (pinAPIUtil.createPin(pin)
@@ -60,7 +56,6 @@ export const createPin = (pin) => dispatch => {
   )
   );
 };
-window.createPin = createPin;
 
 export const editPin = (pin) => dispatch => {
   return(pinAPIUtil.updatePin(pin)
@@ -70,7 +65,6 @@ export const editPin = (pin) => dispatch => {
   )
   );
 };
-window.editPin = editPin;
 
 export const deletePin = (id) => dispatch => {
   return (pinAPIUtil.deletePin(id)
@@ -78,4 +72,3 @@ export const deletePin = (id) => dispatch => {
   ))
   );
 };
-window.deletePin = deletePin;

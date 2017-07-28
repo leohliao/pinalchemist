@@ -11,19 +11,16 @@ export const receiveUserBoards = (boards) => ({
   type: RECEIVE_USER_BOARDS,
   boards
 });
-window.receiveUserBoards = receiveUserBoards;
 
 export const receiveSingleBoard = (board) => ({
   type: RECEIVE_SINGLE_BOARD,
   board
 });
-window.receiveSingleBoard = receiveSingleBoard;
 
 export const deleteBoard = (board) => ({
   type: DELETE_BOARD,
   board
 });
-window.deleteBoard = deleteBoard;
 
 export const receiveBoardErrors = (errors) => ({
   type: RECEIVE_BOARD_ERRORS,
@@ -41,7 +38,6 @@ export const requestUserBoards = (userId) => dispatch => {
   ))
   );
 };
-window.requestUserBoards = requestUserBoards;
 
 export const requestSingleBoard = (id) => dispatch => {
   return (BoardAPIUtil.fetchSingleBoard(id)
@@ -49,7 +45,6 @@ export const requestSingleBoard = (id) => dispatch => {
   ))
   );
 };
-window.requestSingleBoard = requestSingleBoard;
 
 export const removeBoard = (id) => dispatch => {
   return (BoardAPIUtil.deleteBoard(id)
@@ -57,7 +52,6 @@ export const removeBoard = (id) => dispatch => {
   ))
   );
 };
-window.removeBoard = removeBoard;
 
 export const createBoard = (board) => dispatch => {
   return (BoardAPIUtil.createBoard(board)
@@ -65,4 +59,3 @@ export const createBoard = (board) => dispatch => {
   ))
   );
 };
-window.createBoard = createBoard;
