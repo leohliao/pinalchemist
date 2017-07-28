@@ -3,9 +3,10 @@ import MyLibrary from './my_library';
 import { requestAllBoards } from '../../actions/board_actions';
 import { selectAllBoards } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => ({
-  boards: selectAllBoards(state),
-  state
+const mapStateToProps = ({session, boards, pins}) => ({
+  currentUser: session.currentUser.username,
+  boards,
+  pins
 });
 
 const mapDispatchToProps = dispatch => ({

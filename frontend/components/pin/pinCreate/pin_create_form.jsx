@@ -37,7 +37,6 @@ class PinCreateForm extends React.Component {
 
     upload.end((err, response) => {
       if(response.body.secure_url !== ""){
-        console.log(response.body);
         this.setState({
           image_url: response.body.secure_url,
         });

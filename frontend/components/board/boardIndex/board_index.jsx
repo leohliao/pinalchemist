@@ -13,16 +13,10 @@ class BoardIndex extends React.Component {
 
   componentDidMount(){
     this.props.requestUserBoards(this.props.currentUserId);
-    // debugger;
-    // console.log('this.props ='+ this.props);
   }//end componentDidMount
 
   render(){
     const { boards } = this.props;
-
-    if(this.props){
-      // console.log("props: " + this.props.boards);
-    }
 
     const masonryOptions = {
           gutter: 25,

@@ -46,7 +46,6 @@ class ModalPinCreate extends React.Component {
   }
 
   render(){
-    console.log(this.state);
     return (
       <div className="modal-pin-create-home-all">
         <div className="modal-pin-create-button-home" >

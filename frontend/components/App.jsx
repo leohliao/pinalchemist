@@ -5,6 +5,7 @@ import PinCreateContainer from './pin/pinCreate/pin_create_container';
 import PinIndexContainer from './pin/pinIndex/pin_index_container';
 import PinShowContainer from './pin/pinShow/pin_show_container';
 import MyLibraryContainer from './myLibrary/my_library_container';
+import BoardShowContainer from './board/boardShow/board_show_container';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -17,6 +18,7 @@ return (
       <ProtectedRoute path="/mylibrary" component={MyLibraryContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
+      <ProtectedRoute path="/boards/:id" component={BoardShowContainer} />
       <ProtectedRoute path="/" component={PinIndexContainer} />
     </Switch>
   </div>

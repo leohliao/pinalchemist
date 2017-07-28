@@ -37,7 +37,6 @@ const SessionReducer = (state = defaultState, action) => {
             return merge({}, defaultState, {errors: [] } );
 
         case sessionActions.USER_LOG_OUT:
-          // console.log("current user logs out " + currentUser);
           return merge({}, defaultState);
 
         default:

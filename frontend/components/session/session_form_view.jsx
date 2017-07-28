@@ -98,9 +98,6 @@ class SessionForm extends React.Component {
       const navConvert = (this.props.formType === 'login') ? "sign up" : "log in";
       const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
 
-      console.log("this.state.username = " + this.props);
-      console.log("this.props.formType = " + this.props.formType);
-
       return (
         <main className="session-form-view">
           <section className="session-form-container">

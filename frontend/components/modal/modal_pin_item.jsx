@@ -48,7 +48,6 @@ class ModalPinItem extends React.Component {
 
   render(){
     const { pin } = this.props;
-    console.log(this.state.modalOpen);
     return (
       <div>
         <div onClick={this.modalSwitch}

@@ -6,6 +6,10 @@ class MyLibrary extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+
+    }
+
   }//end constructor
   render (){
     return(
@@ -19,16 +23,17 @@ class MyLibrary extends React.Component {
             <div className="my-library-user-info">
               <div className="my-library-user-info-absolute">
                 <div className="my-library-user-username">
-                <h1> This is my username</h1>
+                <h3>Welcome, </h3>
+                <h1>{this.props.currentUser}</h1>
                 </div>
 
                 <div className="my-library-user-separator" />
 
                 <div className="my-library-user-links">
-                <span>Boards</span>
-                <span>Pin</span>
-                <span>Followers</span>
-                <span>Following</span>
+                <h1>Boards</h1>
+                <h1>Pin</h1>
+                <h1>Followers</h1>
+                <h1>Following</h1>
                 </div>
               </div>
             </div>

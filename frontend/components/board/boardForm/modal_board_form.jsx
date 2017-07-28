@@ -80,6 +80,7 @@ class ModalBoardForm extends React.Component {
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Board Create">
+
                <h1>CREATE YOUR BOARD</h1>
                <form className="board-create-form-all"
                      onSubmit={this.handleSubmit}>

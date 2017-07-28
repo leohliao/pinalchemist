@@ -49,12 +49,13 @@ class PinShow extends React.Component {
              alt={pin.title}
              onClick={this.handleSubmit}/>
           <h3>{pin.description}</h3>
-          <div className="pin-show-form-delete">
+          { this.props.pin.user_id === this.props.currentUser_id ?
+            <div className="pin-show-form-delete">
              <img
                src="http://res.cloudinary.com/leosoba/image/upload/v1501017415/delete_pin_p3tmp1.png"
                onClick={this.removePin}/>
              <h6>DELETE PIN</h6>
-          </div>
+          </div> : "" }
       </div>
     );//end return
   }//end render
