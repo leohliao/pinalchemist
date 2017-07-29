@@ -76,8 +76,7 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
       <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
       <div>{this.navLink()}</div>
 
-    </div>
-
-    ```
-
+  </div>
+  ```
+  
 In the above example, I implemented an "update" function that will set my state's contents according to the component I provided. I also use a lot of ternary logic to show different text accord to the state's properties.
