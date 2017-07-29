@@ -31,7 +31,24 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 ## Implementation Style
   - Coding Style: In order to keep the codes neat and dry. I usually create separate classes of object and implement them repeatedly as much as possible.  
 
+  ```html
+  <div className="board-show-all">
+      <Masonry className={'board-index-masonry'}
+               elementType={'ul'}
+               options={masonryOptions}
+               disableImagesLoaded={false}
+               updateOnEachImageLoad={false}>
+        <div className="modal-board-form-container">
+          <ModalBoardForm />
+        </div>
+          { havePins }
+      </Masonry>
+  </div>
+  ```
 
+  Another Example:
+
+  
 
 
 
