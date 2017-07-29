@@ -29,8 +29,8 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 ## Implementation Style
 
-    - Coding Style:
-    I like to keep my codes minimum and separated. Therefore I usually create separate classes of object that would serves as templates and can be used over and over. In the following example, I used the same form (ModalPinItem and ModalBoardForm) that I have used in other parts of the code. I also like to group my codes separated by their category. So I usually define my functions outside of the html part of the file.
+    ** Coding Style:
+    I like to keep my codes minimum and separated. Therefore I usually create separate classes of object that would serves as templates and can be used over and over. In the following example, I used the same form (ModalPinItem and ModalBoardForm) that I have used in other parts of the code. I also like to group my codes separated by their category. So I usually define my functions outside of the html part of the file:
 
     ```jsx
     const havePins = filteredPins.reverse().map( pin => (
@@ -61,7 +61,7 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
       ```
 
 
-    - The tricky part of PinAlchemist is the data associations, in the effort of minimizing the chances of having to modify the table, I changed my backend code so that it filters out prior on sending data to the frontend.
+    - The tricky part of PinAlchemist is the data associations, in the effort of minimizing the chances of having to modify the table, I changed my backend code so that it filters out prior on sending data to the frontend:
 
 
     ``ruby
