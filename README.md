@@ -6,11 +6,11 @@ and thus helping more people to come up with new ideas and inventions.
 This web app is solely build using Ruby on Rails, and React/Redux using POSTGRESQL database.
 
 ## Features
-  - [ ] User Authentication: authentication is implemented both in the frontend and backend.
+  - User Authentication: authentication is implemented both in the frontend and backend.
     ![auth_01](https://user-images.githubusercontent.com/25352090/28740694-06f4442e-73bd-11e7-8e37-5dc28cedd5a1.png)
     * [ ] Users will not be able to enter the site unless they log in or sign up as new user.
     * [ ]Users will not be able to see the DELETE PIN icons unless if they are the author of the pin. (For convenient purpose of the inspector, I included a guest login, see DEMO button)
-  - [ ] User can see all the pins available on the site, they can also create news pins (upload images), delete pins(only if they are authorized).
+  - User can see all the pins available on the site, they can also create news pins (upload images), delete pins(only if they are authorized).
     ![auth_03](https://user-images.githubusercontent.com/25352090/28740704-18496f60-73bd-11e7-9439-2f9f9df5c54a.png)
   - Major UI Components:
     * [ ] Interactive grids system: the arrangement of the pins will be varied according users' browser screen size when they enter the site. Masonry is implemented for the smooth transitioning of the images.
@@ -76,11 +76,11 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
     ```
 
 ## PinAlchemist Project Design
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API Endpoints][api-endpoints]
-* [DB Schema][schema]
-* [Sample State][sample-state]
+* [View Wireframes](docs/wireframes)
+* [React Components](docs/component-hierarchy.md)
+* [API Endpoints](docs/api-endpoints.md)
+* [DB Schema](docs/schema.md)
+* [Sample State](docs/sample-state.md)
 
 
 ## Future Directions
