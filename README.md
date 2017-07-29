@@ -12,15 +12,16 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
       * Users will not be able to enter the site unless they log in or sign up as new user.
       * Users will not be able to see the DELETE PIN icons unless if they are the author of the pin. (For convenient purpose of the inspector, I included a guest login, see DEMO button)
-
-  - User can see all the pins available on the site, they can also create news pins (upload images), delete pins(only if they are authorized).
+      * User can see all the pins available on the site, they can also create news pins (upload images), delete pins(only if they are authorized).
 
     ![auth_03](https://user-images.githubusercontent.com/25352090/28740704-18496f60-73bd-11e7-9439-2f9f9df5c54a.png)
+
 
   - Major UI Components:
     * Interactive grids system: the arrangement of the pins will be varied according users' browser screen size when they enter the site. Masonry is implemented for the smooth transitioning of the images.
 
       ![ui_01](https://user-images.githubusercontent.com/25352090/28740700-0fbb4576-73bd-11e7-82b7-226f7410448e.png)
+
 
     * Pop up window: Creating a new pin, showing a single pin will be result in popping out a separate window for better viewing purposes. There is a close button on the window, but user can user also click area outside of the pop up window to close it.
 
@@ -29,57 +30,14 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 ## Implementation Style
 
-    ** Coding Style:
+    - Coding Style:
     I like to keep my codes minimum and separated. Therefore I usually create separate classes of object that would serves as templates and can be used over and over. In the following example, I used the same form (ModalPinItem and ModalBoardForm) that I have used in other parts of the code. I also like to group my codes separated by their category. So I usually define my functions outside of the html part of the file:
 
-    ```jsx
-    const havePins = filteredPins.reverse().map( pin => (
-      <div className="board-index-masonry-ul-li" key={pin.id} >
-        <div className="modal-board-form-container" >
-            <div className="modal-board-thumbnail-container-show">
-              <div>
-                <ModalPinItem pin={pin}/>
-              </div>
-            </div>
-        </div>
-      </div>
-    ));
-    ```
-
     Similar concept is applied to html:
-
-    ```html
-    return(
-      <div className="board-show-all">
-          <Masonry className={'board-index-masonry'}
-                   elementType={'ul'}
-                   options={masonryOptions}
-                   disableImagesLoaded={false}
-                   updateOnEachImageLoad={false}>
-              <div className="modal-board-form-container">
-                <ModalBoardForm />
-              </div>
-                { havePins }
-          </Masonry>
-      </div>
-      ```
 
 
     The tricky part of PinAlchemist is the data associations, in the effort of minimizing the chances of having to modify the table, I changed my backend code so that it filters out prior on sending data to the frontend:
 
-
-    ```ruby
-    def index
-      @boards = Board.includes(:pins).where(user_id: params[:user_id])
-      render 'api/boards/index'
-    end
-
-    def show
-      # keeps us from using n+1
-      @board = Board.includes(:pins).find(params[:id])
-      render 'api/boards/show'
-    end
-    ```
 
 ## PinAlchemist Project Design
 * [View Wireframes](docs/wireframes)
