@@ -80,33 +80,8 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
     ```
 
-    In the above example, I implemented an "update" function that will set my state's contents according to the component I provided. I also use a lot of ternary logic to show different text accord to the state's properties.
+In the above example, I implemented an "update" function that will set my state's contents according to the component I provided. I also use a lot of ternary logic to show different text accord to the state's properties.
 
-
-## Challenges in  PinAlchemist
-
-- The most challenging part about PinAlchemist is how to manipulate the association between each states so that one can pull up other data. In order to pull up the right data, active records and association were used in the effort to pull up the most accurate data in the backend:
-
-  ```ruby
-  # app/controllers/api/boards_controller.rb
-  def index
-    @boards = Board.includes(:pins).where(user_id: params[:user_id])
-    render 'api/boards/index'
-  end
-  ```
-
-Although the `index` function needs to return all the boards, I specifically set it to search for the pins has the ID that matches with the params[:id], this way I won't just receive all the boards that are unnecessary. Using where instead of find will ensure to return single or more records that I need to use.
-
-
-  ```ruby
-  # app/models/pinning.rb
-    belongs_to :board,
-      primary_key: :id,
-      foreign_key: :board_id,
-      class_name: "Board", dependent: :destroy
-  ```
-
-  In addition to finding the right data, being able to accurately link all the different tables from the backend is also extremely important. In the above example, I set the dependent to be destroy so that when I activate the destroy method in my pinnings, it will also call the destroy method on the board.
 
 
 ## PinAlchemist Project Design
