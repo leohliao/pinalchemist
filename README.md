@@ -62,7 +62,7 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
     The tricky part of PinAlchemist is the data associations, in the effort of minimizing the chances of having to modify the table, I changed my backend code so that it filters out prior on sending data to the frontend.
 
-    ```ruby
+    ``ruby
     def index
       @boards = Board.includes(:pins).where(user_id: params[:user_id])
       render 'api/boards/index'
