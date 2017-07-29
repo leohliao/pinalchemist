@@ -29,7 +29,8 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 
 ## Implementation Style
-  - Coding Style: In order to keep the codes neat and dry. I usually create separate classes of object and implement them repeatedly as much as possible.  
+  - Coding Style: In order to keep the codes neat and dry. I usually create separate classes of object and implement them repeatedly as much as possible. In the following example, I created a component for Masonry,
+  and then implement separate jsx components into the Masonry to get the effect I wanted.
 
   ```html
   <div className="board-show-all">
@@ -38,19 +39,72 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
                options={masonryOptions}
                disableImagesLoaded={false}
                updateOnEachImageLoad={false}>
+
         <div className="modal-board-form-container">
           <ModalBoardForm />
         </div>
-          { havePins }
+
+        { havePins }
+
       </Masonry>
   </div>
   ```
 
-  Another Example:
+  The benefits of using different components together can create tremendous UI effects on the app. In the above example, I have implemented Modal component into Masonry component. By doing this, not only my app will be shown and displayed in astonishing view, but it will also have the ability to open each element in a separate browser (the functionality that Modal has). Here is another example of how I usually implement my functions to keep code dry:
 
-  
+  ```html
+  <div className="session-credential-form">
+      <label>
+        <input type="text"
+               value={this.state.username}
+               placeholder={ usernamePlaceholder }
+               onChange={this.update(`username`)}
+               className="session-input"/>
+      </label>
+      <label>
+        <input type="password"
+               value={this.state.password}
+               placeholder={ passwordPlaceholder }
+               onChange={this.update(`password`)}
+               className="session-input"/>
+      </label>
 
+      <button type="submit"
+              className="session-form-submit-button"><span>{submitText}</span></button>
 
+            <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
+            <div>{this.navLink()}</div>
+    </div>{/* session-credential-form */}
+    ```
+
+    In the above example, I implemented an "update" function that will set my state's contents according to the component I provided.  
+
+## Challenges in  PinAlchemist
+  - The most challenging part about PinAlchemist is how to manipulate the association between each states so that one can pull up other data. In order to pull up the right data, active records and association were used in the effort to pull up the most accurate data in the backend:
+
+  ```ruby
+  # app/controllers/api/boards_controller.rb
+  def index
+    @boards = Board.includes(:pins).where(user_id: params[:user_id])
+    render 'api/boards/index'
+  end
+
+  def show
+    @board = Board.includes(:pins).find(params[:id])
+    render 'api/boards/show'
+  end
+  ```
+  Although the `index` function needs to return all the boards, I specifically set it to search for the pins has the ID that matches with the params[:id], this way I won't just receive all the boards that are unnecessary. Using where instead of find will ensure to return single or more records that I need to use.
+
+  ```ruby
+  # app/models/pinning.rb
+    belongs_to :board,
+      primary_key: :id,
+      foreign_key: :board_id,
+      class_name: "Board", dependent: :destroy
+  ```
+
+  In addition to finding the right data, being able to accurately link all the different tables from the backend is also extremely important. In the above example, I set the dependent to be destroy so that when I activate the destroy method in my pinnings, it will also call the destroy method on the board.
 
 
 ## PinAlchemist Project Design

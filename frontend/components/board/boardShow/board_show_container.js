@@ -5,9 +5,9 @@ import { requestAllPins } from '../../../actions/pin_actions';
 import { selectAllPins } from '../../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
-  const boardId = match.params.id
-  const board = state.boards[boardId]
-  const boardPins = board ? board.pin_ids : []
+  const boardId = match.params.id;
+  const board = state.boards[boardId];
+  const boardPins = board ? board.pin_ids : [];
 
   return ({
     currentUser: state.session.currentUser,

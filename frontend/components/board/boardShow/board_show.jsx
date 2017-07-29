@@ -19,16 +19,10 @@ class BoardShow extends React.Component {
     this.props.requestAllPins();
   }//end componentDidMount
 
-  // componentWillReceiveProps(nextProps){
-  //   if (this.props.match.params.id !== nextProps.match.params.id) {
-  //    this.props.requestSingleBoard(nextProps.match.params.id);
-  //  }
-  // }//componentWillReceiveProps
-
   deleteBoard(e){
     e.preventDefault();
     this.props.history.push(`/users/${this.props.currentUser.id}`);
-    this.props.removeBoard(this.props.board.id)
+    this.props.removeBoard(this.props.board.id);
   }//deleteBoard
 
   render(){
