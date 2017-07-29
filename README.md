@@ -78,5 +78,56 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
   </div>
   ```
-  
+
 In the above example, I implemented an "update" function that will set my state's contents according to the component I provided. I also use a lot of ternary logic to show different text accord to the state's properties.
+
+
+## Challenges in  PinAlchemist
+
+- The most challenging part about PinAlchemist is how to manipulate the association between each states so that one can pull up other data. In order to pull up the right data, active records and association were used in the effort to pull up the most accurate data in the backend:
+
+      ```ruby
+      # app/controllers/api/boards_controller.rb
+      def index
+        @boards = Board.includes(:pins).where(user_id: params[:user_id])
+        render 'api/boards/index'
+      end
+      ```
+
+Although the `index` function needs to return all the boards, I specifically set it to search for the pins has the ID that matches with the params[:id], this way I won't just receive all the boards that are unnecessary. Using where instead of find will ensure to return single or more records that I need to use.
+
+
+      ```ruby
+      # app/models/pinning.rb
+        belongs_to :board,
+          primary_key: :id,
+          foreign_key: :board_id,
+          class_name: "Board", dependent: :destroy
+      ```
+
+In addition to finding the right data, being able to accurately link all the different tables from the backend is also extremely important. In the above example, I set the dependent to be destroy so that when I activate the destroy method in my pinnings, it will also call the destroy method on the board.
+
+## PinAlchemist Project Design
+* [View Wireframes](docs/wireframes)
+* [React Components](docs/component-hierarchy.md)
+* [API Endpoints](docs/api-endpoints.md)
+* [DB Schema](docs/schema.md)
+* [Sample State](docs/sample-state.md)
+
+
+## Future Directions
+  PinAlchemist was designed and launched in a relatively short amount of time. But I plan to continued to implement the following features to this wonderful web app as time permits:
+    * Implement and improve additional UI elements - showing thumbnail views in each boards.
+    * Implement and improve additional UI elements - add Infinite scroll.
+    * Have users be able to search pins.
+    * Have users be able to save pins into the boards.
+    * Have users be able to see other user's boards.
+    * Have users be able to follow other users, as well as be followed.
+
+[PinAlchemist Live]: https://pinalchemist.herokuapp.com/#/login
+[Pinterest]: https://www.pinterest.com/
+[wireframes]: (docs/wireframes)
+[components]: (docs/component-hierarchy.md)
+[sample-state]: (docs/sample-state.md)
+[api-endpoints]: (docs/api-endpoints.md)
+[schema]: (docs/schema.md)
