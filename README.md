@@ -81,22 +81,6 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 
 
-## Challenges in  PinAlchemist
-
-  - The most challenging part about PinAlchemist is how to manipulate the association between each states so that one can pull up other data. In order to pull up the right data, active records and association were used in the effort to pull up the most accurate data in the backend:
-
-  ```ruby
-  # app/controllers/api/boards_controller.rb
-  def index
-    @boards = Board.includes(:pins).where(user_id: params[:user_id])
-    render 'api/boards/index'
-  end
-
-  def show
-    @board = Board.includes(:pins).find(params[:id])
-    render 'api/boards/show'
-  end
-  ```
 
   Although the `index` function needs to return all the boards, I specifically set it to search for the pins has the ID that matches with the params[:id], this way I won't just receive all the boards that are unnecessary. Using where instead of find will ensure to return single or more records that I need to use.
 
