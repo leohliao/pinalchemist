@@ -77,9 +77,12 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
     </div>{/* session-credential-form */}
     ```
 
-    In the above example, I implemented an "update" function that will set my state's contents according to the component I provided.  
+    In the above example, I implemented an "update" function that will set my state's contents according to the component I provided. I also use a lot of ternary logic to show different text accord to the state's properties.
+
+
 
 ## Challenges in  PinAlchemist
+
   - The most challenging part about PinAlchemist is how to manipulate the association between each states so that one can pull up other data. In order to pull up the right data, active records and association were used in the effort to pull up the most accurate data in the backend:
 
   ```ruby
@@ -94,7 +97,9 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
     render 'api/boards/show'
   end
   ```
+
   Although the `index` function needs to return all the boards, I specifically set it to search for the pins has the ID that matches with the params[:id], this way I won't just receive all the boards that are unnecessary. Using where instead of find will ensure to return single or more records that I need to use.
+
 
   ```ruby
   # app/models/pinning.rb
