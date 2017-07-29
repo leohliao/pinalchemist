@@ -29,8 +29,12 @@ This web app is solely build using Ruby on Rails, and React/Redux using POSTGRES
 
 
 ## Implementation Style
+  - Coding Style: In order to keep the codes neat and dry. I usually create separate classes of object and implement them repeatedly as much as possible.  
 
-    
+
+
+
+
 
 ## PinAlchemist Project Design
 * [View Wireframes](docs/wireframes)
