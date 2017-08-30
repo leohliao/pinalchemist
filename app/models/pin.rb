@@ -17,6 +17,15 @@ class Pin < ApplicationRecord
   belongs_to :author,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: "User"
+    class_name: :User
+
+  has_many :pinnings,
+    primary_key: :id,
+    foreign_key: :pin_id,
+    class_name: :Pinning
+
+  has_many :boards,
+    through: :pinnings,
+    source: :board
 
 end

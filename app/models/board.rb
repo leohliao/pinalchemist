@@ -19,12 +19,13 @@ class Board < ApplicationRecord
   belongs_to :author,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: "User"
+    class_name: :User
 
   has_many :pinnings,
+    dependent: :destroy,
     primary_key: :id,
     foreign_key: :board_id,
-    class_name: "Pinning"
+    class_name: :Pinning
 
   has_many :pins,
     through: :pinnings,
