@@ -7,6 +7,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.image_url = "http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg"
 
     if @user.save
       login(@user)
@@ -17,7 +18,8 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(username: params[:username])
+    # @user = User.find_by(username: params[:username])
+    @user = current_user
 
     if @user.update(user_params)
       render 'api/users/show'
