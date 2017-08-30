@@ -20,12 +20,34 @@ class User < ApplicationRecord
   has_many :pins,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: "Pin"
+    class_name: :Pin
 
   has_many :boards,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: "Boards"
+    class_name: :Boards
+
+  has_many :my_pins,
+    through: :boards,
+    source: :pins
+
+  has_many :i_am_being_followed,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: :Following
+
+  has_many :i_am_following,
+    primary_key: :id,
+    foreign_key: :following_id,
+    class_name: :Following
+
+  has_many :disciples,
+    through: :i_am_being_followed,
+    source: :disciples
+
+  has_many :masters,
+    through: :i_am_following,
+    source: :disciples
 
   attr_reader :password
 
