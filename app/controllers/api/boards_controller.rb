@@ -1,4 +1,7 @@
 class Api::BoardsController < ApplicationController
+
+  # before_action :required_logged_in
+  
   def index
     # @boards = Board.includes(:pins).where(user_id: params[:user_id])
     @boards = Board.where(user_id: params[:user_id])
