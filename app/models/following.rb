@@ -12,12 +12,12 @@
 class Following < ApplicationRecord
   validates :following_id, :follower_id, presence: true
 
-  belongs_to :disciples,
+  belongs_to :disciple,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :User
 
-  belongs_to :masters,
+  belongs_to :master,
     primary_key: :id,
     foreign_key: :following_id,
     class_name: :User
