@@ -1,7 +1,8 @@
 class Api::BoardsController < ApplicationController
   def index
     # @boards = Board.includes(:pins).where(user_id: params[:user_id])
-    @boards = current_user.boards
+    @boards = Board.where(user_id: params[:user_id])
+    # @boards = current_user.boards
     render 'api/boards/index'
   end
 
