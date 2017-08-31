@@ -43,11 +43,11 @@ class User < ApplicationRecord
 
   has_many :disciples,
     through: :i_am_being_followed,
-    source: :disciples
+    source: :disciple
 
   has_many :masters,
     through: :i_am_following,
-    source: :disciples
+    source: :master
 
   attr_reader :password
 
