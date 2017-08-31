@@ -35,7 +35,7 @@ before_action :required_logged_in
   end
 
   def destroy
-    @pin = Pin.find(params[:id])
+    @pin = current_user.my_pins.find(params[:id])
     @pin.destroy
     render 'api/pins/show'
   end
