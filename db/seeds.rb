@@ -7,10 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-Pin.destroy_all
-Board.destroy_all
-Pinning.destroy_all
-Following.destroy_all
+
 # This is used for demo account
 # ------ DONT DELETE -------------
 user1 = User.create!(username: "guest", password: "iamdemo")
@@ -21,7 +18,7 @@ user4 = User.create!({username: "leol3", password: "password", image_url: "http:
 user5 = User.create!({username: "leol4", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164721/3_Lelouch_101909_1256006940_tcglgz.jpg"})
 user6 = User.create!({username: "leol5", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164774/5_Vegeta_101909_1256006982_psyiy9.jpg"})
 
-
+Pin.destroy_all
 pin1 = Pin.create!({title: 'Gamera Remake',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Gamera_hohult.jpg",
              user_id: User.find_by_username("leol1").id})
@@ -218,284 +215,304 @@ pin52 = Pin.create!({title: 'Visual Development Cactus and church',
             description: "Paint by Ziwei Duanmu",
             user_id: User.find_by_username("leol2").id})
 
-
-board1 = Board.create!({board_name: 'My favorite',
+Board.destroy_all
+board1 = Board.create!({board_name: 'My favorites',
                description: "Collections of all my favorite",
                user_id: User.find_by_username("leol1").id})
-board2 = Board.create!({board_name: 'Artistst That Inspires Me',
+board2 = Board.create!({board_name: 'Art Center',
                description: "Amazing artworks collection from artCenter",
                user_id: User.find_by_username("guest").id})
-board3 = Board.create!({board_name: 'Incredible Illustration for Cats',
+board3 = Board.create!({board_name: 'Incredible Illustration',
                description: "Meow Meow",
                user_id: User.find_by_username("leol1").id})
-board4 = Board.create!({board_name: 'What else is there?',
+board4 = Board.create!({board_name: 'Illustration',
                description: "Some cool arts I found",
                user_id: User.find_by_username("guest").id})
-board5 = Board.create!({board_name: 'Ideas',
+board5 = Board.create!({board_name: 'Inspiration',
                description: "Images that inspires the heck outta me",
                user_id: User.find_by_username("leol1").id})
-board6 = Board.create!({board_name: 'Freelance',
+board6 = Board.create!({board_name: 'Freelancer',
                description: "All the cool stuff drawn by cool peole",
                user_id: User.find_by_username("guest").id})
-board7 = Board.create!({board_name: 'Board 7',
+board7 = Board.create!({board_name: 'Cats',
               description: "Meow Meow",
               user_id: User.find_by_username("leol1").id})
-board8 = Board.create!({board_name: 'I got a dream',
+board8 = Board.create!({board_name: 'Sweet Arts',
               description: "I got a dream",
               user_id: User.find_by_username("leol2").id})
-board9 = Board.create!({board_name: 'i can do tiz',
+board9 = Board.create!({board_name: 'Arts of mine',
               description: "I can do tis",
               user_id: User.find_by_username("leol1").id})
-board10 = Board.create!({board_name: 'cool',
+board10 = Board.create!({board_name: 'Cool Arts',
               description: "Cool",
               user_id: User.find_by_username("leol2").id})
-board11 = Board.create!({board_name: 'Master collections',
+board11 = Board.create!({board_name: 'Masters illustration',
                description: "master collections",
                user_id: User.find_by_username("leol1").id})
-board12 = Board.create!({board_name: 'is funny',
+board12 = Board.create!({board_name: 'Masters',
                description: "Amazing artworks collection from artCenter",
                user_id: User.find_by_username("guest").id})
-board13 = Board.create!({board_name: 'animal',
+board13 = Board.create!({board_name: 'Cute Animals',
                description: "Meow Meow",
                user_id: User.find_by_username("leol1").id})
-board14 = Board.create!({board_name: 'smells good',
+board14 = Board.create!({board_name: 'More Animals',
                description: "Some cool arts I found",
                user_id: User.find_by_username("guest").id})
-board15 = Board.create!({board_name: 'Yayy',
+board15 = Board.create!({board_name: 'Amazing Artists',
                description: "Images that inspires the heck outta me",
                user_id: User.find_by_username("leol1").id})
-board16 = Board.create!({board_name: 'disney',
+board16 = Board.create!({board_name: 'Viz from Disney',
                description: "All the cool stuff drawn by cool peole",
                user_id: User.find_by_username("guest").id})
-board17 = Board.create!({board_name: 'animation concept',
+board17 = Board.create!({board_name: 'Concept for Animation',
               description: "Meow Meow",
               user_id: User.find_by_username("leol1").id})
-board18 = Board.create!({board_name: 'no repeats',
+board18 = Board.create!({board_name: 'More Boards',
               description: "Some cool arts I found",
               user_id: User.find_by_username("guest").id})
-board19 = Board.create!({board_name: 'rake aborted',
+board19 = Board.create!({board_name: 'Another Sets of Images',
               description: "Images that inspires the heck outta me",
               user_id: User.find_by_username("leol1").id})
-board20 = Board.create!({board_name: 'motta',
+board20 = Board.create!({board_name: 'More amazing arts',
               description: "All the cool stuff drawn by cool peole",
               user_id: User.find_by_username("guest").id})
-board21 = Board.create!({board_name: 'my pinnings',
-              description: "Journey begins here",
-              user_id: User.find_by_username("guest").id})
 
-board1.pin_ids = [pin1.id, pin2.id, pin4.id, pin6.id, pin8.id,
-                  pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
-                  pin20.id, pin21.id, pin37.id, pin35.id, pin32.id,
-                  pin41.id, pin42.id, pin45.id, pin47.id, pin49.id,
-                  pin51.id];
-board1.save!
+# board1.pin_ids = [pin1.id, pin2.id, pin4.id, pin6.id, pin8.id,
+#                   pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
+#                   pin20.id, pin21.id, pin37.id, pin35.id, pin32.id,
+#                   pin41.id, pin42.id, pin45.id, pin47.id, pin49.id,
+#                   pin51.id];
+# board1.save!
+#
+# board2.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
+#                   pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
+#                   pin22.id, pin24.id, pin31.id, pin32.id, pin33.id,
+#                   pin43.id, pin41.id, pin45.id, pin46.id, pin50.id,
+#                   pin14.id, pin16.id, pin18.id, pin20.id, pin21.id];
+# board2.save!
+#
+# board3.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
+#                   pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
+#                   pin22.id, pin24.id, pin31.id, pin32.id, pin33.id,
+#                   pin43.id, pin41.id, pin45.id, pin46.id, pin52.id,
+#                   pin13.id, pin17.id, pin50.id];
+# board3.save!
+#
+# board4.pin_ids = [pin2.id, pin3.id, pin6.id, pin7.id, pin8.id,
+#                   pin41.id, pin44.id, pin45.id, pin50.id, pin49.id,
+#                   pin51.id, pin29.id, pin27.id, pin16.id,
+#                   pin18.id, pin30.id];
+# board4.save!
+#
+# board5.pin_ids = [pin3.id, pin4.id, pin5.id, pin7.id, pin9.id,
+#                   pin11.id, pin15.id, pin17.id, pin18.id, pin19.id,
+#                   pin22.id, pin25, pin27.id, pin29.id,
+#                   pin30.id, pin31.id, pin37.id,
+#                   pin43.id,
+#                   pin50.id, pin52.id];
+# board5.save!
+#
+# board6.pin_ids = [pin1.id, pin2.id, pin4.id, pin7.id, pin8.id, pin9.id,
+#                   pin19.id, pin11.id, pin15.id, pin17.id, pin18.id,
+#                   pin30.id, pin31.id, pin27.id,
+#                   pin42.id, pin43.id, pin45.id, pin50.id, pin52.id];
+# board6.save!
+#
+# board7.pin_ids = [pin1.id, pin2.id,pin4.id, pin6.id, pin8.id,
+#                   pin5.id, pin7.id, pin9.id, pin11.id, pin10.id,
+#                   pin12.id, pin13.id, pin17.id, pin22.id, pin24.id,
+#                   pin30.id, pin32.id, pin33.id, pin43.id, pin41.id,
+#                   pin45.id, pin46.id, pin52.id, pin50.id];
+# board7.save!
+#
+# board8.pin_ids = [pin1.id, pin2.id, pin4.id, pin6.id, pin8.id,
+#                   pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
+#                   pin20.id, pin21.id, pin37.id, pin35.id, pin32.id,
+#                   pin41.id, pin42.id, pin45.id, pin47.id, pin49.id,
+#                   pin51.id];
+# board8.save!
+#
+# board9.pin_ids = [pin2.id, pin6.id, pin7.id, pin9.id, pin1.id, pin16.id,
+#                   pin20.id, pin21.id, pin22.id, pin24.id,
+#                   pin37.id, pin32.id, pin34.id,
+#                   pin43.id, pin41.id, pin45.id, pin47.id, pin50.id,
+#                   ];
+# board9.save!
+#
+# board10.pin_ids = [pin11.id, pin19.id, pin29.id, pin24.id, pin28.id];
+# board10.save!
+#
+# board11.pin_ids = [pin1.id, pin2.id, pin3.id, pin5.id, pin7.id, pin9.id,
+#                    pin13.id, pin18.id, pin22.id, pin25.id, pin29.id,
+#                    pin30.id, pin37.id, pin42.id, pin50.id];
+# board11.save!
+#
+# board12.pin_ids = [pin1.id, pin2.id, pin3.id, pin5.id, pin7.id, pin9.id,
+#                    pin11.id, pin12.id, pin15.id, pin17.id, pin18.id,
+#                    pin30.id, pin31.id, pin27.id,
+#                    pin45.id, pin43.id, pin42.id,
+#                    pin50.id, pin52.id];
+# board12.save!
+#
+# board13.pin_ids = [pin4.id, pin6.id, pin8.id, pin5.id, pin7.id, pin9.id,
+#                    pin11.id, pin10.id, pin12.id,
+#                    pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
+#                    pin43.id, pin47.id, pin50.id];
+# board13.save!
+#
+# board14.pin_ids = [pin20.id, pin29.id, pin27.id, pin16.id, pin23.id,
+#                    pin30.id, pin37.id, pin35.id, pin32.id,
+#                    pin41.id, pin44.id, pin45.id, pin49.id,
+#                    pin50.id, pin51.id];
+# board14.save!
+#
+# board15.pin_ids = [pin3.id, pin5.id,
+#                    pin11.id, pin27.id, pin29.id, pin21.id, pin32.id,
+#                    pin52.id, pin43.id, pin15.id, pin17.id,
+#                    pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
+# board15.save!
+#
+# board16.pin_ids = [pin43.id, pin45.id, pin7.id, pin9.id, pin1.id, pin2.id,
+#                    pin31.id, pin42.id, pin27.id, pin19.id, pin11.id,
+#                    pin11.id, pin52.id, pin34.id, pin15.id, pin17.id,
+#                    pin30.id, pin18.id, pin31.id, pin13.id, pin50.id];
+# board16.save!
+#
+# board17.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin8.id,
+#                    pin4.id, pin6.id, pin38.id, pin10.id, pin12.id,
+#                    pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
+#                    pin13.id, pin17.id, pin50.id];
+# board17.save!
+#
+# board18.pin_ids = [pin21.id, pin2.id, pin4.id, pin6.id, pin8.id,
+#                    pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
+#                    pin20.id, pin23.id, pin37.id, pin35.id, pin32.id,
+#                    pin51.id];
+# board18.save!
+#
+# board19.pin_ids = [pin2.id, pin46.id, pin7.id, pin9.id, pin11.id, pin42.id,
+#                    pin22.id, pin24.id, pin37.id, pin32.id, pin34.id,
+#                    pin43.id, pin41.id, pin45.id, pin47.id, pin50.id,
+#                    pin44.id, pin16.id, pin16.id, pin20.id, pin21.id];
+# board19.save!
+#
+# board20.pin_ids = [pin31.id, pin42.id, pin21.id, pin20.id, pin50.id,
+#                    pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
+#                    pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
+#                    pin43.id, pin41.id, pin45.id, pin46.id, pin52.id,
+#                    pin13.id, pin17.id, pin50.id];
+# board20.save!
 
-board2.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin31.id, pin32.id, pin33.id,
-                  pin43.id, pin41.id, pin45.id, pin46.id, pin50.id,
-                  pin14.id, pin16.id, pin18.id, pin20.id, pin21.id];
-board2.save!
+Pinning.destroy_all
+pinning1 = Pinning.create!(board_id: board1.id, pin_id: pin1.id)
+pinning2 = Pinning.create!(board_id: board1.id, pin_id: pin2.id)
+pinning3 = Pinning.create!(board_id: board1.id, pin_id: pin3.id)
+pinning4 = Pinning.create!(board_id: board1.id, pin_id: pin4.id)
+pinning5 = Pinning.create!(board_id: board1.id, pin_id: pin5.id)
+pinning6 = Pinning.create!(board_id: board1.id, pin_id: pin6.id)
+pinning7 = Pinning.create!(board_id: board1.id, pin_id: pin7.id)
+pinning8 = Pinning.create!(board_id: board2.id, pin_id: pin8.id)
+pinning9 = Pinning.create!(board_id: board2.id, pin_id: pin9.id)
+pinning10 = Pinning.create!(board_id: board2.id, pin_id: pin10.id)
+pinning11 = Pinning.create!(board_id: board2.id, pin_id: pin11.id)
+pinning12 = Pinning.create!(board_id: board2.id, pin_id: pin12.id)
+pinning13 = Pinning.create!(board_id: board2.id, pin_id: pin13.id)
+pinning14 = Pinning.create!(board_id: board2.id, pin_id: pin14.id)
+pinning15 = Pinning.create!(board_id: board3.id, pin_id: pin15.id)
+pinning16 = Pinning.create!(board_id: board3.id, pin_id: pin16.id)
+pinning17 = Pinning.create!(board_id: board3.id, pin_id: pin17.id)
+pinning18 = Pinning.create!(board_id: board3.id, pin_id: pin18.id)
+pinning19 = Pinning.create!(board_id: board3.id, pin_id: pin19.id)
+pinning20 = Pinning.create!(board_id: board3.id, pin_id: pin20.id)
+pinning21 = Pinning.create!(board_id: board3.id, pin_id: pin21.id)
+pinning22 = Pinning.create!(board_id: board4.id, pin_id: pin22.id)
+pinning23 = Pinning.create!(board_id: board4.id, pin_id: pin23.id)
+pinning24 = Pinning.create!(board_id: board4.id, pin_id: pin24.id)
+pinning25 = Pinning.create!(board_id: board4.id, pin_id: pin25.id)
+pinning26 = Pinning.create!(board_id: board4.id, pin_id: pin26.id)
+pinning27 = Pinning.create!(board_id: board4.id, pin_id: pin27.id)
+pinning28 = Pinning.create!(board_id: board4.id, pin_id: pin28.id)
+pinning29 = Pinning.create!(board_id: board5.id, pin_id: pin29.id)
+pinning30 = Pinning.create!(board_id: board5.id, pin_id: pin30.id)
+pinning31 = Pinning.create!(board_id: board5.id, pin_id: pin31.id)
+pinning32 = Pinning.create!(board_id: board5.id, pin_id: pin32.id)
+pinning33 = Pinning.create!(board_id: board5.id, pin_id: pin33.id)
+pinning34 = Pinning.create!(board_id: board5.id, pin_id: pin34.id)
+pinning35 = Pinning.create!(board_id: board6.id, pin_id: pin35.id)
+pinning36 = Pinning.create!(board_id: board6.id, pin_id: pin36.id)
+pinning37 = Pinning.create!(board_id: board6.id, pin_id: pin37.id)
+pinning38 = Pinning.create!(board_id: board6.id, pin_id: pin38.id)
+pinning39 = Pinning.create!(board_id: board6.id, pin_id: pin39.id)
+pinning40 = Pinning.create!(board_id: board7.id, pin_id: pin40.id)
+pinning41 = Pinning.create!(board_id: board7.id, pin_id: pin41.id)
+pinning42 = Pinning.create!(board_id: board7.id, pin_id: pin42.id)
+pinning43 = Pinning.create!(board_id: board7.id, pin_id: pin43.id)
+pinning44 = Pinning.create!(board_id: board7.id, pin_id: pin44.id)
+pinning45 = Pinning.create!(board_id: board8.id, pin_id: pin45.id)
+pinning46 = Pinning.create!(board_id: board8.id, pin_id: pin46.id)
+pinning47 = Pinning.create!(board_id: board8.id, pin_id: pin47.id)
+pinning48 = Pinning.create!(board_id: board8.id, pin_id: pin48.id)
+pinning49 = Pinning.create!(board_id: board8.id, pin_id: pin49.id)
+pinning50 = Pinning.create!(board_id: board8.id, pin_id: pin50.id)
+pinning51 = Pinning.create!(board_id: board9.id, pin_id: pin51.id)
+pinning52 = Pinning.create!(board_id: board9.id, pin_id: pin52.id)
+pinning53 = Pinning.create!(board_id: board9.id, pin_id: pin1.id)
+pinning54 = Pinning.create!(board_id: board9.id, pin_id: pin2.id)
+pinning55 = Pinning.create!(board_id: board10.id, pin_id: pin3.id)
+pinning56 = Pinning.create!(board_id: board10.id, pin_id: pin4.id)
+pinning57 = Pinning.create!(board_id: board10.id, pin_id: pin5.id)
+pinning58 = Pinning.create!(board_id: board10.id, pin_id: pin6.id)
+pinning59 = Pinning.create!(board_id: board10.id, pin_id: pin7.id)
+pinning60 = Pinning.create!(board_id: board11.id, pin_id: pin8.id)
+pinning61 = Pinning.create!(board_id: board11.id, pin_id: pin9.id)
+pinning62 = Pinning.create!(board_id: board11.id, pin_id: pin10.id)
+pinning63 = Pinning.create!(board_id: board12.id, pin_id: pin11.id)
+pinning64 = Pinning.create!(board_id: board12.id, pin_id: pin12.id)
+pinning65 = Pinning.create!(board_id: board12.id, pin_id: pin13.id)
+pinning66 = Pinning.create!(board_id: board13.id, pin_id: pin14.id)
+pinning67 = Pinning.create!(board_id: board13.id, pin_id: pin15.id)
+pinning68 = Pinning.create!(board_id: board13.id, pin_id: pin16.id)
+pinning69 = Pinning.create!(board_id: board13.id, pin_id: pin17.id)
+pinning70 = Pinning.create!(board_id: board14.id, pin_id: pin18.id)
+pinning71 = Pinning.create!(board_id: board14.id, pin_id: pin19.id)
+pinning72 = Pinning.create!(board_id: board15.id, pin_id: pin20.id)
+pinning73 = Pinning.create!(board_id: board15.id, pin_id: pin21.id)
+pinning74 = Pinning.create!(board_id: board15.id, pin_id: pin22.id)
+pinning75 = Pinning.create!(board_id: board16.id, pin_id: pin23.id)
+pinning76 = Pinning.create!(board_id: board16.id, pin_id: pin24.id)
+pinning77 = Pinning.create!(board_id: board17.id, pin_id: pin25.id)
+pinning78 = Pinning.create!(board_id: board17.id, pin_id: pin26.id)
+pinning79 = Pinning.create!(board_id: board18.id, pin_id: pin27.id)
+pinning80 = Pinning.create!(board_id: board19.id, pin_id: pin28.id)
 
-board3.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin31.id, pin32.id, pin33.id,
-                  pin43.id, pin41.id, pin45.id, pin46.id, pin52.id,
-                  pin13.id, pin17.id, pin50.id];
-board3.save!
-
-board4.pin_ids = [pin2.id, pin3.id, pin6.id, pin7.id, pin8.id,
-                  pin10.id, pin11.id, pin13.id, pin19.id, pin18.id,
-                  pin20.id, pin23.id, pin37.id, pin35.id, pin32.id,
-                  pin41.id, pin44.id, pin45.id, pin50.id, pin49.id,
-                  pin51.id, pin13.id, pin29.id, pin27.id, pin16.id,
-                  pin18.id, pin30.id];
-board4.save!
-
-board5.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin31.id, pin45.id, pin27.id, pin19.id, pin11.id,
-                  pin22.id, pin4.id, pin25.id, pin37.id, pin29.id,
-                  pin11.id, pin52.id, pin43.id, pin15.id, pin17.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board5.save!
-
-board6.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin31.id, pin45.id, pin27.id, pin19.id, pin11.id,
-                  pin22.id, pin4.id, pin25.id, pin37.id, pin29.id,
-                  pin11.id, pin52.id, pin43.id, pin15.id, pin17.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board6.save!
-
-board7.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
-                  pin43.id, pin41.id, pin45.id, pin46.id, pin52.id,
-                  pin13.id, pin17.id, pin50.id];
-board7.save!
-
-board8.pin_ids = [pin1.id, pin2.id, pin4.id, pin6.id, pin8.id,
-                  pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
-                  pin20.id, pin21.id, pin37.id, pin35.id, pin32.id,
-                  pin41.id, pin42.id, pin45.id, pin47.id, pin49.id,
-                  pin51.id];
-board8.save!
-
-board9.pin_ids = [pin2.id, pin6.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin22.id, pin24.id, pin37.id, pin32.id, pin34.id,
-                  pin43.id, pin41.id, pin45.id, pin47.id, pin50.id,
-                  pin44.id, pin16.id, pin16.id, pin20.id, pin21.id];
-board9.save!
-
-board10.pin_ids = [pin11.id, pin19.id, pin29.id, pin24.id, pin28.id];
-board10.save!
-
-board11.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin22.id, pin4.id, pin25.id, pin37.id, pin29.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board11.save!
-
-board12.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin31.id, pin45.id, pin27.id, pin19.id, pin11.id,
-                  pin11.id, pin52.id, pin43.id, pin15.id, pin17.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board12.save!
-
-board13.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
-                  pin13.id, pin17.id, pin50.id];
-board13.save!
-
-board14.pin_ids = [pin20.id, pin23.id, pin37.id, pin35.id, pin32.id,
-                  pin41.id, pin44.id, pin45.id, pin50.id, pin49.id,
-                  pin51.id, pin13.id, pin29.id, pin27.id, pin16.id,
-                  pin18.id, pin30.id];
-board14.save!
-
-board15.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin11.id, pin52.id, pin43.id, pin15.id, pin17.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board15.save!
-
-board16.pin_ids = [pin3.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin31.id, pin45.id, pin27.id, pin19.id, pin11.id,
-                  pin11.id, pin52.id, pin43.id, pin15.id, pin17.id,
-                  pin30.id, pin18.id, pin42.id, pin13.id, pin50.id];
-board16.save!
-
-board17.pin_ids = [pin11.id, pin5.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
-                  pin13.id, pin17.id, pin50.id];
-board17.save!
-
-board18.pin_ids = [pin1.id, pin2.id, pin4.id, pin6.id, pin8.id,
-                  pin10.id, pin12.id, pin14.id, pin16.id, pin18.id,
-                  pin20.id, pin21.id, pin37.id, pin35.id, pin32.id,
-                  pin51.id];
-board18.save!
-
-board19.pin_ids = [pin2.id, pin6.id, pin7.id, pin9.id, pin1.id, pin2.id,
-                  pin22.id, pin24.id, pin37.id, pin32.id, pin34.id,
-                  pin43.id, pin41.id, pin45.id, pin47.id, pin50.id,
-                  pin44.id, pin16.id, pin16.id, pin20.id, pin21.id];
-board19.save!
-
-board20.pin_ids = [pin31.id, pin42.id, pin21.id, pin20.id, pin50.id,
-                  pin4.id, pin6.id, pin8.id, pin10.id, pin12.id,
-                  pin22.id, pin24.id, pin30.id, pin32.id, pin33.id,
-                  pin43.id, pin41.id, pin45.id, pin46.id, pin52.id,
-                  pin13.id, pin17.id, pin50.id];
-board20.save!
-
-
-pinning1 = Pinning.create!(board_id: board21.id,
-                           pin_id: pin1.id)
-pinning2 = Pinning.create!(board_id: board21.id,
-                           pin_id: pin24.id)
-pinning3 = Pinning.create!(board_id: board21.id,
-                           pin_id: pin17.id)
-pinning4 = Pinning.create!(board_id: board21.id,
-                           pin_id: pin39.id)
-pinning5 = Pinning.create!(board_id: board21.id,
-                           pin_id: pin28.id)
-
+Following.destroy_all
 following1 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following2 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following3 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following4 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following5 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following6 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following7 = Following.create!(following_id: user1.id, follower_id: user3.id)
-following8 = Following.create!(following_id: user1.id, follower_id: user3.id)
-following9 = Following.create!(following_id: user1.id, follower_id: user3.id)
-following10 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following11 = Following.create!(following_id: user1.id, follower_id: user4.id)
-following12 = Following.create!(following_id: user1.id, follower_id: user4.id)
-following13 = Following.create!(following_id: user1.id, follower_id: user5.id)
-following14 = Following.create!(following_id: user1.id, follower_id: user5.id)
-following15 = Following.create!(following_id: user1.id, follower_id: user5.id)
-following16 = Following.create!(following_id: user1.id, follower_id: user6.id)
-following17 = Following.create!(following_id: user1.id, follower_id: user6.id)
-following18 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following19 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following20 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following21 = Following.create!(following_id: user2.id, follower_id: user2.id)
-following22 = Following.create!(following_id: user2.id, follower_id: user2.id)
-following23 = Following.create!(following_id: user2.id, follower_id: user2.id)
-following24 = Following.create!(following_id: user2.id, follower_id: user2.id)
-following25 = Following.create!(following_id: user2.id, follower_id: user3.id)
-following26 = Following.create!(following_id: user2.id, follower_id: user3.id)
-following27 = Following.create!(following_id: user2.id, follower_id: user3.id)
-following28 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following29 = Following.create!(following_id: user2.id, follower_id: user3.id)
-following30 = Following.create!(following_id: user2.id, follower_id: user4.id)
-following31 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following32 = Following.create!(following_id: user2.id, follower_id: user3.id)
-following33 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following34 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following35 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following36 = Following.create!(following_id: user2.id, follower_id: user1.id)
-following37 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following38 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following39 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following40 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following41 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following42 = Following.create!(following_id: user3.id, follower_id: user2.id)
-following43 = Following.create!(following_id: user3.id, follower_id: user2.id)
-following44 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following45 = Following.create!(following_id: user3.id, follower_id: user2.id)
-following46 = Following.create!(following_id: user3.id, follower_id: user5.id)
-following47 = Following.create!(following_id: user3.id, follower_id: user6.id)
-following48 = Following.create!(following_id: user3.id, follower_id: user5.id)
-following49 = Following.create!(following_id: user3.id, follower_id: user5.id)
-following50 = Following.create!(following_id: user3.id, follower_id: user4.id)
-following51 = Following.create!(following_id: user3.id, follower_id: user2.id)
-following52 = Following.create!(following_id: user3.id, follower_id: user1.id)
-following53 = Following.create!(following_id: user3.id, follower_id: user4.id)
-following54 = Following.create!(following_id: user4.id, follower_id: user1.id)
-following55 = Following.create!(following_id: user4.id, follower_id: user2.id)
-following56 = Following.create!(following_id: user4.id, follower_id: user2.id)
-following57 = Following.create!(following_id: user4.id, follower_id: user5.id)
-following58 = Following.create!(following_id: user4.id, follower_id: user2.id)
-following59 = Following.create!(following_id: user4.id, follower_id: user3.id)
-following60 = Following.create!(following_id: user4.id, follower_id: user2.id)
-following61 = Following.create!(following_id: user4.id, follower_id: user3.id)
-following62 = Following.create!(following_id: user4.id, follower_id: user6.id)
-following63 = Following.create!(following_id: user4.id, follower_id: user3.id)
-following64 = Following.create!(following_id: user4.id, follower_id: user1.id)
-following65 = Following.create!(following_id: user5.id, follower_id: user4.id)
-following66 = Following.create!(following_id: user5.id, follower_id: user4.id)
-following67 = Following.create!(following_id: user5.id, follower_id: user2.id)
-following68 = Following.create!(following_id: user5.id, follower_id: user3.id)
-following69 = Following.create!(following_id: user5.id, follower_id: user2.id)
-following70 = Following.create!(following_id: user5.id, follower_id: user2.id)
-following71 = Following.create!(following_id: user5.id, follower_id: user3.id)
-following72 = Following.create!(following_id: user5.id, follower_id: user4.id)
-following73 = Following.create!(following_id: user5.id, follower_id: user3.id)
-following74 = Following.create!(following_id: user6.id, follower_id: user1.id)
-following75 = Following.create!(following_id: user6.id, follower_id: user4.id)
-following76 = Following.create!(following_id: user6.id, follower_id: user3.id)
-following77 = Following.create!(following_id: user6.id, follower_id: user2.id)
-following78 = Following.create!(following_id: user6.id, follower_id: user1.id)
-following79 = Following.create!(following_id: user6.id, follower_id: user1.id)
+following2 = Following.create!(following_id: user1.id, follower_id: user3.id)
+following3 = Following.create!(following_id: user1.id, follower_id: user4.id)
+following4 = Following.create!(following_id: user1.id, follower_id: user5.id)
+following5 = Following.create!(following_id: user1.id, follower_id: user6.id)
+following6 = Following.create!(following_id: user2.id, follower_id: user1.id)
+following7 = Following.create!(following_id: user2.id, follower_id: user3.id)
+following8 = Following.create!(following_id: user2.id, follower_id: user4.id)
+following9 = Following.create!(following_id: user2.id, follower_id: user5.id)
+following10 = Following.create!(following_id: user2.id, follower_id: user6.id)
+following11 = Following.create!(following_id: user3.id, follower_id: user1.id)
+following12 = Following.create!(following_id: user3.id, follower_id: user2.id)
+following13 = Following.create!(following_id: user3.id, follower_id: user4.id)
+following14 = Following.create!(following_id: user3.id, follower_id: user5.id)
+following15 = Following.create!(following_id: user3.id, follower_id: user6.id)
+following16 = Following.create!(following_id: user4.id, follower_id: user1.id)
+following17 = Following.create!(following_id: user4.id, follower_id: user2.id)
+following18 = Following.create!(following_id: user4.id, follower_id: user3.id)
+following19 = Following.create!(following_id: user4.id, follower_id: user5.id)
+following20 = Following.create!(following_id: user4.id, follower_id: user6.id)
+following21 = Following.create!(following_id: user5.id, follower_id: user1.id)
+following22 = Following.create!(following_id: user5.id, follower_id: user2.id)
+following23 = Following.create!(following_id: user5.id, follower_id: user3.id)
+following24 = Following.create!(following_id: user5.id, follower_id: user4.id)
+following25 = Following.create!(following_id: user5.id, follower_id: user6.id)
+following26 = Following.create!(following_id: user6.id, follower_id: user1.id)
+following27 = Following.create!(following_id: user6.id, follower_id: user2.id)
+following28 = Following.create!(following_id: user6.id, follower_id: user3.id)
+following29 = Following.create!(following_id: user6.id, follower_id: user4.id)
+following30 = Following.create!(following_id: user6.id, follower_id: user5.id)

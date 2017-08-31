@@ -30,8 +30,8 @@ class Board < ApplicationRecord
     through: :pinnings,
     source: :pin
 
-  def pin_ids
-    # get the ids in the table column
-    self.pins.pluck(:id)
-  end
+  # def pin_ids
+  #   # get the ids in the table column
+  #   self.pins.pluck(:id)
+  # end
 end

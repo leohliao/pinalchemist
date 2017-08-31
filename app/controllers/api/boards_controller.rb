@@ -1,17 +1,20 @@
 class Api::BoardsController < ApplicationController
   def index
-    @boards = Board.includes(:pins).where(user_id: params[:user_id])
+    # @boards = Board.includes(:pins).where(user_id: params[:user_id])
+    @boards = current_user.boards
     render 'api/boards/index'
   end
 
   def show
     # keeps us from using n+1
-    @board = Board.includes(:pins).find(params[:id])
+    # @board = Board.includes(:pins).find(params[:id])
+    @board = Board.find(params[:id])
     render 'api/boards/show'
   end
 
   def create
-    @board = Board.new(board_params)
+    # @board = Board.new(board_params)
+    @board = current_user.boards.new(board_params)
     @board.user_id = current_user.id
 
     if @board.save
@@ -31,7 +34,8 @@ class Api::BoardsController < ApplicationController
   end
 
   def destroy
-    @board = Board.includes(:pins).find(params[:id])
+    # @board = Board.includes(:pins).find(params[:id])
+    @board = current_user.boards.find(params[:id])
     @board.destroy
     render 'api/boards/show'
   end
