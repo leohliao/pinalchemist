@@ -2,7 +2,8 @@ class Api::FollowingsController < ApplicationController
 
   def create
     @following = Following.new(following_params)
-    @user = User.find_by_id(@following.following_id)
+    # @user = User.find_by_id(@following.following_id)
+    @user = @following.disciple
 
     if @following.save
       render 'api/users/show'
@@ -12,9 +13,9 @@ class Api::FollowingsController < ApplicationController
   end
 
   def destroy
-    @following = Following.where(following_id: params[:following][:following_id]).first
+    @following = current_user.i_am_following.where(following_id: params[:following][:following_id]).first
     # @user = User.find(:following.following_id)
-    @user = @follow.disciple
+    @user = @following.disciple
 
     @following.destroy
     render json: 'api/user/show'
