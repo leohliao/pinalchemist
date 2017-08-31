@@ -13,7 +13,6 @@ class Api::PinningsController < ApplicationController
     @pinning = Pinning.where(board_id: params[:pinning][:board_id], pin_id: params[:pinning][:pin_id]).first
     board = @pinning.board
     @pinning.destroy
-    @board = board
     render 'api/boards/show'
   end
 
