@@ -10,7 +10,6 @@
 import * as sessionActions from '../actions/session_actions';
 import merge from 'lodash/merge';
 
-
 const defaultState = Object.freeze({
     currentUser: null,
     errors: []
@@ -26,8 +25,8 @@ const SessionReducer = (state = defaultState, action) => {
             newState.errors = []; ///clears the errors in the errors array
             return newState;
 
-        case sessionActions.RECEIVE_USER:
-            return merge({}, {currentUser: state.currentUser}, {user: action.user} );
+        // case sessionActions.RECEIVE_USER:
+        //     return merge({}, {currentUser: state.currentUser}, {user: action.user} );
 
         case sessionActions.RECEIVE_SESSION_ERRORS:
             const errors = action.errors;

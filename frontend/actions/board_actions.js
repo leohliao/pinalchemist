@@ -1,10 +1,11 @@
-
 import * as BoardAPIUtil from '../util/board_api_util';
+
 export const RECEIVE_USER_BOARDS = 'RECEIVE_USER_BOARDS';
 export const RECEIVE_SINGLE_BOARD = 'RECEIVE_SINGLE_BOARD';
 export const DELETE_BOARD = 'DELETE_BOARD';
-export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 export const RECEIVE_BOARD_ERRORS = 'RECEIVE_BOARD_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
 //action creators
 export const receiveUserBoards = (boards) => ({
   type: RECEIVE_USER_BOARDS,

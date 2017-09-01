@@ -26,7 +26,7 @@ class BoardShow extends React.Component {
   }//deleteBoard
 
   render(){
-    const { currentUser, boards, pins, boardPins } = this.props;
+    const { currentUser, boards, pins } = this.props;
 
     const masonryOptions = {
           gutter: 25,
@@ -38,7 +38,9 @@ class BoardShow extends React.Component {
 
     let filteredPins;
     if(this.props){
-      const filteringPins = pins.filter((pin) => this.props.boardPins.includes(pin.id));
+      console.log(this.props);
+      // const filteringPins = pins.filter((pin) => this.props.pins.pinned_boards.includes(board.id));
+      const filteringPins = this.props.pins
       if (filteringPins) {
         filteredPins = filteringPins;
       }
