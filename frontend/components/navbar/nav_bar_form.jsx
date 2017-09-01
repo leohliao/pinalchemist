@@ -28,8 +28,8 @@ class NavBarForm extends React.Component {
                name="search"
                placeholder="Search"/>
 
-        <div className="nav-bar-discover-ideas">
-        <p>Discover Ideas</p>
+        <div className="nav-bar-discover-ideas" >
+          <p>Discover Ideas</p>
         </div>
 
         <Link className="nav-bar-my-board" to="/mylibrary">

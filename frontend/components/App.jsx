@@ -6,6 +6,7 @@ import PinIndexContainer from './pin/pinIndex/pin_index_container';
 import PinShowContainer from './pin/pinShow/pin_show_container';
 import MyLibraryContainer from './myLibrary/my_library_container';
 import BoardShowContainer from './board/boardShow/board_show_container';
+import DiscoverIdeaContainer from './discover/discover_container';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
