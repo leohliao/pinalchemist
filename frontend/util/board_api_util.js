@@ -1,9 +1,9 @@
-// export const fetchAllBoards = () => {
-//   return $.ajax ({
-//     method: 'GET',
-//     url: `/api/boards`,
-//   })
-// }
+export const fetchUserBoards = (userId) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/users/${userId}/boards`
+  });
+};
 
 export const fetchSingleBoard = (id) => {
   return $.ajax ({

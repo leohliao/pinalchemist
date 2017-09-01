@@ -1,6 +1,5 @@
 
 import * as BoardAPIUtil from '../util/board_api_util';
-import * as UserAPIUtil from '../util/user_api_util';
 export const RECEIVE_USER_BOARDS = 'RECEIVE_USER_BOARDS';
 export const RECEIVE_SINGLE_BOARD = 'RECEIVE_SINGLE_BOARD';
 export const DELETE_BOARD = 'DELETE_BOARD';
@@ -33,7 +32,7 @@ export const clearBoardErrors = () => ({
 
 //thunk actions
 export const requestUserBoards = (userId) => dispatch => {
-  return (UserAPIUtil.fetchUserBoards(userId)
+  return (BoardAPIUtil.fetchUserBoards(userId)
     .then(boards => dispatch(receiveUserBoards(boards)
   ))
   );
