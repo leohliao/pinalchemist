@@ -2,11 +2,10 @@ class Api::FollowingsController < ApplicationController
 
   def create
     @following = Following.new(following_params)
-    # @user = User.find_by_id(@following.following_id)
-    @user = @following.disciple
+    @user = User.find_by_id(@following.following_id)
 
     if @following.save
-      render 'api/users/show'
+      render 'api/users/show.json.jbuilder'
     else
       render json: @following.errors.full_messages, status: 400
     end
@@ -14,11 +13,9 @@ class Api::FollowingsController < ApplicationController
 
   def destroy
     @following = current_user.i_am_following.where(following_id: params[:following][:following_id]).first
-    # @user = User.find(:following.following_id)
-    @user = @following.disciple
-
+    @user = User.find_by_id(@following.following_id)
     @following.destroy
-    render json: 'api/user/show'
+    render json: 'api/user/show.json.jbuilder'
   end
 
   private

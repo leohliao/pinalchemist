@@ -14,12 +14,12 @@ class Following < ApplicationRecord
 
   belongs_to :disciple,
     primary_key: :id,
-    foreign_key: :follower_id,
+    foreign_key: :following_id,
     class_name: :User
 
   belongs_to :master,
     primary_key: :id,
-    foreign_key: :following_id,
+    foreign_key: :follower_id,
     class_name: :User
 
 end
