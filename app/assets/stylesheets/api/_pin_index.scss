@@ -47,6 +47,29 @@
   transition: all 0.2s linear;
 }
 
+.pin-index-pin-items:hover .pin-index-pin-items-modal-view {
+  opacity: 1;
+  transition: opacity .35s ease;
+}
+
+.pin-index-pin-items-modal-view {
+  position: absolute;
+  text-align: center;
+  height: inherit;
+  width: inherit;
+  margin-left: 35%;
+  top: 30%;
+  font-size: 22px;
+  font-family: sans-serif;
+  border: 2px solid white;
+  padding: 6px;
+  border-radius: 4px;
+  color: white;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
 .pin-index-pin-items-info {
   display: flex;
   flex-flow: column;

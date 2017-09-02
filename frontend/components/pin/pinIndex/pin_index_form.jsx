@@ -39,6 +39,7 @@ class PinIndexForm extends React.Component {
     const allThePins = sortedPins.map( pin => (
       <li className="pin-index-pin-items" key={pin.id}>
         <ModalPinItem pin={pin} className="pin-index-pin-items-modal"/>
+        <div className="pin-index-pin-items-modal-view">view</div>
         <div className="pin-index-pin-items-info">
           <div className="pin-index-pin-items-info-upper">
             <p>{pin.description ? pin.description : "..." }</p>
