@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestSinglePin, deletePin } from '../../../actions/pin_actions';
+import { requestSinglePin, deletePin, editPin } from '../../../actions/pin_actions';
 import PinShow from './pin_show';
 
 //ownProps comes from modal_pin_item
@@ -14,6 +14,7 @@ const mapStateToProps = ({ session, pins }, ownProps ) => {
 
 const mapDispatchToProps = dispatch => ({
   requestSinglePin: (id) => dispatch(requestSinglePin(id)),
+  editPin: (pin) => dispatch(editPin(pin)),
   deletePin: (id) => dispatch(deletePin(id))
 });
 

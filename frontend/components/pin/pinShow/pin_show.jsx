@@ -11,7 +11,9 @@ class PinShow extends React.Component {
     };
 
     this.switchOff = this.switchOff.bind(this);
+    this.update = this.update.bind(this);
     this.removePin = this.removePin.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }//end constructor
 
   // componentWillReceiveProps(nextProps){
@@ -36,30 +38,74 @@ class PinShow extends React.Component {
     this.props.modalSwitch();
   }
 
+  //change the value of the input field
+  update(field){
+    return e => this.setState({
+      [field]: e.currentTarget.value
+    });
+  }//end update
+
+  //click to handle all forms information
+  handleSubmit(e){
+    e.preventDefault();
+    const pin = this.state;
+    if (this.props.pin.user_id === this.props.currentUser_id){
+      this.props.editPin(pin);
+      this.props.modalSwitch();
+    } else {
+      alert("You are missing title or actual image!");
+    }
+  }
+
   render(){
     const { pin } = this.props;
     return (
       <div className="pin-show-all">
-          <img className="modal-pin-create-img-close"
+
+          <img className="modal-pin-show-img-close"
              src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
              onClick={this.switchOff} />
-
           <img className='pin-show-form-img'
              src={pin.image_url}
-             alt={pin.title}
-             onClick={this.handleSubmit}/>
-          <h1>{pin.title}</h1>
-          <h3>{pin.description}</h3>
-          { this.props.pin.user_id === this.props.currentUser_id ?
-            <div className="pin-show-form-delete">
-             <img
-               src="http://res.cloudinary.com/leosoba/image/upload/v1501017415/delete_pin_p3tmp1.png"
-               onClick={this.removePin}/>
-             <h6>DELETE PIN</h6>
-          </div> : "" }
+             alt={pin.title}/>
+
+          <div className='pin-show-form-info'>
+            <div className='pin-show-form-info-left'>
+              <h2>Title:</h2>
+              <h2>Description:</h2>
+            </div>
+            <div className='pin-show-form-info-right'>
+              <h2>{pin.title}</h2>
+              <h2>{pin.description}</h2>
+            </div>
+          </div>
+
+          <div className="pin-show-pin-info">
+            <div className="pin-show-pin-info-author-image">
+              <img src= {pin.author_image_url} />
+            </div>
+            <div className="pin-show-pin-info-text" >
+              <h1>{pin.author}</h1>
+              <p>{pin.author.description}</p>
+            </div>
+            
+          </div>
+
+
+
       </div>
     );//end return
   }//end render
 }//end PinShowForm
 
 export default PinShow;
+
+// <div className='pin-show-form-user-tools'>
+//   { this.props.pin.user_id === this.props.currentUser_id ?
+//     <div className="pin-show-form-delete">
+//      <img
+//        src="http://res.cloudinary.com/leosoba/image/upload/v1501017415/delete_pin_p3tmp1.png"
+//        onClick={this.removePin}/>
+//      <h6>DELETE PIN</h6>
+//   </div> : "" }
+// </div>

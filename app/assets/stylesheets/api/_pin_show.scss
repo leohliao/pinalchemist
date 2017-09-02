@@ -2,26 +2,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  vertical-align: top;
+  // vertical-align: top;
   background-color: #57bc90;
   border-radius: 8px;
   width: inherit;
   height: inherit;
 }
 
-.pin-show-all h1 {
+.pin-show-all h2 {
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 200;
   color: white;
-  margin-top: -20px;
+  height: 1.2em;
 }
 
-.pin-show-all h3 {
-  font-family: sans-serif;
-  font-weight: 100;
-  color: white;
+.modal-pin-show-img-close {
+  width: 23px;
+  display: block;
+  padding-top: 5px;
+  padding-right: 5px;
+  justify-content: flex-end;
+  align-self: flex-end;
+  opacity: 0.7;
+}
+
+.modal-pin-show-img-close:hover{
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .pin-show-form-img {
@@ -32,38 +44,116 @@
   max-height: 60vh;
 }
 
-.pin-show-form-delete {
+.pin-show-form-info {
   display: flex;
-  // align-self: flex-end;
-  vertical-align: middle;
-  margin: 5px 10px 10px auto;
+  flex-flow: row;
+  justify-content: center;
+  width: auto;
 }
 
-.pin-show-form-delete img {
-  height: 5vh;
-  align-self: center;
+.pin-show-form-info-left {
+  text-align: right;
+  // margin-left: 4em;
 }
 
-.pin-show-form-delete h6 {
-  color: white;
+.pin-show-form-info-right {
+  margin-left: 12px;
+  // margin-right: 4em;
+}
+
+.pin-show-pin-info {
+  display: flex;
+  flex-flow: row;
+  // justify-content: space-around;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0);
+  width: 90%;
+  // align-items: center;
+}
+
+.pin-show-pin-info-author-image {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.pin-show-pin-info-author-image img {
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pin-show-pin-info-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  width: 200px;
+}
+
+.pin-show-pin-info-text h1, p {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.pin-show-pin-info-text h1 {
   font-family: sans-serif;
-  background-color: #c92228;
-  font-size: 12px;
-  height: 8px;
-  padding: 8px 10px 10px 10px;
-  align-self: center;
-  border-radius: 8px;
+  font-size: 16px;
+  color: #3d3d3d;
 }
 
-.pin-show-form-delete:hover {
-  opacity: 1;
-  cursor: pointer;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+.pin-show-pin-info-text p {
+  font-family: sans-serif;
+  margin-top: 4px;
+  font-size: 13px;
+  color: gray;
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 240px;
 }
+// .pin-show-all h3 {
+//   padding: 5px auto 10px auto;
+//   margin-bottom: 5px;
+// }
 
-.pin-show-all h3 {
-  padding: 5px auto 10px auto;
-  margin-bottom: 5px;
-}
+
+// .pin-show-form-delete {
+//   display: flex;
+//   // align-self: flex-end;
+//   vertical-align: middle;
+//   margin: 5px 10px 10px auto;
+// }
+//
+// .pin-show-form-delete img {
+//   height: 5vh;
+//   align-self: center;
+// }
+//
+// .pin-show-form-delete h6 {
+//   color: white;
+//   font-family: sans-serif;
+//   background-color: #c92228;
+//   font-size: 12px;
+//   height: 8px;
+//   padding: 8px 10px 10px 10px;
+//   align-self: center;
+//   border-radius: 8px;
+// }
+//
+// .pin-show-form-delete:hover {
+//   opacity: 1;
+//   cursor: pointer;
+//   -webkit-transform: scale(1.05);
+//   -ms-transform: scale(1.05);
+//   transform: scale(1.05);
+// }
