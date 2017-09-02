@@ -10,13 +10,31 @@ User.destroy_all
 
 # This is used for demo account
 # ------ DONT DELETE -------------
-user1 = User.create!({username: "guest", password: "iamdemo", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504175717/20ea0e8740c052012543b9c7b250fcfa_typz7g.jpg"})
+user1 = User.create!({username: "guest",
+  password: "iamdemo",
+  description: "I am guest, and I think this website looks cool!",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504175717/20ea0e8740c052012543b9c7b250fcfa_typz7g.jpg"})
 # --------------------------------
-user2 = User.create!({username: "leol1", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg"})
-user3 = User.create!({username: "leol2", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164620/4_Luffy_101909_1256006964_aw7ehf.jpg"})
-user4 = User.create!({username: "leol3", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164655/528897_1397877658276_480_300_hsyjag.jpg"})
-user5 = User.create!({username: "leol4", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164721/3_Lelouch_101909_1256006940_tcglgz.jpg"})
-user6 = User.create!({username: "leol5", password: "password", image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164774/5_Vegeta_101909_1256006982_psyiy9.jpg"})
+user2 = User.create!({username: "leol1",
+  password: "password",
+  description: "I am a storyboard artist",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg"})
+user3 = User.create!({username: "leol2",
+  password: "password",
+  description: "Illustration artist",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164620/4_Luffy_101909_1256006964_aw7ehf.jpg"})
+user4 = User.create!({username: "leol3",
+  password: "password",
+  description: "3D Artist at Leo Studio",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164655/528897_1397877658276_480_300_hsyjag.jpg"})
+user5 = User.create!({username: "leol4",
+  password: "password",
+  description: "Designer at ILoveDesign.com",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164721/3_Lelouch_101909_1256006940_tcglgz.jpg"})
+user6 = User.create!({username: "leol5",
+  password: "password",
+  description: "Freelance Artist",
+  image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164774/5_Vegeta_101909_1256006982_psyiy9.jpg"})
 
 Pin.destroy_all
 pin1 = Pin.create!({title: 'Gamera Remake',

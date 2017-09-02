@@ -29,7 +29,7 @@ class PinIndexForm extends React.Component {
           // right: '10%',
           // backgroundColor: 'red',
         };
-        
+
     const sortedPins = pins.sort(function(a,b){
       let dateA = new Date(a.created_at)
       let dateB = new Date(b.created_at)
@@ -40,12 +40,17 @@ class PinIndexForm extends React.Component {
       <li className="pin-index-pin-items" key={pin.id}>
         <ModalPinItem pin={pin} className="pin-index-pin-items-modal"/>
         <div className="pin-index-pin-items-info">
-          <div className="pin-index-pin-items-info-image">
-            <img src= {pin.author_image_url} />
+          <div className="pin-index-pin-items-info-upper">
+            <p>{pin.description ? pin.description : "..." }</p>
           </div>
-          <div className="pin-index-pin-items-info-text">
-            <h1>{pin.author}</h1>
-            <p>{pin.author.description}</p>
+          <div className="pin-index-pin-items-info-lower">
+            <div className="pin-index-pin-items-info-author-image">
+              <img src= {pin.author_image_url} />
+            </div>
+            <div className="pin-index-pin-items-info-text">
+              <h1>{pin.author}</h1>
+              <p>{pin.author.description}</p>
+            </div>
           </div>
         </div>
       </li>

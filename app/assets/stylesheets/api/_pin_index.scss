@@ -23,23 +23,66 @@
   margin-top: 40vh;
 }
 
-.pin-index-pin-items{
-  margin-bottom: 30px;
+.pin-index-pin-items {
+  margin-bottom: 10px;
+  padding: 7px;
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.pin-index-pin-items:hover {
+  background-color: #E3DCD5;
+  border-radius: 6px;
+  opacity: 0.7;
+  transform: scale(0.96);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .pin-index-pin-items-info {
   display: flex;
-  flex-flow: row;
-  justify-content: space-around;
+  flex-flow: column;
 }
 
-.pin-index-pin-items-info-image {
+.pin-index-pin-items-info-upper {
+  width: 240px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.pin-index-pin-items-info-upper p {
+  margin-left: 5px;
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.pin-index-pin-items-info-lower {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  padding-bottom: 5px;
+}
+
+.pin-index-pin-items-info-author-image {
   width: 60px;
   height: 60px;
   overflow: hidden;
 }
 
-.pin-index-pin-items-info-image img {
+.pin-index-pin-items-info-author-image img {
   border-radius: 50px;
   object-fit: cover;
   display: block;
@@ -70,4 +113,11 @@
   margin-top: 3px;
   font-size: 13px;
   color: gray;
+  display: inline-block;
+  word-wrap: break-word;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 240px;
 }
