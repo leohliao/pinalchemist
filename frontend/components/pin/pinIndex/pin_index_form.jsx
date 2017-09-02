@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 import ModalPinItem from '../../modal/modal_pin_item';
 import { RingLoader } from 'react-spinners';
@@ -44,15 +44,15 @@ class PinIndexForm extends React.Component {
           <div className="pin-index-pin-items-info-upper">
             <p>{pin.description ? pin.description : "..." }</p>
           </div>
-          <div className="pin-index-pin-items-info-lower">
+          <Link className="pin-index-pin-items-info-lower" to="/pins">
             <div className="pin-index-pin-items-info-author-image">
               <img src= {pin.author_image_url} />
             </div>
-            <div className="pin-index-pin-items-info-text">
+            <div className="pin-index-pin-items-info-text" >
               <h1>{pin.author}</h1>
               <p>{pin.author.description}</p>
             </div>
-          </div>
+          </Link>
         </div>
       </li>
     ));
