@@ -15,7 +15,7 @@ class PinIndexForm extends React.Component {
 
   componentDidMount(){
     this.props.requestAllPins()
-    .then(setTimeout(() => this.setState({ loading: false }), 2000))
+    .then(setTimeout(() => this.setState({ loading: false }), 1000))
   }//end componentDidMount
 
   render(){
@@ -30,8 +30,17 @@ class PinIndexForm extends React.Component {
           // backgroundColor: 'red',
         };
     const allThePins = pins.reverse().map( pin => (
-      <li className="image-element-class" key={pin.id}>
-        <ModalPinItem pin={pin} />
+      <li className="pin-index-pin-items" key={pin.id}>
+        <ModalPinItem pin={pin} className="pin-index-pin-items-modal"/>
+        <div className="pin-index-pin-items-info">
+          <div className="pin-index-pin-items-info-image">
+            <img src= {pin.author_image_url} />
+          </div>
+          <div className="pin-index-pin-items-info-text">
+            <h1>{pin.author}</h1>
+            <p>{pin.author.description}</p>
+          </div>
+        </div>
       </li>
     ));
 

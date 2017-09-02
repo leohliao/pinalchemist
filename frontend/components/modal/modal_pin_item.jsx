@@ -67,6 +67,7 @@ class ModalPinItem extends React.Component {
                                  id={pin.id}
                                  className="modal-pin-show"/>
         </Modal>
+  
       </div>
     );
   }//end render
