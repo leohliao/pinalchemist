@@ -38,7 +38,7 @@ class NavBarForm extends React.Component {
 
         <div className="nav-bar-log-out"
              onClick={this.currentUserLogOut}>
-        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795169/log_out_omgkze.png" alt="Log Out" />
+        <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
         </div>
 
         <ModalPinCreate />

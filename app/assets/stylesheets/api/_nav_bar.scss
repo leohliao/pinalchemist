@@ -43,7 +43,7 @@ input .nav-bar-search-input {
 .nav-bar-search-input {
     margin-left: 18px;
     width: 90%;
-    height: 50px;
+    height: 46px;
     box-sizing: border-box;
     border: 1px solid #57BC90;
     border-radius: 5px;
@@ -64,11 +64,11 @@ input .nav-bar-search-input {
 
 .nav-bar-discover-ideas {
     flex: 1;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .nav-bar-discover-ideas p {
-    margin: 6px 36px 6px 36px;
+    margin: 6px 20px 6px 30px;
     padding: 4px 4px 4px 4px;
     font-family: sans-serif;
     color: #57b38d;
@@ -91,15 +91,15 @@ input .nav-bar-search-input {
 }
 
 .nav-bar-my-board img {
-  height: 46px;
+  height: 42px;
   width: auto;
   padding: 10px 10px 10px 10px;
-  margin: 4px 20px 0px 20px;
+  margin: 4px 30px 0px 20px;
 }
 
 .nav-bar-my-board {
   flex: 1;
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .nav-bar-my-board img:hover {
@@ -118,14 +118,14 @@ input .nav-bar-search-input {
 
 .nav-bar-log-out {
   flex: 1;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 40px 0px 10px;
 }
 
 .nav-bar-log-out img {
-  height: 45px;
+  height: 40px;
   width: auto;
   padding: 10px 10px 10px 10px;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 40px 0px 10px;
 }
 
 .nav-bar-log-out img:hover {
