@@ -43,11 +43,12 @@ class PinShow extends React.Component {
           <img className="modal-pin-create-img-close"
              src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
              onClick={this.switchOff} />
-          <h1>{pin.title}</h1>
+
           <img className='pin-show-form-img'
              src={pin.image_url}
              alt={pin.title}
              onClick={this.handleSubmit}/>
+          <h1>{pin.title}</h1>
           <h3>{pin.description}</h3>
           { this.props.pin.user_id === this.props.currentUser_id ?
             <div className="pin-show-form-delete">

@@ -4,7 +4,6 @@ import Masonry from 'react-masonry-component';
 import ModalPinItem from '../../modal/modal_pin_item';
 import { RingLoader } from 'react-spinners';
 
-
 class PinIndexForm extends React.Component {
   constructor(props){
     super(props);
