@@ -17,7 +17,7 @@ const style = {
     position        : 'flex',
     margin          : '20px auto 20px auto',
     width           : '50vw',
-    height          : '90vh',
+    height          : 'auto',
     border          : '2px solid #57bc90',
     background      : 'white',
     borderRadius    : '8px',
