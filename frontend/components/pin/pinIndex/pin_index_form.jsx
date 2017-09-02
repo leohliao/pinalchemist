@@ -29,7 +29,14 @@ class PinIndexForm extends React.Component {
           // right: '10%',
           // backgroundColor: 'red',
         };
-    const allThePins = pins.reverse().map( pin => (
+        
+    const sortedPins = pins.sort(function(a,b){
+      let dateA = new Date(a.created_at)
+      let dateB = new Date(b.created_at)
+      return dateB-dateA;
+    });
+
+    const allThePins = sortedPins.map( pin => (
       <li className="pin-index-pin-items" key={pin.id}>
         <ModalPinItem pin={pin} className="pin-index-pin-items-modal"/>
         <div className="pin-index-pin-items-info">
