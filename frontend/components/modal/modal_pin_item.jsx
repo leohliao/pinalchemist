@@ -70,6 +70,6 @@ class ModalPinItem extends React.Component {
       </div>
     );
   }//end render
-}//end ModalPinCreate
+}//end ModalPinItem
 
 export default ModalPinItem;

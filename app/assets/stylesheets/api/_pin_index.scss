@@ -61,10 +61,14 @@
   top: 30%;
   font-size: 22px;
   font-family: sans-serif;
-  border: 2px solid white;
+  // border: 2px solid #57bc90;
+  box-shadow: 0 0 0 2px #57bc90,
+              0 0 0 3px rgba(0, 0 ,0, 0),
+              0 0 0 4px white;
   padding: 6px;
   border-radius: 4px;
   color: white;
+  background-color: #015249;
   pointer-events: none;
   opacity: 0;
   transition: opacity .35s ease;

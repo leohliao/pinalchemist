@@ -4,7 +4,7 @@ export const RECEIVE_SINGLE_PIN = "RECEIVE_SINGLE_PIN";
 export const RECEIVE_ALL_PINS = "RECEIVE_ALL_PINS";
 export const REMOVE_PIN = "REMOVE_PIN";
 export const RECEIVE_PIN_ERRORS = "RECEIVE_PIN_ERRORS";
-export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const CLEAR_PIN_ERRORS = "CLEAR_PIN_ERRORS";
 
 //action creators
 export const receiveAllPins = (pins) => ({
@@ -28,7 +28,7 @@ export const receivePinErrors = (errors) => ({
 });
 
 export const clearErrors = () => ({
-    type: CLEAR_ERRORS
+    type: CLEAR_PIN_ERRORS
 });
 
 //thunk Actions
