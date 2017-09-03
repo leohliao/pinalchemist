@@ -9,3 +9,11 @@ export const selectBoardPins = ({boards}, board) => {
   return board ?
     boards.id.map (id => boards[id].pin_ids) : [];
 }
+
+export const selectAllUsers = (state) => {
+  return (values(state.users))
+}
+
+export const selectSingleUser = ({ users }, id) => {
+  return users[id] || {};
+};
