@@ -6,14 +6,13 @@ import { requestSingleUser } from '../../../actions/user_actions';
 import PinShow from './pin_show';
 
 //ownProps comes from modal_pin_item
-const mapStateToProps = ({ session, pins, board, user }, ownProps ) => {
+const mapStateToProps = ({ session, pins, boards }, ownProps ) => {
   return ({
-    currentUser: session.currentUser.username,
+    currentUser: session.currentUser,
     currentUser_id: session.currentUser.id,
     errors: pins.errors,
     pin: pins.pins[ownProps.id],
-    user,
-    board
+    boards
   });
 };
 

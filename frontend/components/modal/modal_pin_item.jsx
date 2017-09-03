@@ -15,6 +15,7 @@ const style = {
   },
   content : {
     position        : 'flex',
+    justifyContent  : 'center',
     margin          : '20px auto 20px auto',
     width           : '50vw',
     height          : 'auto',
