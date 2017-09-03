@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { requestSinglePin, deletePin, editPin } from '../../../actions/pin_actions';
-import { createPinning, deletePinning } from '../../../actions/pinning_actions';
+import { createPinning, deletePinning, deletePinningInPinDiffBoard, deletePinningInPinSameBoard } from '../../../actions/pinning_actions';
 import { requestSingleBoard } from '../../../actions/board_actions';
 import { requestSingleUser } from '../../../actions/user_actions';
 import PinShow from './pin_show';
@@ -21,7 +21,6 @@ const mapDispatchToProps = dispatch => ({
   deletePin: (id) => dispatch(deletePin(id)),
   requestSinglePin: (id) => dispatch(requestSinglePin(id)),
   createPinning: (pinning) => dispatch(createPinning(pinning)),
-  deletePinning: (pinning) => dispatch(deletePinning(pinning)),
   requestSingleUser: (id) => dispatch(requestSingleUser(id)),
   requestSingleBoard: (id) => dispatch(requestSingleBoard(id))
 });

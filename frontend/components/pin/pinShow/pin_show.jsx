@@ -1,5 +1,6 @@
 import React from 'react';
 import { values, merge } from 'lodash';
+import PinningCreateContainer from '../../pinning/pinning_create_container';
 
 class PinShow extends React.Component {
   constructor(props){
@@ -15,22 +16,7 @@ class PinShow extends React.Component {
     this.switchOff = this.switchOff.bind(this);
     this.update = this.update.bind(this);
     this.removePin = this.removePin.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    this.handlePinning = this.handlePinning.bind(this);
-    this.handleUnpinning = this.handleUnpinning.bind(this);
   }//end constructor
-
-  // componentWillMount() {
-  //   this.props.requestSinglePin(this.props.id);
-  //   // this.props.requestSingleBoard(this.props.)
-  //   ;
-  // }
-
-  // componentWillReceiveProps(nextProps){
-  //   if (this.props.match.params.id !== nextProps.match.params.id){
-  //     this.props.requestSinglePin(nextProps.match.params.id);
-  //   }
-  // }//end componentWillReceiveProps
 
   removePin(e){
     e.preventDefault();
@@ -55,64 +41,6 @@ class PinShow extends React.Component {
     });
   }//end update
 
-  handlePinning(e){
-    e.preventDefault();
-    let pinId = parseInt(this.props.pin.id);
-    let boardId = parseInt(e.currentTarget.value);
-    let pinning = { pinning: {pin_id: pinId, boar_id: boardId}};
-    this.props.createPinning(pinning);
-  };
-
-  handleUnpinning(){
-    let pinId = parseInt(this.props.pin.id);
-    let boardId = parseInt(this.props.match.params.boardId);
-    let pinning = { pinning: {pin_id: pinId, boar_id: boardId}};
-    this.props.deletePinning(pinning);
-  };
-
-  // //click to handle all forms information
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   const pin = this.state;
-  //   if (this.props.pin.user_id === this.props.currentUser_id){
-  //     this.props.editPin(pin);
-  //     this.props.modalSwitch();
-  //   } else {
-  //     alert("You are missing title or actual image!");
-  //   }
-  // }
-  handleCheckUnpinning(e) {
-    e.preventDefault();
-    let pinId = parseInt(this.props.pin.id);
-    let boardId = parseInt(e.currentTarget.value);
-    let pinning = {pinning: {pin_id: pinId, board_id: boardId}};
-    // this.props.match.params.boardId == boardId ?
-    // this.props.deletePinning(pinning) :
-    this.props.deletePinning(pinning);
-  }
-
-  boards() {
-    let { pin, deletePin, currentUser, board, user } = this.props;
-    return (
-      values(currentUser.boards).map((board, idx) => {
-        if (values(pin.pinned_boards).includes(board.id)) {
-        return (
-          <button className="pin-show-button"
-            onClick={this.handleCheckUnpinning}
-            key={idx}
-            value={board.id}> {board.title}  ✔
-          </button>
-        )} else {
-        return(
-          <button className="pin-show-button"
-                  key={idx}
-                  onClick={this.handlePinning}
-                  value={board.id}>{board.title}
-          </button>
-        );
-      }}));
-  };
-
   render(){
     const { pin } = this.props;
     console.log(this.props);
@@ -122,13 +50,13 @@ class PinShow extends React.Component {
          <h6 onClick={this.removePin}>DELETE PIN!</h6>
         </div> : "")
 
-    const pinningButton = () => {
-      return (
-        <div className="pin-show-form-delete">
-          <h6>PIN TO BOARD!</h6>
-        </div>
-      );
-    };
+    const pinningButton = (
+      // <div className="pin-show-form-delete">
+      //   <h6>PIN TO BOARD!</h6>
+      // </div>
+      <PinningCreateContainer />
+    );
+
 
     return (
       <div className="pin-show-all">
@@ -162,6 +90,7 @@ class PinShow extends React.Component {
             <div className='pin-show-form-user-tools'>
               { pinningButton }
               { deletePinbutton }
+
             </div>
           </div>
 

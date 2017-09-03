@@ -15,19 +15,3 @@ export const deletePinning = (pinning) => (dispatch) => {
     .then(board => dispatch(receiveSingleBoard(board)))
   );
 };
-
-//
-// export const deletePinningInPinDiffBoard = (pinning) => (dispatch) => {
-//   return APIUtil.deletePinning(pinning).then(
-//     entities => dispatch(receiveSinglePin(entities.pin))
-//   );
-// };
-//
-// export const deletePinningInPinSameBoard = pinning => dispatch => {
-//   return APIUtil.deletePinning(pinning).then(
-//     entities => (
-//       dispatch(receiveSinglePin(entities.pin)),
-//       dispatch(receiveSingleBoard(entities.board))
-//     )
-//   );
-// };
