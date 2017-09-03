@@ -6,7 +6,7 @@ const defaultState = () => ({
   errors: []
 })
 
-const userReducer = (state = defaultState, action) => {
+const UserReducer = (state = defaultState, action) => {
 
   Object.freeze(state);
 
@@ -25,4 +25,4 @@ const userReducer = (state = defaultState, action) => {
   }
 };
 
-export default userReducer;
+export default UserReducer;
