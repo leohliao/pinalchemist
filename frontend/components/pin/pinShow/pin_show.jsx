@@ -3,7 +3,7 @@ import React from 'react';
 class PinShow extends React.Component {
   constructor(props){
     super(props);
-
+    console.log(this.props);
     this.state = {
       currentUser: this.props.currentUser,
       currentUser_id: this.props.currentUser_id,
@@ -59,6 +59,17 @@ class PinShow extends React.Component {
 
   render(){
     const { pin } = this.props;
+
+    const deletePinbutton = (this.props.pin.user_id === this.props.currentUser_id ?
+        <div className="pin-show-form-delete">
+         <h6 onClick={this.removePin}>DELETE PIN!</h6>
+        </div> : "")
+
+    const pinningButton = (this.props.pin.user_id === this.props.currentUser_id ?
+        <div className="pin-show-form-delete">
+         <h6 onClick={this.removePin}>PIN TO BOARD!</h6>
+        </div> : "")
+
     return (
       <div className="pin-show-all">
 
@@ -88,7 +99,10 @@ class PinShow extends React.Component {
               <h1>{pin.author}</h1>
               <p>{pin.author.description}</p>
             </div>
-            
+            <div className='pin-show-form-user-tools'>
+              { pinningButton }
+              { deletePinbutton }
+            </div>
           </div>
 
 

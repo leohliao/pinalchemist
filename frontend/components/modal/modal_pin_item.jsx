@@ -62,10 +62,9 @@ class ModalPinItem extends React.Component {
                onAfterOpen={this.onAfterOpen}
                style={style}
                contentLabel="Modal Pin Item">
-
-               <PinShowContainer modalSwitch={this.modalSwitch}
-                                 id={pin.id}
-                                 className="modal-pin-show"/>
+         <PinShowContainer modalSwitch={this.modalSwitch}
+                           id={pin.id}
+                           className="modal-pin-show"/>
         </Modal>
 
       </div>

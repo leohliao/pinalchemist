@@ -66,6 +66,7 @@
   flex-flow: row;
   // justify-content: space-around;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding-bottom: 5px;
   padding-top: 5px;
   text-decoration: none;
@@ -94,7 +95,7 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 5px;
-  width: 200px;
+  width: 250px;
 }
 
 .pin-show-pin-info-text h1, p {
@@ -109,10 +110,10 @@
 }
 
 .pin-show-pin-info-text p {
+  color: rgba(255,255,255, 0.8);
   font-family: sans-serif;
   margin-top: 4px;
   font-size: 13px;
-  color: gray;
   display: inline-block;
   word-wrap: break-word;
   text-align: center;
@@ -120,40 +121,45 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 240px;
+  width: 200px;
 }
-// .pin-show-all h3 {
-//   padding: 5px auto 10px auto;
-//   margin-bottom: 5px;
-// }
 
+.pin-show-form-user-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0 0 10px;
+  width: 50%;
+  vertical-align: middle;
+}
 
-// .pin-show-form-delete {
-//   display: flex;
-//   // align-self: flex-end;
-//   vertical-align: middle;
-//   margin: 5px 10px 10px auto;
-// }
-//
-// .pin-show-form-delete img {
-//   height: 5vh;
-//   align-self: center;
-// }
-//
-// .pin-show-form-delete h6 {
-//   color: white;
-//   font-family: sans-serif;
-//   background-color: #c92228;
-//   font-size: 12px;
-//   height: 8px;
-//   padding: 8px 10px 10px 10px;
-//   align-self: center;
-//   border-radius: 8px;
-// }
-//
-// .pin-show-form-delete:hover {
-//   opacity: 1;
-//   cursor: pointer;
-//   -webkit-transform: scale(1.05);
-//   -ms-transform: scale(1.05);
-//   transform: scale(1.05);
-// }
+.pin-show-form-delete {
+  display: flex;
+  // align-self: flex-end;
+  vertical-align: middle;
+  margin: auto 10px;
+}
+
+.pin-show-form-delete h6 {
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 0 0 2px white;
+  font-size: 12px;
+  height: 8px;
+  padding: 8px 10px 10px 10px;
+  align-self: center;
+  border-radius: 8px;
+  background-color: rgb(46,77,70);
+}
+
+.pin-show-form-delete:hover {
+  opacity: 1;
+  box-shadow:   0 0 0 4px #57bc90,//rgb(159,57,52),
+                0 0 0 5px white,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
