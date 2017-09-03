@@ -1,12 +1,12 @@
 import * as boardActions from '../actions/board_actions';
 import merge from 'lodash/merge';
 //
-// const defaultState = Object.freeze({
-//   boards: {},
-//   errors: []
-// });
+const defaultState = Object.freeze({
+  boards: {},
+  errors: []
+});
 
-const BoardReducer = (state = {}, action) => {
+const BoardReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type){
 

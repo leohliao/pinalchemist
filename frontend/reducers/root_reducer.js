@@ -17,7 +17,7 @@ import UserReducer from './user_reducer';
 const rootReducer = combineReducers({
     session: SessionReducer,
     pins: PinReducer,
-    user: UserReducer,
+    users: UserReducer,
     boards: BoardReducer
 });
 
