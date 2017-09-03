@@ -15,7 +15,8 @@ const UserReducer = (state = defaultState, action) => {
       return merge({}, action.user);
 
     case RECEIVE_USER_ERRORS:
-      return merge({}, state, {errors: [...action.errors]});
+      const errors = action.errors;
+      return merge({}, state, { errors });
 
     case CLEAR_USER_ERRORS:
     return merge({}, defaultState, {errors: []} );
