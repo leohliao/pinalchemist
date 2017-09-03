@@ -28,7 +28,7 @@ const PinReducer = (state = defaultState, action) => {
       const errors = action.errors;
       return merge({}, defaultState, { errors } );
 
-    case pinActions.CLEAR_ERRORS:
+    case pinActions.CLEAR_PIN_ERRORS:
       return merge({}, defaultState, {errors: []} );
 
     default:
