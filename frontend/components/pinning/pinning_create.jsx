@@ -9,21 +9,24 @@ class PinningCreate extends React.Component {
     this.state = {
       pin_id: null,
       board_id: null,
-      wating: true
     };
-    
+
     this.handleClick = this.handleClick.bind(this);
     this.createNewBoardModal = this.createNewBoardModal.bind(this)
   }
 
   componentDidMount() {
     this.props.requestUserBoards(this.props.currentUser_id)
-    .then(() => this.setState({
-      waiting: false}));
   }
 
   componentDidUpdate() {
-    this.props.createPinning(this.state);
+    if (this.state.board_id) {
+      this.props.createPinning(this.state);
+      this.setState({
+        pin_id: null,
+        board_id: null
+      })
+    }
   }
 
   handleClick(e) {
@@ -32,6 +35,11 @@ class PinningCreate extends React.Component {
       pin_id: this.props.pin.id,
       board_id: e.currentTarget.value
     });
+
+  //   let pinId = parseInt(this.props.pin.id);
+  //   let boardId = parseInt(e.currentTarget.value);
+  //   let pinning = {pin_id: pinId, board_id: boardId};
+  //   this.props.createPinning(pinning);
   }
 
   createNewBoardModal(){
@@ -51,15 +59,12 @@ class PinningCreate extends React.Component {
     const pinningButton = boards.map((board) => (
       <li className={className}
           key={board.id}
-          onClick={this.handleClick}>
+          onClick={this.handleClick}
+          value={board.id}>
           {board.board_name}
       </li>
-    ));
-    if (this.state.waiting) {
-      return (
-        <div> loading... </div>
-      );
-    } else {
+      ));
+
     return (
       <div className="dropdown">
         <div className="dropbtn">PIN TO BOARDS!</div>
@@ -71,7 +76,6 @@ class PinningCreate extends React.Component {
         </div>
       </div>
     );
-  }
   }
 }
 

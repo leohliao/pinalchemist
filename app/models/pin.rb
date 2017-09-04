@@ -22,7 +22,8 @@ class Pin < ApplicationRecord
   has_many :pinnings,
     primary_key: :id,
     foreign_key: :pin_id,
-    class_name: :Pinning
+    class_name: :Pinning,
+    dependent: :destroy
 
   has_many :boards,
     through: :pinnings,

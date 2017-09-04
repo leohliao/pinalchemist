@@ -9,9 +9,11 @@ export const createPinning = (pinning) => (dispatch) => {
   .then(pin => dispatch(receiveSinglePin(pin)))
   );
 };
+window.createPinning = createPinning;
 
 export const deletePinning = (pinning) => (dispatch) => {
   return (pinningAPIUtil.deletePinning(pinning)
     .then(board => dispatch(receiveSingleBoard(board)))
   );
 };
+window.deletePinning = deletePinning;
