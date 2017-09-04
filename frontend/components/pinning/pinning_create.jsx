@@ -7,14 +7,8 @@ class PinningCreate extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      pin_id: null,
-      board_id: null,
-    };
-
     this.handlePinning = this.handlePinning.bind(this);
     this.handleUnpinning = this.handleUnpinning.bind(this);
-    // this.handleCheckUnpinning = this.handleCheckUnpinning.bind(this);
     this.createNewBoardModal = this.createNewBoardModal.bind(this)
   }
 
@@ -64,16 +58,6 @@ class PinningCreate extends React.Component {
     this.props.deletePinning(pinning);
   }
 
-//   handleCheckUnpinning(e) {
-//     e.preventDefault();
-//     let pinId = parseInt(this.props.pin.id);
-//     let boardId = parseInt(e.currentTarget.value);
-//     let pinning = {pinning: {pin_id: pinId, board_id: boardId}};
-//     this.props.match.params.boardId == boardId ?
-//     this.props.deletePinningInPinSameBoard(pinning) :
-//     this.props.deletePinningInPinDiffBoard(pinning);
-// }
-
   createNewBoardModal(){
     return (
       <div className="create">
@@ -109,6 +93,7 @@ class PinningCreate extends React.Component {
       }
     }) // end pinningButton
 
+    console.log(this.props);
     return (
       <div className="dropdown">
         <div className="dropbtn">PIN TO BOARDS!</div>

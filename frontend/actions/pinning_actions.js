@@ -17,16 +17,3 @@ export const deletePinning = (pinning) => (dispatch) => {
   );
 };
 window.deletePinning = deletePinning;
-
-export const deletePinningInPinDiffBoard = (pinning) => (dispatch) => {
-  return pinningAPIUtil.deletePinning(pinning)
-    .then(pin => dispatch(receiveSinglePin(pin))
-  );
-};
-
-export const deletePinningInPinSameBoard = pinning => dispatch => {
-  return pinningAPIUtil.deletePinning(pinning)
-    .then( pin => (dispatch(receiveSinglePin(pin.pin.pin)),
-                   dispatch(receiveSingleBoard(pin.pin.board)))
-  );
-};
