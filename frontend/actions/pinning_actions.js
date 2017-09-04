@@ -13,7 +13,20 @@ window.createPinning = createPinning;
 
 export const deletePinning = (pinning) => (dispatch) => {
   return (pinningAPIUtil.deletePinning(pinning)
-    .then(board => dispatch(receiveSingleBoard(board)))
+    .then(board => receiveSingleBoard(board.pin.board))
   );
 };
 window.deletePinning = deletePinning;
+
+export const deletePinningInPinDiffBoard = (pinning) => (dispatch) => {
+  return pinningAPIUtil.deletePinning(pinning)
+    .then(pin => dispatch(receiveSinglePin(pin))
+  );
+};
+
+export const deletePinningInPinSameBoard = pinning => dispatch => {
+  return pinningAPIUtil.deletePinning(pinning)
+    .then( pin => (dispatch(receiveSinglePin(pin.pin.pin)),
+                   dispatch(receiveSingleBoard(pin.pin.board)))
+  );
+};

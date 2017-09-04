@@ -18,31 +18,27 @@ class PinningCreate extends React.Component {
     this.createNewBoardModal = this.createNewBoardModal.bind(this)
   }
 
-  componentDidMount() {
-    this.props.requestUserBoards(this.props.currentUser_id)
+  componentWillMount() {
+    this.props.requestUserBoards(this.props.currentUser_id);
   }
 
-  // componentWillMount() {
-  //   this.props.requestSinglePin(this.props.id);
-  //   this.props.match.params.userId ?
-  //   this.props.requestSingleUser(this.props.match.params.userId) :
-  //   this.props.requestSingleUser(this.props.currentUser.id);
+  componentWillUnmount() {
+    this.props.resetBoard();
+  }
+
+  // componentDidMount() {
+  //   this.props.requestUserBoards(this.props.currentUser_id)
   // }
-  //
-  // componentWillUnmount() {
-  //   this.props.resetPin();
-  // }
-  //
-  // componentWillMount() {
-  //   this.props.requestUserBoards(this.props.currentUser_id);
-  // }
-  //
+
   // componentDidUpdate() {
   //   this.props.requestUserBoards(this.props.currentUser_id);
   // }
 
-  // componentWillUpdate(nextProps, nextState) {
-  //   if (this.props.pin.id === nextProps.pin.id) {
+  // componentWillUpdate(nextProps) {
+  //   console.log(this.props.pin.pinned_boards);
+  //   console.log(nextProps.pin.pinned_boards);
+  //   if (JSON.stringify(this.props.pin.pinned_boards) === JSON.stringify(nextProps.pin.pinned_boards)) {
+  //     this.props.requestUserBoards(this.props.currentUser_id);
   //   }
   // };
 
@@ -79,7 +75,6 @@ class PinningCreate extends React.Component {
 // }
 
   createNewBoardModal(){
-    console.log(this.props);
     return (
       <div className="create">
         <ModalBoardForm small={true} currentUserImage={this.props.currentUser.image_url}/>
@@ -89,8 +84,6 @@ class PinningCreate extends React.Component {
 
   render() {
     const { pin, boards } = this.props;
-    console.log(pin.pinned_boards);
-
     const pinningButton = boards.map((board) => {
       if (values(pin.pinned_boards).includes(board.id)) {
         return (
@@ -116,33 +109,6 @@ class PinningCreate extends React.Component {
       }
     }) // end pinningButton
 
-/////
-
-// boards() {
-//   let { pin, deletePin, currentUser, board, user } = this.props;
-//
-//   return (
-//     values(currentUser.boards).map((board, idx) => {
-//       if (values(pin.pinned_boards).includes(board.id)) {
-//       return (
-//         <button className="pin-button"
-//           onClick={this.handleCheckUnpinning}
-//           key={idx}
-//           value={board.id}>{board.title}  ✔
-//         </button>
-//       )} else {
-//       return(
-//         <button className="pin-button"
-//           key={idx}
-//           onClick={this.handlePinning}
-//           value={board.id}>{board.title}
-//         </button>
-//       );
-//       }
-//     })
-//   )
-// }
-/////
     return (
       <div className="dropdown">
         <div className="dropbtn">PIN TO BOARDS!</div>
@@ -158,23 +124,3 @@ class PinningCreate extends React.Component {
 }
 
 export default PinningCreate;
-//
-// if (this.state.waiting) {
-//    return (
-//      <div></div>
-//    );
-//  }
-//  const className = this.state.clicked ? 'click-state' : 'base-state';
-//  return (
-//    <div className="board-menu">
-//      <ul className="dropdown-content">
-//        <li><a href="#">Select a Board</a></li>
-//        {this.props.boards.map((board, i) => {
-//          return <li className={className} onClick={this.handleClick}
-//            key={board.id} value={board.id}>{board.title}</li>;
-//        })}
-//      </ul>
-//    </div>
-//  );
-// }
-// }

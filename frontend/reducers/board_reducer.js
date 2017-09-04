@@ -14,6 +14,9 @@ const BoardReducer = (state = defaultState, action) => {
       const boards = action.boards;
       return boards;
 
+    case boardActions.RESET_BOARD:
+      return merge ({}, state, {boards: {}});
+
     case boardActions.RECEIVE_SINGLE_BOARD:
       const board = action.board;
       const boardID = action.board.id;
