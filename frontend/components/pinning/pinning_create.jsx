@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ModalBoardForm from '../board/boardForm/board_form_container';
 
 class PinningCreate extends React.Component {
   constructor(props) {
@@ -9,6 +10,7 @@ class PinningCreate extends React.Component {
       board_id: null,
     };
     // this.handleClick = this.handleClick.bind(this);
+    this.createNewBoardModal = this.createNewBoardModal.bind(this)
   }
   //
   // componentDidMount() {
@@ -27,17 +29,31 @@ class PinningCreate extends React.Component {
   //   });
   // }
 
+  createNewBoardModal(){
+    return (
+      <div className="create">
+        <ModalBoardForm small={true} currentUserImage={this.props.currentUser.image_url}/>
+      </div>
+    )
+  }
+
   render() {
+      console.log(this.props);
+    const { pin, boards } = this.props;
+    const pinningButton = boards.map((board) => (
+      <li key={board.id}>{board.board_name}</li>
+    ));
     // const className = this.state.clicked ? 'click-state' : 'base-state';
-    // console.log(this.props);
+
     return (
       <div className="dropdown">
-        <button className="dropbtn">Dropdown</button>
-          <div className="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-         </div>
+        <div className="dropbtn">PIN TO BOARDS!</div>
+        <div className="dropdown-content">
+          <li >
+              {this.createNewBoardModal()}
+          </li>
+          {pinningButton}
+        </div>
       </div>
     );
   }
