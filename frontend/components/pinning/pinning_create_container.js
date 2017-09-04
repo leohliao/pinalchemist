@@ -6,11 +6,11 @@ import { selectAllBoards } from '../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
   // currentUser: state.currentUser,
-  // boards: state.boards,
+  boards: selectAllBoards(state),
   // errors: state.errors
   currentUser: state.session.currentUser,
   currentUser_id: state.session.currentUser.id,
-  boards: selectAllBoards(state.session.currentUser)
+  // boards: selectAllBoards(state.session.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

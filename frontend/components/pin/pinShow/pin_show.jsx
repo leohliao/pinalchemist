@@ -43,7 +43,7 @@ class PinShow extends React.Component {
 
 
   render(){
-    const { pin, boards } = this.props;
+    const { pin } = this.props;
     const deletePinbutton = (pin.user_id === this.props.currentUser_id ?
         <div className="pin-show-form-delete">
          <h6 onClick={this.removePin}>DELETE PIN!</h6>

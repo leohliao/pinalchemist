@@ -38,6 +38,7 @@ export const requestUserBoards = (userId) => dispatch => {
   ))
   );
 };
+window.requestUserBoards = requestUserBoards;
 
 export const requestSingleBoard = (id) => dispatch => {
   return (BoardAPIUtil.fetchSingleBoard(id)
