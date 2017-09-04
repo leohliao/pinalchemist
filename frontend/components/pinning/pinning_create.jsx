@@ -31,10 +31,6 @@ class PinningCreate extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    // this.setState({
-    //   pin_id: this.props.pin.id,
-    //   board_id: e.currentTarget.value
-    // });
     let pinId = parseInt(this.props.pin.id);
     let boardId = parseInt(e.currentTarget.value);
     let pinning = {pinning: {pin_id: pinId, board_id: boardId}};;

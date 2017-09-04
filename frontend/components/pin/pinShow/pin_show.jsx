@@ -76,11 +76,10 @@ class PinShow extends React.Component {
             </div>
             <div className="pin-show-pin-info-text" >
               <h1>{pin.author}</h1>
-              <p>{pin.author.description}</p>
-            </div>
-            <div className='pin-show-form-user-tools'>
-              <PinningCreateContainer pin={pin}/>
-              { deletePinbutton }
+              <div className='pin-show-form-user-tools'>
+                <PinningCreateContainer pin={pin}/>
+                { deletePinbutton }
+              </div>
             </div>
           </div>
 

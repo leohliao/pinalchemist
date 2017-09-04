@@ -40,7 +40,7 @@
   vertical-align: top;
   margin: 15px auto;
   border-radius: 5px;
-  max-width: 48vw;
+  max-width: 50vw;
   max-height: 60vh;
 }
 
@@ -64,7 +64,7 @@
 .pin-show-pin-info {
   display: flex;
   flex-flow: row;
-  // justify-content: space-around;
+  justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 5px;
@@ -72,7 +72,7 @@
   text-decoration: none;
   border-radius: 4px;
   border: 2px solid rgba(255,255,255,0);
-  width: 90%;
+  width: 50vw;
   // align-items: center;
 }
 
@@ -109,27 +109,27 @@
   color: #3d3d3d;
 }
 
-.pin-show-pin-info-text p {
-  color: rgba(255,255,255, 0.8);
-  font-family: sans-serif;
-  margin-top: 4px;
-  font-size: 13px;
-  display: inline-block;
-  word-wrap: break-word;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 240px;
-  width: 200px;
-}
+// .pin-show-pin-info-text p {
+//   color: rgba(255,255,255, 0.8);
+//   font-family: sans-serif;
+//   margin-top: 4px;
+//   font-size: 13px;
+//   display: inline-block;
+//   word-wrap: break-word;
+//   text-align: center;
+//   overflow: hidden;
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   max-width: 240px;
+//   width: 200px;
+// }
 
 .pin-show-form-user-tools {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin: 0 0 0 10px;
-  width: 50%;
+  justify-content: flex-start;
+  margin: 10px 0 0 10px;
+  width: 350px;
   vertical-align: middle;
 }
 
@@ -166,12 +166,6 @@
 
 /* Dropdown Button */
 .dropbtn {
-    // background-color: #4CAF50;
-    // color: white;
-    // padding: 16px;
-    // font-size: 16px;
-    // border: none;
-    // cursor: pointer;
     color: white;
     font-family: sans-serif;
     box-shadow: 0 0 0 2px white;
@@ -181,6 +175,7 @@
     align-self: center;
     border-radius: 8px;
     background-color: rgb(46,77,70);
+    width: inherit;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -237,7 +232,7 @@
   display: flex;
   flex-flow: column;
   bottom: 100%;
-  right: 75%;
+  right: 25%;
   overflow: auto;
 }
 

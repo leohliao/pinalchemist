@@ -17,7 +17,7 @@ const style = {
     position        : 'flex',
     justifyContent  : 'center',
     margin          : '20px auto 20px auto',
-    width           : '50vw',
+    maxWidth        : '55vw',
     height          : 'auto',
     border          : '2px solid #57bc90',
     background      : 'white',
