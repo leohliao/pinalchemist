@@ -9,6 +9,10 @@ class Api::PinningsController < ApplicationController
     end
   end
 
+  def index
+    @pinnings = Pinning.all
+  end
+
   def destroy
     @pinning = Pinning.where(board_id: params[:pinning][:board_id], pin_id: params[:pinning][:pin_id]).first
     board = @pinning.board
