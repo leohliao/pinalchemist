@@ -47,7 +47,6 @@ class PinIndexForm extends React.Component {
               </div>
           </div>
 
-
         </div>
       </li>
     ));

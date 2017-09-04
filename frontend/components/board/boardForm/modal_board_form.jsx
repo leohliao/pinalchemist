@@ -28,8 +28,8 @@ const style = {
 };
 
 class ModalBoardForm extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       board_name: "",
       description: "",
@@ -68,10 +68,12 @@ class ModalBoardForm extends React.Component {
   render(){
     return (
       <div className="modal-board-create-home-all">
-        <div className="modal-board-thumbnail-container-add"
-             onClick={this.modalSwitch}  >
-           <div>
-           </div>
+
+        <div className={this.props.small ? "modal-board-thumbnail-container-add-small" : "modal-board-thumbnail-container-add"}
+             onClick={this.modalSwitch}>
+           <h3>
+             CREATE BOARD!
+           </h3>
         </div>
 
         <Modal className="modal-board-create-all"
@@ -86,7 +88,7 @@ class ModalBoardForm extends React.Component {
                      onSubmit={this.handleSubmit}>
 
                      <div className="board-create-form-board-img">
-                       <img src="http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg" alt="user-photo" />
+                       <img src={this.props.currentUserImage} alt="user-photo" />
                      </div>
 
                      <label className="board-create-form-label" >

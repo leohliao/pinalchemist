@@ -1,6 +1,7 @@
 import React from 'react';
 import { values, merge } from 'lodash';
 import PinningCreateContainer from '../../pinning/pinning_create_container';
+import ModalBoardForm from '../../board/boardForm/board_form_container';
 
 class PinShow extends React.Component {
   constructor(props){
@@ -16,6 +17,7 @@ class PinShow extends React.Component {
     this.switchOff = this.switchOff.bind(this);
     this.update = this.update.bind(this);
     this.removePin = this.removePin.bind(this);
+    this.createNewBoardModal = this.createNewBoardModal.bind(this);
   }//end constructor
 
   removePin(e){
@@ -41,22 +43,25 @@ class PinShow extends React.Component {
     });
   }//end update
 
-  render(){
-    const { pin } = this.props;
-    console.log(this.props);
+  createNewBoardModal(){
+    return (
+      <div className="create">
+        <ModalBoardForm small={true} currentUserImage={this.props.currentUser.image_url}/>
+      </div>
+    )
+  }
 
-    const deletePinbutton = (this.props.pin.user_id === this.props.currentUser_id ?
+  render(){
+    console.log(this.props.currentUser.image_url);
+    const { pin, boards } = this.props;
+    const deletePinbutton = (pin.user_id === this.props.currentUser_id ?
         <div className="pin-show-form-delete">
          <h6 onClick={this.removePin}>DELETE PIN!</h6>
         </div> : "")
 
-    const pinningButton = (
-      // <div className="pin-show-form-delete">
-      //   <h6>PIN TO BOARD!</h6>
-      // </div>
-      <PinningCreateContainer />
-    );
-
+    const pinningButton = boards.map((board, idx) => (
+          <li key={idx}>{board.board_name}</li>
+    ));
 
     return (
       <div className="pin-show-all">
@@ -88,9 +93,17 @@ class PinShow extends React.Component {
               <p>{pin.author.description}</p>
             </div>
             <div className='pin-show-form-user-tools'>
-              { pinningButton }
-              { deletePinbutton }
+              <div className="dropdown">
+                <div className="dropbtn">PIN TO BOARDS!</div>
+                <div className="dropdown-content">
+                  <li >
+                      {this.createNewBoardModal()}
+                  </li>
+                  { pinningButton }
+                </div>
+              </div>
 
+              { deletePinbutton }
             </div>
           </div>
 

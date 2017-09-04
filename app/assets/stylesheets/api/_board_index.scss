@@ -74,30 +74,3 @@
 //   background-color: rgba(235, 235, 235, 0.7);
 //   cursor: pointer;
 // }
-
-.modal-board-thumbnail-container-add {
-  display:flex;
-  width: 275px;
-  height: 250px;
-  background-color: rgb(225, 225, 225);
-  border-radius: 7px;
-  align-items: center;
-  justify-content: center;
-  background-image: url("http://res.cloudinary.com/leosoba/image/upload/v1501211642/add_board_iw5knx.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 65%;
-}
-
-.modal-board-thumbnail-container-add:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-  opacity: .8;
-  box-shadow: 0 0 3px 2px #a5a5af;
-}
-
-.modal-board-thumbnail-container div h1 {
-  font-family: 'Arimo', sans-serif;
-}

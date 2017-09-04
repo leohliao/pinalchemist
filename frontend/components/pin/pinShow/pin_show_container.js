@@ -3,16 +3,17 @@ import { requestSinglePin, deletePin, editPin } from '../../../actions/pin_actio
 import { createPinning, deletePinning, deletePinningInPinDiffBoard, deletePinningInPinSameBoard } from '../../../actions/pinning_actions';
 import { requestSingleBoard } from '../../../actions/board_actions';
 import { requestSingleUser } from '../../../actions/user_actions';
+import { selectAllBoards } from '../../../reducers/selectors';
 import PinShow from './pin_show';
 
 //ownProps comes from modal_pin_item
-const mapStateToProps = ({ session, pins, boards }, ownProps ) => {
+const mapStateToProps = ({ session, pins }, ownProps ) => {
   return ({
     currentUser: session.currentUser,
     currentUser_id: session.currentUser.id,
     errors: pins.errors,
     pin: pins.pins[ownProps.id],
-    boards
+    boards: selectAllBoards(session.currentUser)
   });
 };
 
