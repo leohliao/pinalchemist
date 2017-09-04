@@ -55,9 +55,10 @@ class PinShow extends React.Component {
           <img className="modal-pin-show-img-close"
              src="http://res.cloudinary.com/leosoba/image/upload/v1500988417/close_vxcbie.png"
              onClick={this.switchOff} />
-          <img className='pin-show-form-img'
-             src={pin.image_url}
-             alt={pin.title}/>
+
+        <img className='pin-show-form-img'
+               src={pin.image_url}
+               alt={pin.title}/>
 
           <div className='pin-show-form-info'>
             <div className='pin-show-form-info-left'>
