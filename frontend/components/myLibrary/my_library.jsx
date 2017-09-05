@@ -12,7 +12,7 @@ class MyLibrary extends React.Component {
   }//end constructor
 
   render (){
-    console.log(this.props);
+    // console.log(this.props.masters);
     return(
       <div className="my-library-form-all">
 

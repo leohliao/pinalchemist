@@ -1,21 +1,29 @@
 import React from 'react';
+import {values} from 'lodash';
+import { withRouter, Link } from 'react-router-dom';
 
 class FollowingShow extends React.Component {
   constructor(props) {
     super(props);
   } // end constructor
 
+
+  componentDidMount() {
+    this.props.requestSingleUser(this.props.match.params.userId);
+  }
+
   componentWillReceiveProps(nextProps) {
-    if (nextProps.currentUser) {
-      this.props.history.push('/');
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.receiveSingleUser(nextProps.match.params.userId);
     }
-  }//componentWillReceiveProps
+  }
 
   render(){
-    console.log("MASTERS " + this.props.masters);
+    // const { masters, disciples } = this.props
+    console.log(this.props);
+    console.log("MASTERS " + Object.values(this.props.masters));
     console.log("DISCIPLES" + this.props.disciples);
-    console.log("CURRENTUSER " + this.props.currentUser);
-    console.log("formType " + this.props.formType);
+    // console.log("CURRENTUSER " + this.props.currentUser);
     return(
       <div>
         <h1>This is following</h1>

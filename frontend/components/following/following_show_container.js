@@ -1,21 +1,20 @@
 import { connect } from 'react-redux';
 import { startFollowing, endFollowing } from '../../actions/follow_actions';
+import { requestSingleUser } from '../../actions/user_actions';
 import FollowingShow from './following_show';
 import { values } from 'lodash';
 
-const mapStateToProps = (state) => {
-  return ({
-    currentUser: state.session.currentUser,
-    masters: values(state.session.currentUser.masters),
-    disciples: values(state.session.currentUser.disciples),
-    state
-  })
-};
+const mapStateToProps = ({session}) => ({
+  currentUser: session.currentUser,
+  masters: session.currentUser.masters,
+  disciples: session.currentUser.disciples
+});
 
 const mapDispatchToProps = (dispatch) => {
   return {
     startFollowing: (follower) => dispatch(startFollowing(follower)),
     endFollowing: (follow) => dispatch(endFollowing(follower)),
+    requestSingleUser: (id) => dispatch(requestSingleUser(id))
   };
 };
 
