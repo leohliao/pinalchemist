@@ -54,6 +54,14 @@
   font-family: 'Arimo', sans-serif;
 }
 
+.my-library-user-username h2 {
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Arimo', sans-serif;
+  margin: 5px auto -10px auto;
+  color: gray;
+}
+
 .my-library-user-separator {
   height: 2px;
   min-width: 40vw;
@@ -69,6 +77,31 @@
   margin: auto;
   padding: auto 35px auto 35px;;
 }
+
+.my-library-links-boards-active {
+  opacity: 1;
+  box-shadow:   0 0 0 4px white,//rgb(159,57,52),
+                0 0 0 7px #57bc90,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.my-library-links-pins-active {
+  opacity: 1;
+  box-shadow:   0 0 0 4px white,//rgb(159,57,52),
+                0 0 0 7px #57bc90,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
 
 .my-library-user-links h1 {
   font-family: 'Arimo', sans-serif;

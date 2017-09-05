@@ -25,15 +25,16 @@ class MyLibrary extends React.Component {
               <div className="my-library-user-info-absolute">
                 <div className="my-library-user-username">
                 <h1>{this.props.currentUser.username}</h1>
+                <h2>{this.props.currentUser.description}</h2>
                 </div>
 
                 <div className="my-library-user-separator" />
 
                 <div className="my-library-user-links">
-                  <NavLink className="profile-links-active" to={`/${this.props.currentUser.id}/boards`}>
+                  <NavLink activeClassName="my-library-links-boards-active" to={`/${this.props.currentUser.id}/boards`}>
                     <h1>Boards</h1>
                   </NavLink>
-                  <NavLink className="profile-links-active" to={`/${this.props.currentUser.id}/pins`}>
+                  <NavLink activeClassName="my-library-links-pins-active" to={`/${this.props.currentUser.id}/pins`}>
                     <h1>Pins</h1>
                   </NavLink>
 
