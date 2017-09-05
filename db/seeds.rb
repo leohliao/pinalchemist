@@ -535,8 +535,8 @@ pinning110 = Pinning.create!(board_id: board3.id, pin_id: pin6.id)
 
 Following.destroy_all
 following1 = Following.create!(following_id: user1.id, follower_id: user2.id)
-following2 = Following.create!(following_id: user1.id, follower_id: user3.id)
-following3 = Following.create!(following_id: user1.id, follower_id: user4.id)
+# following2 = Following.create!(following_id: user1.id, follower_id: user3.id)
+# following3 = Following.create!(following_id: user1.id, follower_id: user4.id)
 following4 = Following.create!(following_id: user1.id, follower_id: user5.id)
 # following5 = Following.create!(following_id: user1.id, follower_id: user6.id)
 following6 = Following.create!(following_id: user2.id, follower_id: user1.id)
