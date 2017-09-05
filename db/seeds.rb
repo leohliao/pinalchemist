@@ -39,14 +39,14 @@ user6 = User.create!({username: "jimIsTheFinisher",
 Pin.destroy_all
 pin1 = Pin.create!({title: 'Gamera Remake',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Gamera_hohult.jpg",
-             user_id: User.find_by_username("leol1").id})
+             user_id: User.find_by_username("leoLiao").id})
 pin2 = Pin.create!({title: 'Tanks And Airplane',
-             user_id: User.find_by_username("leol1").id,
+             user_id: User.find_by_username("leoLiao").id,
              description: "none",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858054/TnP_01_d0f9qg.jpg"})
 pin3 = Pin.create!({title: 'Plants',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/Plants_01_ukeaoi.jpg",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin4 = Pin.create!({title: 'Airplanes',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500858033/TnP_02_eh9wap.jpg",
              user_id: User.find_by_username("guest").id})
@@ -59,7 +59,7 @@ pin6 = Pin.create!({title: 'Magnodente',
 pin7 = Pin.create!({title: 'Imagery Car',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500921017/ddioayzedr7ifigwky8w.jpg",
              description: "modeling done by Zack Cheng",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin8 = Pin.create!({title: 'Girl Standing Against Wall',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1500984079/ewnwmjrvlobmw3lkqza6.jpg",
             description: "digital paint by Ziwei Duanmu",
@@ -71,147 +71,147 @@ pin9 = Pin.create!({title: 'New Year Goal',
 pin10 = Pin.create!({title: 'Visual Development Project',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501007060/gl2qlxsf1kqdmqxkgufy.jpg",
             description: "digital paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol1").id})
+            user_id: User.find_by_username("leoLiao").id})
 pin11 = Pin.create!({title: 'Crane',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501022171/qanjfdrxm4uzvuku7i1o.gif",
             description: "GIF animation, digital paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin12 = Pin.create!({title: 'Snow House',
             description: "by Ziwei",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195308/95318_orig_r18xtu.jpg",
-             user_id: User.find_by_username("leol1").id})
+             user_id: User.find_by_username("leoLiao").id})
 pin13 = Pin.create!({title: 'Arale Rendered',
-             user_id: User.find_by_username("leol1").id,
+             user_id: User.find_by_username("leoLiao").id,
              description: "Maya V-Ray",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195378/Arale_1_1_fduzdy.jpg"})
 pin14 = Pin.create!({title: 'Arale Rendered2',
             description: "Maya V-Ray",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195384/Arale_3_tbtzn3.jpg",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin15 = Pin.create!({title: 'Gundam Wing',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195422/Gundam00_uobymt.jpg",
-             user_id: User.find_by_username("leol3").id})
+             user_id: User.find_by_username("mikeloves3DArts").id})
 pin16 = Pin.create!({title: 'Hair in Maya',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195451/Week5_wgdcew.jpg",
-             user_id: User.find_by_username("leol4").id})
+             user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin17 = Pin.create!({title: 'Life Drawing',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195486/IMG_4144_zoz0et.jpg",
-             user_id: User.find_by_username("leol5").id})
+             user_id: User.find_by_username("jimIsTheFinisher").id})
 pin18 = Pin.create!({title: 'Tengu',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195493/Tengu_1_fh2vzt.jpg",
              description: "Zbrush by Leo Liao",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin19 = Pin.create!({title: 'Nathan Fowkes Concept',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196268/Nathan_Fowkes_24a_tor1r0.jpg",
             description: "digital paint by NF",
-            user_id: User.find_by_username("leol4").id})
+            user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin20 = Pin.create!({title: 'Puss',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196273/The-Art-of-Nathan-Fowkes-25_u3wumd.jpg",
             description: "dreamworks",
-            user_id: User.find_by_username("leol4").id})
+            user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin21 = Pin.create!({title: 'Visual Development Project',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196283/tumblr_mhfi6tymb51rg2f4po4_1280_y6oedo.jpg",
             description: "digital paint by Nathan",
-            user_id: User.find_by_username("leol3").id})
+            user_id: User.find_by_username("mikeloves3DArts").id})
 pin22 = Pin.create!({title: 'Painting',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196294/12249575_10208371488548757_8527565230743978182_n_buhnjh.jpg",
             description: "Mike Hernandez",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin23 = Pin.create!({title: 'Painting',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196354/Untitled-4_mz3j6t.jpg",
-             user_id: User.find_by_username("leol1").id})
+             user_id: User.find_by_username("leoLiao").id})
 pin24 = Pin.create!({title: 'Painting',
-             user_id: User.find_by_username("leol3").id,
+             user_id: User.find_by_username("mikeloves3DArts").id,
              description: "digital paintings",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196303/pib-township-web_znxow5.jpg"})
 pin25 = Pin.create!({title: 'NF workflow',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196331/57926438e8fcdba3ec606c6f53cb8918_dar7ij.jpg",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin26 = Pin.create!({title: 'Balboa Park',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196317/balboa_qwahba.jpg",
-             user_id: User.find_by_username("leol3").id})
+             user_id: User.find_by_username("mikeloves3DArts").id})
 pin27 = Pin.create!({title: 'Concept',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196344/nathan-fowkes-rio2-01_zcowgm.jpg",
-             user_id: User.find_by_username("leol4").id})
+             user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin28 = Pin.create!({title: 'Magnodente2',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501195473/Magnodente__10_icsfyw.jpg",
-             user_id: User.find_by_username("leol5").id})
+             user_id: User.find_by_username("jimIsTheFinisher").id})
 pin29 = Pin.create!({title: 'Alien Kitty',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196307/alien_kitty1_yomnnu.jpg",
              description: "Jonath Kuo Arts",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin30 = Pin.create!({title: 'NF Walkflow',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501196289/28283_2247252l_xtlzoa.jpg",
             description: "digital paint by Nathan Fowkes",
-            user_id: User.find_by_username("leol4").id})
+            user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin31 = Pin.create!({title: 'Visual Development Project for Disney',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160026/8371549_orig_q7kxlu.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol1").id})
+            user_id: User.find_by_username("leoLiao").id})
 pin32 = Pin.create!({title: 'Visual Development Project for Disney',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160149/7678256_orig_qatfog.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin33 = Pin.create!({title: 'Visual Development for Disney',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160209/mmcl-2016-ballspin-v01-bg-v04-zd-011316-72dpi_orig_medvgs.jpg",
              description: "Paint by Ziwei Duanmu",
-             user_id: User.find_by_username("leol1").id})
+             user_id: User.find_by_username("leoLiao").id})
 pin34 = Pin.create!({title: 'Visual Development for Disney',
-             user_id: User.find_by_username("leol3").id,
+             user_id: User.find_by_username("mikeloves3DArts").id,
              description: "digital paintings by Ziwei Duanmu",
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160297/mmcl-2016-dunk-v01-shot1-bg-v01-zd-012416-120dpi_orig_bgntjs.jpg"})
 pin35 = Pin.create!({title: 'Visual Development for Disney',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160398/mmcl-2016-gamewinner-v01-shot2-bg-zd-011816-150dpi_orig_obzubo.jpg",
              description: "digital paintings by Ziwei Duanmu",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin36 = Pin.create!({title: 'Icy North - Visual Development',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160459/_8159683_orig_sugfcv.jpg",
              description: "digital paintings by Ziwei Duanmu",
-             user_id: User.find_by_username("leol3").id})
+             user_id: User.find_by_username("mikeloves3DArts").id})
 pin37 = Pin.create!({title: 'Visual Development: Snow Storm',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160516/_5861338_orig_eyiqjp.jpg",
              description: "digital paintings by Ziwei Duanmu",
-             user_id: User.find_by_username("leol4").id})
+             user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin38 = Pin.create!({title: 'Visual Development - Sailing in the storm',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160567/_9153677_orig_ynbeeb.jpg",
              description: "digital paintings by Ziwei Duanmu",
-             user_id: User.find_by_username("leol5").id})
+             user_id: User.find_by_username("jimIsTheFinisher").id})
 pin39 = Pin.create!({title: 'Visual Development BG',
              image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160627/7235707_orig_q9edzk.jpg",
              description: "digital paintings by Ziwei Duanmu",
-             user_id: User.find_by_username("leol2").id})
+             user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin40 = Pin.create!({title: 'Snow House',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160749/4552509_orig_e3uvvu.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol4").id})
+            user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin41 = Pin.create!({title: 'Visual Development Mountain',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160787/7336510_orig_ruu4cy.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol1").id})
+            user_id: User.find_by_username("leoLiao").id})
 pin42 = Pin.create!({title: 'Visual Development Living Room',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504160822/1904021_orig_cm2bgd.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin43 = Pin.create!({title: 'Visual Development - Bridge',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162470/241915_orig_njab6v.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol1").id})
+            user_id: User.find_by_username("leoLiao").id})
 pin44 = Pin.create!({title: 'Visual Development - home',
-            user_id: User.find_by_username("leol3").id,
+            user_id: User.find_by_username("mikeloves3DArts").id,
             description: "digital paintings by Ziwei Duanmu",
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162505/9828331_orig_phddoc.jpg"})
 pin45 = Pin.create!({title: 'Visual Development - home again',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162547/08-zd-031716-1_orig_jyuv8z.jpg",
             description: "digital paintings by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin46 = Pin.create!({title: 'Visual Development - home stair',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162599/09-bg-033016_orig_zclbmj.jpg",
             description: "digital paintings by Ziwei Duanmu",
-            user_id: User.find_by_username("leol3").id})
+            user_id: User.find_by_username("mikeloves3DArts").id})
 pin47 = Pin.create!({title: 'Visual Development - home from door',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/c_scale,w_753/v1504162652/40-bg-0426-1_orig_dwejto.jpg",
             description: "digital paintings by Ziwei Duanmu",
-            user_id: User.find_by_username("leol4").id})
+            user_id: User.find_by_username("josephTheAwesomeDesigner").id})
 pin48 = Pin.create!({title: 'Visual Development - dining table',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162694/25-0420-1_orig_ve94cc.jpg",
             description: "digital paintings by Ziwei Duanmu",
@@ -219,7 +219,7 @@ pin48 = Pin.create!({title: 'Visual Development - dining table',
 pin49 = Pin.create!({title: 'Visual Development - swimming pool',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162747/6507989_orig_dfygmj.jpg",
             description: "digital paintings by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 pin50 = Pin.create!({title: 'Interesting Things',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162902/7109467_orig_ju5gmy.jpg",
             description: "Paint by Ziwei Duanmu",
@@ -227,70 +227,70 @@ pin50 = Pin.create!({title: 'Interesting Things',
 pin51 = Pin.create!({title: 'Visual Development School',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162939/4749901_orig_jjdglc.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol1").id})
+            user_id: User.find_by_username("leoLiao").id})
 pin52 = Pin.create!({title: 'Visual Development Cactus and church',
             image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504162971/__1285450_orig_sb87dr.jpg",
             description: "Paint by Ziwei Duanmu",
-            user_id: User.find_by_username("leol2").id})
+            user_id: User.find_by_username("ziweiDuanmuArtist").id})
 
 Board.destroy_all
 board1 = Board.create!({board_name: 'My favorites',
                description: "Collections of all my favorite",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board2 = Board.create!({board_name: 'Art Center',
                description: "Amazing artworks collection from artCenter",
                user_id: User.find_by_username("guest").id})
 board3 = Board.create!({board_name: 'Incredible Illustration',
                description: "Meow Meow",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board4 = Board.create!({board_name: 'Illustration',
                description: "Some cool arts I found",
                user_id: User.find_by_username("guest").id})
 board5 = Board.create!({board_name: 'Inspiration',
                description: "Images that inspires the heck outta me",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board6 = Board.create!({board_name: 'Freelancer',
                description: "All the cool stuff drawn by cool peole",
                user_id: User.find_by_username("guest").id})
 board7 = Board.create!({board_name: 'Cats',
               description: "Meow Meow",
-              user_id: User.find_by_username("leol1").id})
+              user_id: User.find_by_username("leoLiao").id})
 board8 = Board.create!({board_name: 'Sweet Arts',
               description: "I got a dream",
-              user_id: User.find_by_username("leol2").id})
+              user_id: User.find_by_username("ziweiDuanmuArtist").id})
 board9 = Board.create!({board_name: 'Arts of mine',
               description: "I can do tis",
-              user_id: User.find_by_username("leol1").id})
+              user_id: User.find_by_username("leoLiao").id})
 board10 = Board.create!({board_name: 'Cool Arts',
               description: "Cool",
-              user_id: User.find_by_username("leol2").id})
+              user_id: User.find_by_username("ziweiDuanmuArtist").id})
 board11 = Board.create!({board_name: 'Masters illustration',
                description: "master collections",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board12 = Board.create!({board_name: 'Masters',
                description: "Amazing artworks collection from artCenter",
                user_id: User.find_by_username("guest").id})
 board13 = Board.create!({board_name: 'Cute Animals',
                description: "Meow Meow",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board14 = Board.create!({board_name: 'More Animals',
                description: "Some cool arts I found",
                user_id: User.find_by_username("guest").id})
 board15 = Board.create!({board_name: 'Amazing Artists',
                description: "Images that inspires the heck outta me",
-               user_id: User.find_by_username("leol1").id})
+               user_id: User.find_by_username("leoLiao").id})
 board16 = Board.create!({board_name: 'Viz from Disney',
                description: "All the cool stuff drawn by cool peole",
                user_id: User.find_by_username("guest").id})
 board17 = Board.create!({board_name: 'Concept for Animation',
               description: "Meow Meow",
-              user_id: User.find_by_username("leol1").id})
+              user_id: User.find_by_username("leoLiao").id})
 board18 = Board.create!({board_name: 'More Boards',
               description: "Some cool arts I found",
               user_id: User.find_by_username("guest").id})
 board19 = Board.create!({board_name: 'Another Sets of Images',
               description: "Images that inspires the heck outta me",
-              user_id: User.find_by_username("leol1").id})
+              user_id: User.find_by_username("leoLiao").id})
 board20 = Board.create!({board_name: 'More amazing arts',
               description: "All the cool stuff drawn by cool peole",
               user_id: User.find_by_username("guest").id})
