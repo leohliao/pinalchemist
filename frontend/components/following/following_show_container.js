@@ -6,8 +6,8 @@ import { values } from 'lodash';
 
 const mapStateToProps = ({session}) => ({
   currentUser: session.currentUser,
-  masters: session.currentUser.masters,
-  disciples: session.currentUser.disciples
+  masters: values(session.currentUser.masters),
+  disciples: values(session.currentUser.disciples)
 });
 
 const mapDispatchToProps = (dispatch) => {
