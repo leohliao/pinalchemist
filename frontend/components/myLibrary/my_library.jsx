@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, Link, withRouter, Route } from 'react-router-dom';
 import BoardIndexContainer from '../board/boardIndex/board_index_container';
+import BoardPinIndexContainer from '../board/boardPinIndex/board_pin_index_container';
 import BoardShowContainer from '../board/boardShow/board_show_container';
 
 class MyLibrary extends React.Component {
@@ -32,6 +33,9 @@ class MyLibrary extends React.Component {
                   <NavLink className="profile-links-active" to={`/${this.props.currentUser.id}/boards`}>
                     <h1>Boards</h1>
                   </NavLink>
+                  <NavLink className="profile-links-active" to={`/${this.props.currentUser.id}/pins`}>
+                    <h1>Pins</h1>
+                  </NavLink>
 
                   <h1>Followers</h1>
                   <h1>Following</h1>
@@ -52,6 +56,7 @@ class MyLibrary extends React.Component {
         <div className="my-library-form-board-index">
           <Route exact path="/:userId/boards" component={ BoardIndexContainer }/>
           <Route exact path="/boards/:id" component={ BoardShowContainer }/>
+          <Route exact path="/:userId/pins" component={ BoardPinIndexContainer }/>
         </div>
 
       </div>

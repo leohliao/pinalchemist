@@ -7,6 +7,7 @@ import PinIndexContainer from './pin/pinIndex/pin_index_container';
 import MyLibraryContainer from './myLibrary/my_library_container';
 import BoardShowContainer from './board/boardShow/board_show_container';
 import BoardIndexContainer from './board/boardIndex/board_index_container';
+import BoardPinIndexContainer from './board/boardPinIndex/board_pin_index_container';
 // import DiscoverIdeaContainer from './discover/discover_container';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -21,6 +22,7 @@ return (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/:userId" component={MyLibraryContainer} />
       <ProtectedRoute path="/:userId/boards" component={BoardIndexContainer} />
+      <ProtectedRoute path="/:userId/pins" component={BoardPinIndexContainer} />
       <ProtectedRoute path="/boards/:id" component={BoardShowContainer} />
       <ProtectedRoute path="/" component={PinIndexContainer} />
     </Switch>
