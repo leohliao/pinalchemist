@@ -30,7 +30,6 @@ class BoardIndex extends React.Component {
         <div className="board-index-masonry-ul-li" key={board.id} >
           <BoardItem board={board} />
         </div>
-
     ));
 
     return(
@@ -42,7 +41,7 @@ class BoardIndex extends React.Component {
                  updateOnEachImageLoad={false}>
 
           <div className="modal-board-form-container">
-            <ModalBoardForm />
+            <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
           </div>
           { allTheBoards }
         </Masonry>

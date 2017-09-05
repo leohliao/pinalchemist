@@ -1,4 +1,5 @@
 .my-library-form-all {
+  min-width: 1080px;
 }
 
 .my-library-form-user {
@@ -8,32 +9,33 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   align-content: center;
-  margin: 85px auto 0 auto;
+  margin: 45px auto 0 auto;
   font-family: sans-serif;
 }
 
 ////child for .my-library-form-user
 .my-library-user-photo {
   margin: auto;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   box-shadow: 0 0 0 3px #a5a5af;
   border-radius: 50vw;
+  overflow: hidden;
 }////child for .my-library-form-user
 
 .my-library-user-photo img {
-  border-radius: inherit;
-  width: inherit;
-  height: inherit;
-  image: cover;
-  width: 180px;
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 ////child for .my-library-form-user
 .my-library-user-info {
   position: relative;
   margin: auto auto auto -100px;
-
+  min-width: 500px;
 }
 
 .my-library-user-absolute {
@@ -62,6 +64,7 @@
 
 .my-library-user-links {
   display: flex;
+  min-width: 500px;
   justify-content: space-around;
   margin: auto;
   padding: auto 35px auto 35px;;
@@ -69,8 +72,30 @@
 
 .my-library-user-links h1 {
   font-family: 'Arimo', sans-serif;
+  font-stretch: expanded;
+  color: white;
+  box-shadow: 0 0 0 2px white;
+  font-size: 15px;
+  height: 14px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgb(46,77,70);
+  vertical-align: middle;
+  width: 70px;
 }
 
+.my-library-user-links h1:hover {
+  opacity: 1;
+  box-shadow:   0 0 0 4px white,//rgb(159,57,52),
+                0 0 0 7px #57bc90,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
 ////child for .my-library-form-user
 
 ////child for .my-library-form-user

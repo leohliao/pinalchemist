@@ -4,7 +4,7 @@ import { requestAllBoards } from '../../actions/board_actions';
 import { selectAllBoards } from '../../reducers/selectors';
 
 const mapStateToProps = ({session, boards, pins}) => ({
-  currentUser: session.currentUser.username,
+  currentUser: session.currentUser,
   boards,
   pins
 });

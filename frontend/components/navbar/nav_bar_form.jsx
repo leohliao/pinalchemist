@@ -32,7 +32,7 @@ class NavBarForm extends React.Component {
           <p>Discover Ideas</p>
         </div>
 
-        <Link className="nav-bar-my-board" to="/mylibrary">
+        <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
         <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
         </Link>
 

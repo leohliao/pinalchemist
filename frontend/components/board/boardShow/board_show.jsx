@@ -1,10 +1,9 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import BoardItem from './board_item';
-import ModalBoardForm from '../boardForm/board_form_container';
-import { selectAllPins } from '../../../reducers/selectors';
+// import ModalBoardForm from '../boardForm/board_form_container';
 import ModalPinItem from '../../modal/modal_pin_item';
 
 class BoardShow extends React.Component {
@@ -16,7 +15,6 @@ class BoardShow extends React.Component {
 
   componentDidMount(){
     this.props.requestSingleBoard(this.props.match.params.id);
-    this.props.requestAllPins();
   }//end componentDidMount
 
   deleteBoard(e){
@@ -62,14 +60,12 @@ class BoardShow extends React.Component {
 
     return(
       <div className="board-show-all">
+        <h1>{this.props.board.board_name}</h1>
           <Masonry className={'board-index-masonry'}
                    elementType={'ul'}
                    options={masonryOptions}
                    disableImagesLoaded={false}
                    updateOnEachImageLoad={false}>
-            <div className="modal-board-form-container">
-              <ModalBoardForm />
-            </div>
               { havePins }
           </Masonry>
       </div>

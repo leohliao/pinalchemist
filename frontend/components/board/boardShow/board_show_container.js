@@ -1,19 +1,18 @@
 import { connect } from 'react-redux';
+
 import BoardShow from './board_show';
 import { requestSingleBoard, removeBoard } from '../../../actions/board_actions';
 import { requestAllPins } from '../../../actions/pin_actions';
-import { selectAllPins } from '../../../reducers/selectors';
+import { selectMyPins, selectAllBoards } from '../../../reducers/selectors';
 
 const mapStateToProps = (state, { match }) => {
   const boardId = match.params.id;
   const board = state.boards[boardId];
-  const boardPins = board ? board.pin_ids : [];
-
   return ({
     currentUser: state.session.currentUser,
-    pins: selectAllPins(state),
-    board,
-    boardPins
+    pins: selectMyPins(state),
+    boards: state.boards,
+    board
   });
 };
 
