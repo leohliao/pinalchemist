@@ -3,6 +3,7 @@ import { NavLink, Link, withRouter, Route } from 'react-router-dom';
 import BoardIndexContainer from '../board/boardIndex/board_index_container';
 import BoardPinIndexContainer from '../board/boardPinIndex/board_pin_index_container';
 import BoardShowContainer from '../board/boardShow/board_show_container';
+// import FollowShowContainer from '../following/follow_show_container';
 
 class MyLibrary extends React.Component {
   constructor(props){
@@ -11,7 +12,6 @@ class MyLibrary extends React.Component {
 
   render (){
     console.log(this.props);
-    console.log(this.state);
 
     return(
       <div className="my-library-form-all">
@@ -38,8 +38,11 @@ class MyLibrary extends React.Component {
                     <h1>Pins</h1>
                   </NavLink>
 
-                  <h1>Followers</h1>
-                  <h1>Following</h1>
+                    <h1>Followings</h1>
+
+
+                    <h1>Followers</h1>
+
                 </div>
               </div>
             </div>
@@ -47,10 +50,10 @@ class MyLibrary extends React.Component {
             <div className="my-library-follows">
               <div className="my-library-follow-wrapper">
                 <h1>Following</h1>
-                <h3>#</h3>
+                <h3>{this.props.masters.length}</h3>
                 <br />
                 <h1>Followers</h1>
-                <h3>#</h3>
+                <h3>{this.props.disciples.length}</h3>
               </div>
             </div>
         </div>
@@ -58,6 +61,7 @@ class MyLibrary extends React.Component {
           <Route exact path="/:userId/boards" component={ BoardIndexContainer }/>
           <Route exact path="/boards/:id" component={ BoardShowContainer }/>
           <Route exact path="/:userId/pins" component={ BoardPinIndexContainer }/>
+
         </div>
 
       </div>
@@ -66,3 +70,6 @@ class MyLibrary extends React.Component {
 }//end homeForm
 
 export default withRouter(MyLibrary);
+
+// <Route exact path="/followings" component={ FollowShowContainer }/>
+// <Route exact path="/followers" component={ FollowShowContainer }/>

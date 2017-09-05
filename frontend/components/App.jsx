@@ -22,8 +22,8 @@ return (
       <ProtectedRoute path="/:userId" component={MyLibraryContainer} />
       <ProtectedRoute path="/:userId/boards" component={BoardIndexContainer} />
       <ProtectedRoute path="/:userId/pins" component={BoardPinIndexContainer} />
-      <ProtectedRoute path="/:userId/followers" component={FollowShowContainer} />
-      <ProtectedRoute path="/:userId/followings" component={FollowShowContainer} />
+      <ProtectedRoute path="/followers" component={FollowShowContainer} />
+      <ProtectedRoute path="/followings" component={FollowShowContainer} />
       <ProtectedRoute path="/boards/:id" component={BoardShowContainer} />
       <ProtectedRoute path="/" component={PinIndexContainer} />
     </Switch>

@@ -88,6 +88,7 @@
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+  text-decoration: none;
 }
 
 .my-library-links-pins-active {
@@ -100,8 +101,34 @@
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+  text-decoration: none;
 }
 
+.my-library-links-followings-active {
+  opacity: 1;
+  box-shadow:   0 0 0 4px white,//rgb(159,57,52),
+                0 0 0 7px #57bc90,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.my-library-links-followers-active {
+  opacity: 1;
+  box-shadow:   0 0 0 4px white,//rgb(159,57,52),
+                0 0 0 7px #57bc90,
+                0 6px 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  text-decoration: none;
+}
 
 .my-library-user-links h1 {
   font-family: 'Arimo', sans-serif;
@@ -116,6 +143,7 @@
   background-color: rgb(46,77,70);
   vertical-align: middle;
   width: 70px;
+  text-decoration: none;
 }
 
 .my-library-user-links h1:hover {
@@ -128,6 +156,7 @@
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
+  text-decoration: none;
 }
 ////child for .my-library-form-user
 
@@ -139,8 +168,23 @@
 }
 
 .my-library-follow-wrapper {
-  margin-top: 20px;
+  margin-left: 30px;
   vertical-align: super;
+}////child for .my-library-form-user
+
+.my-library-follow-wrapper h1 {
+  color: #ababab;
+  font-stretch: extra-expanded;
+  font-weight: bold;
+  text-align: right;
+  font-family: sans-serif;
+}////child for .my-library-form-user
+
+.my-library-follow-wrapper h3 {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: sans-serif;
+  margin-bottom: 10px;
 }////child for .my-library-form-user
 
 .my-library-form-board-index {
