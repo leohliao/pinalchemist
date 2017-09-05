@@ -5,8 +5,10 @@ export const startFollowing = (follower) => dispatch => {
   return FollowingAPIUtil.createFollowing(follower)
      .then(follower => dispatch(receiveSingleUser(follower)))
 }
+window.startFollowing = startFollowing;
 
 export const endFollowing = (follower) => dispatch  => {
   return FollowingAPIUtil.deleteFollowing(follower)
     .then(follower => dispatch(receiveSingleUser(follower)))
 }
+window.endFollowing = endFollowing;

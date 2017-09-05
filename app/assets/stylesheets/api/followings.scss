@@ -1,3 +1,64 @@
 // Place all the styles related to the api/Followings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.following-show-all {
+  width:70vw;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  margin: auto;
+}
+
+.following-show-title {
+  font-size: 48px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #4a4a4a;
+  border-bottom: 2px solid #a5a5af;
+  padding-bottom: 5px;
+}
+
+.following-show-masonry {
+  margin-top: 20px;
+}
+
+.following-show-li-items {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+}
+
+.following-show-li-img {
+  margin: 15px auto;
+  width: 180px;
+  height: 180px;
+  box-shadow: 0 0 0 3px #a5a5af;
+  border-radius: 50vw;
+  overflow: hidden;
+}
+
+.following-show-li-img img {
+  border-radius: 50px;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.following-show-li-info {
+  color: #a5a5af;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  text-decoration: none;
+}
+
+.following-show-li-info h1 {
+  color: #a5a5af;
+  text-align: center;
+  margin-bottom: 5px;
+  text-decoration: none;
+}

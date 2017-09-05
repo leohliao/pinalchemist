@@ -12,10 +12,13 @@ class Api::FollowingsController < ApplicationController
   end
 
   def destroy
-    @following = current_user.i_am_following.where(following_id: params[:following][:following_id]).first
+    @following = Following.where(following: params[:following][:following_id], follower_id: params[:following][:follower_id]).first
     @user = User.find_by_id(@following.following_id)
-    @following.destroy
-    render json: 'api/user/show.json.jbuilder'
+    if @following.destroy
+      render json: 'api/user/show.json.jbuilder'
+    else
+      render json: @following.errors.full_messages, status: 422
+    end
   end
 
   private
