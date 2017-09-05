@@ -1,6 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import { withRouter, Link } from 'react-router-dom';
+import {values} from 'lodash';
 
 class FollowingShow extends React.Component {
   constructor(props) {
@@ -13,18 +14,19 @@ class FollowingShow extends React.Component {
     this.props.requestSingleUser(this.props.match.params.userId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.userId !== nextProps.match.params.userId) {
-  //     this.props.receiveSingleUser(nextProps.match.params.userId);
-  //   }
-  // }
-  //
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.receiveSingleUser(nextProps.match.params.userId);
+    }
+  }
+
   handleUnfollow(e) {
     e.preventDefault();
     let userId = parseInt(this.props.currentUser.id);
     let masterId = parseInt(e.currentTarget.value);
-    let following = { follower: {follower_id: userId, following_id: masterId }};
-    this.props.endFollowing({following});
+    let following = { following: {following_id: masterId, follower_id: userId }};
+    console.log(following);
+    this.props.endFollowing(following);
   }
 
   render(){
@@ -33,23 +35,25 @@ class FollowingShow extends React.Component {
           fitWidth: true,
         };
 
-        console.log(this.props);
+        console.log(this.props.masters);
 
-    const allMasters = this.props.masters.map ((master) => (
-      <li key={master.id} className="following-show-li-items">
-        <Link to={`/${master.id}/boards`} >
-        <div className="following-show-li-img">
-          <img src={master.image_url}></img>
-        </div>
-        <div className="following-show-li-info">
-          <h1>{master.username}</h1>
-          <button onClick={this.handleUnfollow} value={master.id}>
-            unfollow
-          </button>
-        </div>
-        </Link>
-      </li>
-    ));
+    const allMasters = this.props.masters.map ((master) => {
+        return (
+        <li key={master.id} className="following-show-li-items">
+          <Link to={`/${master.id}/boards`} >
+          <div className="following-show-li-img">
+            <img src={master.image_url}></img>
+          </div>
+          <div className="following-show-li-info">
+            <h1>{master.username}</h1>
+            <button onClick={this.handleUnfollow} value={master.id}>
+              unfollow
+            </button>
+          </div>
+          </Link>
+        </li>
+      );
+    });
 
     return(
       <div className="following-show-all">

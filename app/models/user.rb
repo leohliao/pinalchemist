@@ -34,12 +34,14 @@ class User < ApplicationRecord
   has_many :i_am_being_followed,
     primary_key: :id,
     foreign_key: :follower_id,
-    class_name: :Following
+    class_name: :Following,
+    dependent: :destroy
 
   has_many :i_am_following,
     primary_key: :id,
     foreign_key: :following_id,
-    class_name: :Following
+    class_name: :Following,
+    dependent: :destroy
 
   has_many :disciples,
     through: :i_am_being_followed,

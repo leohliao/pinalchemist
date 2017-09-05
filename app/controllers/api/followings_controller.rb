@@ -12,7 +12,7 @@ class Api::FollowingsController < ApplicationController
   end
 
   def destroy
-    @following = Following.where(following: params[:following][:following_id], follower_id: params[:following][:follower_id]).first
+    @following = Following.where(following_id: params[:following][:following_id], follower_id: params[:following][:follower_id]).first
     @user = User.find_by_id(@following.following_id)
     if @following.destroy
       render json: 'api/user/show.json.jbuilder'

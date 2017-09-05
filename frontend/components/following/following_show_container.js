@@ -13,7 +13,7 @@ const mapStateToProps = ({session}) => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     startFollowing: (follower) => dispatch(startFollowing(follower)),
-    endFollowing: (follow) => dispatch(endFollowing(follower)),
+    endFollowing: (follower) => dispatch(endFollowing(follower)),
     requestSingleUser: (id) => dispatch(requestSingleUser(id))
   };
 };
