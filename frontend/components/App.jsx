@@ -2,7 +2,8 @@ import React from 'react';
 import NavBarFormContainer from './navbar/nav_bar_container';
 import MyLibraryContainer from './myLibrary/my_library_container';
 import PinIndexContainer from './pin/pinIndex/pin_index_container';
-import FollowShowContainer from './following/follow_show_container';
+import FollowingShowContainer from './following/following_show_container';
+import FollowerShowContainer from './following/follower_show_container';
 import SessionFormContainer from './session/session_form_container';
 import BoardShowContainer from './board/boardShow/board_show_container';
 import BoardIndexContainer from './board/boardIndex/board_index_container';
@@ -22,8 +23,8 @@ return (
       <ProtectedRoute path="/:userId" component={MyLibraryContainer} />
       <ProtectedRoute path="/:userId/boards" component={BoardIndexContainer} />
       <ProtectedRoute path="/:userId/pins" component={BoardPinIndexContainer} />
-      <ProtectedRoute path="/followers" component={FollowShowContainer} />
-      <ProtectedRoute path="/followings" component={FollowShowContainer} />
+      <ProtectedRoute path="/:userId/followers" component={FollowerShowContainer} />
+      <ProtectedRoute path="/:userId/followings" component={FollowingShowContainer} />
       <ProtectedRoute path="/boards/:id" component={BoardShowContainer} />
       <ProtectedRoute path="/" component={PinIndexContainer} />
     </Switch>

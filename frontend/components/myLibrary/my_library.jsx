@@ -3,7 +3,8 @@ import { NavLink, Link, withRouter, Route } from 'react-router-dom';
 import BoardIndexContainer from '../board/boardIndex/board_index_container';
 import BoardPinIndexContainer from '../board/boardPinIndex/board_pin_index_container';
 import BoardShowContainer from '../board/boardShow/board_show_container';
-// import FollowShowContainer from '../following/follow_show_container';
+import FollowerShowContainer from '../following/follower_show_container';
+import FollowingShowContainer from '../following/following_show_container';
 
 class MyLibrary extends React.Component {
   constructor(props){
@@ -12,7 +13,6 @@ class MyLibrary extends React.Component {
 
   render (){
     console.log(this.props);
-
     return(
       <div className="my-library-form-all">
 
@@ -37,12 +37,12 @@ class MyLibrary extends React.Component {
                   <NavLink activeClassName="my-library-links-pins-active" to={`/${this.props.currentUser.id}/pins`}>
                     <h1>Pins</h1>
                   </NavLink>
-
+                  <NavLink activeClassName="my-library-links-followings-active" to={`/${this.props.currentUser.id}/followings`}>
                     <h1>Followings</h1>
-
-
+                  </NavLink>
+                  <NavLink activeClassName="my-library-links-followers-active" to={`/${this.props.currentUser.id}/followers`}>
                     <h1>Followers</h1>
-
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -61,9 +61,9 @@ class MyLibrary extends React.Component {
           <Route exact path="/:userId/boards" component={ BoardIndexContainer }/>
           <Route exact path="/boards/:id" component={ BoardShowContainer }/>
           <Route exact path="/:userId/pins" component={ BoardPinIndexContainer }/>
-
+          <Route exact path="/:userId/followings" component={ FollowingShowContainer } />
+          <Route exact path="/:userId/followers" component={ FollowerShowContainer } />
         </div>
-
       </div>
     );//end return
   }//end render
@@ -71,5 +71,4 @@ class MyLibrary extends React.Component {
 
 export default withRouter(MyLibrary);
 
-// <Route exact path="/followings" component={ FollowShowContainer }/>
 // <Route exact path="/followers" component={ FollowShowContainer }/>

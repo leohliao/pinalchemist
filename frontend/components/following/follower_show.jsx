@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FollowShow extends React.Component {
+class FollowerShow extends React.Component {
   constructor(props) {
     super(props);
   } // end constructor
@@ -18,10 +18,10 @@ class FollowShow extends React.Component {
     console.log("formType " + this.props.formType);
     return(
       <div>
-        <h1>This is following</h1>
+        <h1>This is follower</h1>
       </div>
     );//end return
   }//end render
 }// end class FollowShow
 
-export default FollowShow;
+export default FollowerShow;
