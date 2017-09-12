@@ -19,23 +19,21 @@
   -ms-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-}
-
-.pin-index-pin-items:hover {
-  background-color: #E3DCD5;
-  border-radius: 6px;
-  opacity: 0.6;
-  transform: scale(0.96);
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-.pin-index-pin-items:hover .pin-index-pin-items-modal-view {
-  opacity: 1;
-  transition: opacity .35s ease;
+  &:hover {
+    background-color: #E3DCD5;
+    border-radius: 6px;
+    opacity: 0.6;
+    transform: scale(0.96);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    .pin-index-pin-items-modal-view {
+      opacity: 1;
+      transition: opacity .35s ease;
+    }
+  }/* end hover*/
 }
 
 .pin-index-pin-items-modal-view {
@@ -47,7 +45,6 @@
   top: 30%;
   font-size: 22px;
   font-family: sans-serif;
-  // border: 2px solid #57bc90;
   box-shadow: 0 0 0 2px #57bc90,
               0 0 0 3px rgba(0, 0 ,0, 0),
               0 0 0 4px white;
@@ -62,7 +59,6 @@
 
 .pin-index-pin-items-info {
   display: flex;
-  // flex-flow: column;
   margin-top: -2px;
 }
 
@@ -73,39 +69,45 @@
   width: 240px;
   margin-top: -10px;
   margin-bottom: 5px;
-}
-
-.pin-index-pin-items-info-upper p {
-  vertical-align: middle;
-  padding-top: 8px;
-  margin-left: 5px;
-  display: inline-block;
-  word-wrap: break-word;
-  text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 180px;
-  color: #6e6e6e;
-  font-family: sans-serif;
-  font-size: 13px;
-  height: 1.6em;
-  font-weight: bold;
+  p {
+    vertical-align: middle;
+    padding-top: 8px;
+    margin-left: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    color: #6e6e6e;
+    font-family: sans-serif;
+    font-size: 13px;
+    height: 1.6em;
+    font-weight: bold;
+  } /* end p */
 }
 
 .pin-index-pin-items-info-author {
   width: 30px;
   height: 30px;
   overflow: hidden;
+  img {
+    border-radius: 50px;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+  } /* end img */
 }
 
-.pin-index-pin-items-info-author img {
-  border-radius: 50px;
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
+// .pin-index-pin-items-info-author img {
+//   border-radius: 50px;
+//   object-fit: cover;
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+// }
 //
 // .pin-index-pin-items-info-lower {
 //   display: flex;
