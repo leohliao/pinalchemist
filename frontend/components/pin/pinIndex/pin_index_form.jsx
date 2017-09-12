@@ -46,7 +46,6 @@ class PinIndexForm extends React.Component {
                 <img src= {pin.author_image_url} />
               </div>
           </div>
-
         </div>
       </li>
     ));

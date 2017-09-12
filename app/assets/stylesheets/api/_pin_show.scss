@@ -2,54 +2,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   border-radius: 8px;
   width: inherit;
   height: auto;
   overflow: auto;
-}
-
-.pin-show-all h2 {
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  font-weight: 200;
-  color: white;
-  height: 1.2em;
+  h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: 200;
+    color: white;
+    height: 1.2em;
+  } /* end h2 */
 }
 
 .modal-pin-show-img-close {
   width: 23px;
   display: block;
   position: absolute;
-  padding-top: -10px;
-  padding-right: -10px;
+  padding-top: -20px;
+  padding-right: -20px;
   justify-content: flex-end;
   align-self: flex-end;
   opacity: 0.7;
-}
-
-.modal-pin-show-img-close:hover{
-  cursor: pointer;
-  opacity: 1;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  } /* end hover */
 }
 
 .pin-show-form-img {
   vertical-align: top;
-  margin: 15px auto;
+  margin: 20px auto;
   border-radius: 5px;
   max-width: 50vw;
   max-height: 68vh;
   // min-height: 50vh;
 }
-//
-// .pin-show-form-img img{
-//   width: 100%;
-//   height: auto;
-// }
 
 .pin-show-form-info {
   display: flex;
@@ -104,15 +96,22 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 5px;
-  width: 100px;
-}
-
-.pin-show-pin-info-text h1 {
-  font-family: sans-serif;
-  font-size: 16px;
-  color: #3d3d3d;
-  text-align: center;
-  margin-left: 20px;
+  width: 140px;
+  h1 {
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #3d3d3d;
+      text-align: center;
+      margin-left: 20px;
+      display: inline-block;
+      word-wrap: break-word;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 140px;
+      color: #6e6e6e;
+      height: 1.6em;
+  }
 }
 
 .pin-show-form-user-tools {
@@ -129,31 +128,33 @@
   // align-self: flex-end;
   vertical-align: middle;
   margin: auto 10px;
+
+  h6 {
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 0 0 0 2px white;
+    font-size: 12px;
+    height: 8px;
+    padding: 8px 10px 10px 10px;
+    align-self: center;
+    border-radius: 8px;
+    background-color: rgb(46,77,70);
+
+    &:hover {
+      opacity: 1;
+      box-shadow:   0 0 0 4px #57bc90,//rgb(159,57,52),
+                    0 0 0 5px white,
+                    0 6px 20px 0 rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      cursor: pointer;
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+    } /* end hover */
+  } /* end h6 */
 }
 
-.pin-show-form-delete h6 {
-  color: white;
-  font-family: sans-serif;
-  box-shadow: 0 0 0 2px white;
-  font-size: 12px;
-  height: 8px;
-  padding: 8px 10px 10px 10px;
-  align-self: center;
-  border-radius: 8px;
-  background-color: rgb(46,77,70);
-}
 
-.pin-show-form-delete:hover {
-  opacity: 1;
-  box-shadow:   0 0 0 4px #57bc90,//rgb(159,57,52),
-                0 0 0 5px white,
-                0 6px 20px 0 rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  cursor: pointer;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
 
 /* Dropdown Button */
 .dropbtn {

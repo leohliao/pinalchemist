@@ -18,7 +18,7 @@ const style = {
   content : {
     position        : 'flex',
     justifyContent  : 'center',
-    margin          : '20px auto 20px auto',
+    margin          : '15px auto 20px auto',
     maxWidth        : '53vw',
     height          : 'auto',
     // minHeight       : '75vh',
