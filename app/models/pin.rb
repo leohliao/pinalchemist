@@ -12,6 +12,10 @@
 #
 
 class Pin < ApplicationRecord
+  include PgSearch
+  multisearchable :against => :title
+  pg_search_scope :whose_title_starts_with, against: :title, using: {tsearch: {prefix: true}}
+
   validates :title, :image_url, :user_id, presence: true
 
   belongs_to :author,
@@ -19,10 +23,9 @@ class Pin < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
-  has_many :pinnings, dependent: :destroy
-
   has_many :boards,
     through: :pinnings,
     source: :board
 
+  has_many :pinnings, dependent: :destroy
 end
