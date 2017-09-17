@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :boards, only: [:show, :create, :destroy]
     resources :pinnings, only: [:create, :destroy, :index]
     resources :followings, only:[:create, :destroy]
+    resources :searches, only[:index]
   end
 
   root "static_pages#root"
