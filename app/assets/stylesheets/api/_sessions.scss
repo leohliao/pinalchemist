@@ -16,16 +16,11 @@
 .session-form-container {
     margin-top: 10vh;
     border-radius: 9px;
-    // box-shadow: 0 0 0 2px #A19A8F;
-                // 5px 5px 4px #888888;
-    // background-color: #18B5A6;
     background-color: white;
     display: flex;
     text-align: center;
     width: 380px;
     height: 570px;
-    // opacity: 0.95;
-    // filter: alpha(opacity=95);
 } //sign-in box
 
 .session-form-logo-image {
@@ -138,28 +133,36 @@
     background-color: #015249;
     color: #FFFFFF;
     transition: all 0.5s;
+    &:hover {
+      background-color: #017366;
+      cursor: pointer;
+    }
 }
 
-.session-form-submit-button:hover {
-    background-color: #017366;
-    cursor: pointer;
-}
 
 .session-form-submit-button span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
     cursor: pointer;
+    &:after {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+      content: '\00bb';
+    }
 }
 
-.session-form-submit-button span:after {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-    content: '\00bb';
-}
+// .session-form-submit-button span:after {
+//     position: absolute;
+//     opacity: 0;
+//     top: 0;
+//     right: -20px;
+//     transition: 0.5s;
+//     content: '\00bb';
+// }
 
 .session-form-submit-button:hover span {
     padding-right: 35px;
@@ -185,13 +188,18 @@
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #015249;
   color: #FFFFFF;
-  opacity: 0.4;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 3px #015249;
+  &:hover {
+    cursor: pointer;
+
+  }
 }
 
-.session-form-demo:hover {
-  cursor: pointer;
-  opacity: 1;
-}
+// .session-form-demo:hover {
+//   cursor: pointer;
+//   opacity: 1;
+// }
 
 .session-form-message {
     font-family: 'Source Sans Pro', sans-serif;
