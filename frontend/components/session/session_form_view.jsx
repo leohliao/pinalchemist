@@ -109,7 +109,7 @@ class SessionForm extends React.Component {
             </div>
 
             <div className="session-form-slogan">
-              <h1>CHEMISTRY OF CREATIVITY STARTS HERE</h1>
+              <h1>CHEMISTRY FOR CREATIVITY STARTS HERE</h1>
             </div>
 
             <div className="session-form-errors">
