@@ -11,9 +11,9 @@
 #
 
 class Board < ApplicationRecord
-  include PgSearch
-  multisearchable :against => :board_name
-  pg_search_scope :whose_board_name_starts_with, against: :board_name, using: {tsearch: {prefix: true}}
+  # include PgSearch
+  # multisearchable :against => :board_name
+  # pg_search_scope :whose_board_name_starts_with, against: :board_name, using: {tsearch: {prefix: true}}
 
   validates :board_name, :user_id, presence: true
   validates :board_name, uniqueness: { scope: :user_id,

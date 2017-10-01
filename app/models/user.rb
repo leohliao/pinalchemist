@@ -21,6 +21,8 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  before_validation :ensure_token
+
   has_many :pins,
     primary_key: :id,
     foreign_key: :user_id,
