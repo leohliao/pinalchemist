@@ -124,7 +124,7 @@ In addition to finding the right data, being able to accurately link all the dif
     * Have users be able to see other user's boards.
     * Have users be able to follow other users, as well as be followed.
 
-[PinAlchemist Live]: https://pinalchemist.herokuapp.com/#/login
+[PinAlchemist Live]: https://pinalchemist.herokuapp.com/#/
 [Pinterest]: https://www.pinterest.com/
 [wireframes]: (docs/wireframes)
 [components]: (docs/component-hierarchy.md)
