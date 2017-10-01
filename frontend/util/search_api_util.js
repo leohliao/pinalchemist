@@ -1,7 +1,7 @@
 export const fetchSearch = search => {
   return $.ajax({
     method: 'GET',
-    url: 'api/searchs',
+    url: 'api/searches',
     data: { search }
   });
 }; //end fetchSearch
