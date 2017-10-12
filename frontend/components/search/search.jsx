@@ -8,25 +8,30 @@ class Search extends React.Component {
     super(props);
 
     this.state = { search: ""};
-    this.handleInput = this.handleInput.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+    // this.handleInput = this.handleInput.bind(this);
+    // this.handleReset = this.handleReset.bind(this);
+    // this.searchResults = this.searchResults.bind(this);
   } // end constructor
 
-  handleInput(event){
-    event.preventDefault();
-    this.setState({search: event.target.value},
-      () => this.props.requestSearch(this.state.search)
-    )
-  }  // end handleInput
-
-  handleReset(event){
-    event.preventDefault();
-    this.setState({search: ""});
-  } // end handleReset
-
-  componentWillMount(){
-    this.props.resetSearch();
-  } // componentWillMount
+  // handleInput(event){
+  //   event.preventDefault();
+  //   this.setState({search: event.target.value},
+  //     () => this.props.requestSearch(this.state.search)
+  //   )
+  // }  // end handleInput
+  //
+  // handleReset(event){
+  //   event.preventDefault();
+  //   this.setState({search: ""});
+  // } // end handleReset
+  //
+  // componentWillMount(){
+  //   this.props.resetSearch();
+  // } // componentWillMount
+  //
+  // searchResults(items, type){
+  //
+  // } // searchResults
 
   render(){
     return (
@@ -35,6 +40,8 @@ class Search extends React.Component {
                type="text"
                autoComplete="off"
                name="search"
+               value={this.state.search}
+               onChange={this.handleInput}
                placeholder="Search"/>
       </div>
     ) // return

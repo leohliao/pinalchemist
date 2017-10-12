@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ModalPinCreate from '../modal/modal_pin_create';
+import Search from '../search/search_container';
 
 class NavBarForm extends React.Component {
   constructor(props){
@@ -22,11 +23,7 @@ class NavBarForm extends React.Component {
         <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
         </Link>
 
-        <input className="nav-bar-search-input"
-               type="text"
-               autoComplete="off"
-               name="search"
-               placeholder="Search"/>
+        <Search />
 
         <div className="nav-bar-discover-ideas" >
           <p>Discover Ideas</p>

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { requestSearch, resetSearch } from '../../actions/search_actions';
 import Search from './search';
 
-const mapStateToProps = ({ state }) => ({
+const mapStateToProps = (state) => ({
   currentUser: state.session.currentUser,
   search: state.search
 });
