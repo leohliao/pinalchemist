@@ -13,9 +13,10 @@ export const resetSearch = () => {
   type: RESET_SEARCH
 }
 
-//thunk
+//thunk action
 export const requestSearch = (search) => dispatch => {
   return (
     searchAPIUtil.fetchSearch(search)
-    .then( search => receiveSearch(search)));
+    .then(search => dispatch(receiveSearch(search)))
+  );
 };
