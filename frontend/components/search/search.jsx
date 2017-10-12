@@ -12,22 +12,21 @@ class Search extends React.Component {
     this.handleReset = this.handleReset.bind(this);
   } // end constructor
 
+  handleInput(event){
+    event.preventDefault();
+    this.setState({search: event.target.value},
+      () => this.props.requestSearch(this.state.search)
+    )
+  }  // end handleInput
+
   handleReset(event){
     event.preventDefault();
     this.setState({search: ""});
   } // end handleReset
 
-  handleInput(event){
-    event.preventDefault();
-    this.setState({search: event.target.value},
-    () => this.props.requestSearch(this.state.search)
-    )
-  }  // end handleInput
-
   componentWillMount(){
     this.props.resetSearch();
   } // componentWillMount
-
 
   render(){
     return (

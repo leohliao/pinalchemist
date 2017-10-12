@@ -13,12 +13,14 @@ import SessionReducer from './session_reducer';
 import PinReducer from './pin_reducer';
 import BoardReducer from './board_reducer';
 import UserReducer from './user_reducer';
+import SearchReducer from './search_reducer';
 
 const rootReducer = combineReducers({
     session: SessionReducer,
     pins: PinReducer,
     users: UserReducer,
-    boards: BoardReducer
+    boards: BoardReducer,
+    search: SearchReducer
 });
 
 export default rootReducer;
