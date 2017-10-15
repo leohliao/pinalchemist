@@ -10,11 +10,6 @@ section {
   }
 }
 
-// section .nav-bar-all {
-//   height: 64px;
-//   width: auto;
-// }
-
 .nav-bar-home-page {
   flex: 1; //.nav-bar-search-input
   img {
@@ -37,34 +32,16 @@ section {
   }
 }
 
-// .nav-bar-home-page img {
-//   width: 80px;
-//   height: auto;
-//   padding: 4px 4px 4px 4px;
-//   margin: 12px 28px 12px 28px;
-// }
-
-// .nav-bar-home-page img:hover {
-//   background-color: #f0f0f0;
-//   border-radius: 10px;
-//   cursor: pointer;
-//   -webkit-transform: scale(1.05);
-//   -ms-transform: scale(1.05);
-//   transform: scale(1.05);
-// }
-
-// .nav-bar-home-page img:active {
-//   box-shadow: 0 0 0 2px white,
-//               0 0 0 4px #57b38d;
-// }
-
-input .nav-bar-search-input {
+.nav-bar-search {
     flex: 2; // .nav-bar-home-page
+    // margin-left: 18px;
+    // width: 90%;
+    // min-width: 120px;
 }
 
 .nav-bar-search-input {
-    margin-left: 18px;
-    width: 90%;
+    // margin-left: 18px;
+    // width: 90%;
     height: 46px;
     box-sizing: border-box;
     border: 1px solid #57BC90;
@@ -77,7 +54,7 @@ input .nav-bar-search-input {
     background-size: contain;
     background-repeat: no-repeat;
     padding: 12px 25px 14px 50px;
-    min-width: 120px;
+    // min-width: 120px;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -87,79 +64,70 @@ input .nav-bar-search-input {
 .nav-bar-discover-ideas {
     flex: 1;
     margin-left: 30px;
-}
-
-.nav-bar-discover-ideas p {
-    margin: 6px 20px 6px 30px;
-    padding: 4px 4px 4px 4px;
-    font-family: sans-serif;
-    color: #57b38d;
-    font-size: 22px;
-    text-align: center;
-}
-
-.nav-bar-discover-ideas:hover {
-  cursor: pointer;
-  -webkit-animation: swing 1s ease;
-  animation: swing 1s ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-.nav-bar-discover-ideas:active {
-  box-shadow: 0 0 0 1px white,
-              0 0 0 3px #57b38d;
-  border-radius: 5px;
-}
-
-.nav-bar-my-board img {
-  height: 42px;
-  width: auto;
-  padding: 10px 10px 10px 10px;
-  margin: 4px 30px 0px 20px;
+    p {
+      margin: 6px 20px 6px 30px;
+      padding: 4px 4px 4px 4px;
+      font-family: sans-serif;
+      color: #57b38d;
+      font-size: 22px;
+      text-align: center;
+    }
+    &:hover {
+      cursor: pointer;
+      -webkit-animation: swing 1s ease;
+      animation: swing 1s ease;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+    &:active {
+      box-shadow: 0 0 0 1px white,
+                  0 0 0 3px #57b38d;
+      border-radius: 5px;
+    }
 }
 
 .nav-bar-my-board {
   flex: 1;
   margin-left: 10px;
-}
-
-.nav-bar-my-board img:hover {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.nav-bar-my-board img:active {
-  box-shadow: 0 0 0 1px white,
-              0 0 0 3px #57b38d;
+  img {
+    height: 42px;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    margin: 4px 30px 0px 20px;
+    &:hover {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      cursor: pointer;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    &:active {
+      box-shadow: 0 0 0 1px white,
+                  0 0 0 3px #57b38d;
+    }
+  }
 }
 
 .nav-bar-log-out {
   flex: 1;
   margin: 0px 40px 0px 10px;
-}
-
-.nav-bar-log-out img {
-  height: 40px;
-  width: auto;
-  padding: 10px 10px 10px 10px;
-  margin: 0px 40px 0px 10px;
-}
-
-.nav-bar-log-out img:hover {
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.nav-bar-log-out img:active {
-  box-shadow: 0 0 0 1px white,
-              0 0 0 3px #57b38d;
+  img {
+    height: 40px;
+    width: auto;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 40px 0px 10px;
+    &:hover {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      cursor: pointer;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    &:active {
+      box-shadow: 0 0 0 1px white,
+                  0 0 0 3px #57b38d;
+    }
+  }
 }

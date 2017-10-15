@@ -20,10 +20,12 @@ class NavBarForm extends React.Component {
       <section className="nav-bar-all">
 
         <Link className="nav-bar-home-page" to="/">
-        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
+          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
         </Link>
 
-        <Search />
+        <div className="nav-bar-search">
+          <Search />
+        </div>
 
         <div className="nav-bar-discover-ideas" >
           <p>Discover Ideas</p>
