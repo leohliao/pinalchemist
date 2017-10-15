@@ -1,12 +1,12 @@
 section {
-  display: flex;
-  padding: 7px 10px 6px 10px;
-  height: 78px;
-  align-items: center;
-  border-bottom: 2px solid #74edbb;
   .nav-bar-all {
     height: 64px;
     width: auto;
+    display: flex;
+    padding: 7px 10px 6px 10px;
+    height: 78px;
+    align-items: center;
+    border-bottom: 2px solid #74edbb;
   }
 }
 
@@ -62,7 +62,7 @@ section {
     flex: 1;
     max-width: 130px;
     p {
-      margin: 6px 20px 6px 30px;
+      margin: 6px 20px 6px 20px;
       padding: 4px 4px 4px 4px;
       font-family: sans-serif;
       color: #57b38d;
@@ -108,12 +108,13 @@ section {
 
 .nav-bar-log-out {
   flex: 1;
-  margin: 0px 40px 0px 10px;
+  margin: 0px 10px 0px 10px;
+  max-width: 100px;
   img {
     height: 40px;
     width: auto;
     padding: 10px 10px 10px 10px;
-    margin: 0px 40px 0px 10px;
+    margin: 0px 10px 0px 10px;
     &:hover {
       background-color: #f0f0f0;
       border-radius: 10px;

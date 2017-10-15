@@ -17,35 +17,35 @@ class NavBarForm extends React.Component {
   render(){
 
     return (
-      <section className="nav-bar-all">
+      <section >
+        <div className="nav-bar-all">
+          <div>
+            <Link className="nav-bar-home-page" to="/">
+              <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
+            </Link>
+          </div>
 
-        <div>
-          <Link className="nav-bar-home-page" to="/">
-            <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
-          </Link>
+          <div className="nav-bar-search">
+            <Search />
+          </div>
+
+          <div className="nav-bar-discover-ideas" >
+            <p>Discover Ideas</p>
+          </div>
+
+          <div>
+            <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
+            <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
+            </Link>
+          </div>
+
+          <div className="nav-bar-log-out"
+               onClick={this.currentUserLogOut}>
+               <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
+          </div>
+
+          <ModalPinCreate />
         </div>
-
-        <div className="nav-bar-search">
-          <Search />
-        </div>
-
-        <div className="nav-bar-discover-ideas" >
-          <p>Discover Ideas</p>
-        </div>
-
-        <div>
-          <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
-          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
-          </Link>
-        </div>
-
-        <div className="nav-bar-log-out"
-             onClick={this.currentUserLogOut}>
-             <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
-        </div>
-
-        <ModalPinCreate />
-
       </section>
     );//end return
   }//end render
