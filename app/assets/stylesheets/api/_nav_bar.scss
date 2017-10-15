@@ -34,14 +34,11 @@ section {
 
 .nav-bar-search {
     flex: 2; // .nav-bar-home-page
-    // margin-left: 18px;
-    // width: 90%;
-    // min-width: 120px;
 }
 
 .nav-bar-search-input {
-    // margin-left: 18px;
-    // width: 90%;
+    margin-left: 18px;
+    width: 90%;
     height: 46px;
     box-sizing: border-box;
     border: 1px solid #57BC90;
@@ -54,7 +51,7 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     padding: 12px 25px 14px 50px;
-    // min-width: 120px;
+    min-width: 120px;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -63,7 +60,7 @@ section {
 
 .nav-bar-discover-ideas {
     flex: 1;
-    margin-left: 30px;
+    max-width: 130px;
     p {
       margin: 6px 20px 6px 30px;
       padding: 4px 4px 4px 4px;

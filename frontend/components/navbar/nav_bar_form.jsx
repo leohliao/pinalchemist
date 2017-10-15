@@ -19,9 +19,11 @@ class NavBarForm extends React.Component {
     return (
       <section className="nav-bar-all">
 
-        <Link className="nav-bar-home-page" to="/">
-          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
-        </Link>
+        <div>
+          <Link className="nav-bar-home-page" to="/">
+            <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
+          </Link>
+        </div>
 
         <div className="nav-bar-search">
           <Search />
@@ -31,13 +33,15 @@ class NavBarForm extends React.Component {
           <p>Discover Ideas</p>
         </div>
 
-        <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
-        <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
-        </Link>
+        <div>
+          <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
+          <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
+          </Link>
+        </div>
 
         <div className="nav-bar-log-out"
              onClick={this.currentUserLogOut}>
-        <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
+             <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
         </div>
 
         <ModalPinCreate />
