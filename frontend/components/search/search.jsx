@@ -16,9 +16,9 @@ class Search extends React.Component {
   handleInput(e){
     console.log(e.target.value);
     e.preventDefault();
-    this.setState({ search: e.target.value} )
-    //   () => this.props.requestSearch(this.state.search)
-    // )
+    this.setState({ search: e.target.value},
+      () => this.props.requestSearch(this.state.search)
+    );
   }  // end handleInput
   //
   // handleReset(event){
