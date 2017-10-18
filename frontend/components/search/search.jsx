@@ -7,18 +7,19 @@ class Search extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = { search: ""};
-    // this.handleInput = this.handleInput.bind(this);
+    this.state = { search: "" };
+    this.handleInput = this.handleInput.bind(this);
     // this.handleReset = this.handleReset.bind(this);
     // this.searchResults = this.searchResults.bind(this);
   } // end constructor
 
-  // handleInput(event){
-  //   event.preventDefault();
-  //   this.setState({search: event.target.value},
-  //     () => this.props.requestSearch(this.state.search)
-  //   )
-  // }  // end handleInput
+  handleInput(e){
+    console.log(e.target.value);
+    e.preventDefault();
+    this.setState({ search: e.target.value} )
+    //   () => this.props.requestSearch(this.state.search)
+    // )
+  }  // end handleInput
   //
   // handleReset(event){
   //   event.preventDefault();
@@ -34,12 +35,12 @@ class Search extends React.Component {
   // } // searchResults
 
   render(){
+
     return (
       <div>
         <input className="nav-bar-search-input"
                type="text"
-               autoComplete="off"
-               name="search"
+               autoComplete="on"
                value={this.state.search}
                onChange={this.handleInput}
                placeholder="Search"/>
