@@ -11,8 +11,7 @@ class Search extends React.Component {
     this.state = { searchQuery: "" };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
-    this.searchResults = this.searchResults.bind(this);
-    
+    // this.searchResults = this.searchResults.bind(this);
   } // end constructor
 
   handleInput(e){
@@ -28,9 +27,9 @@ class Search extends React.Component {
     this.setState({searchQuery: ""});
   } // end handleReset
 
-  componentWillMount(){
-    this.props.resetSearch();
-  } // componentWillMount
+  // componentWillMount(){
+  //   this.props.resetSearch();
+  // } // componentWillMount
 
   searchResults(items, type){
     let {resetSearch} = this.props;
@@ -72,8 +71,8 @@ class Search extends React.Component {
   } // searchResults
 
   searchResultsAnalyze(){
-    let { search } = this.props;
-    const pin = search.pins || [];
+    const search = this.props.search;
+    const pins = search.pins || [];
     const boards = search.boards || [];
     const users = search.users || [];
     let pinsList;
@@ -111,10 +110,10 @@ class Search extends React.Component {
       <div>
         <input className="nav-bar-search-input"
                type="text"
-               autoComplete="on"
                value={this.state.searchQuery}
                onChange={this.handleInput}
                placeholder="Search"/>
+             {this.searchResultsAnalyze()}
       </div>
     ) // return
   }// end render

@@ -20,3 +20,6 @@ export const requestSearch = (search) => dispatch => {
     .then(search => dispatch(receiveSearch(search)))
   );
 };
+
+window.requestSearch = requestSearch;
+window.receiveSearch = receiveSearch;
