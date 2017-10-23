@@ -32,28 +32,6 @@ section {
   }
 }
 
-.nav-bar-search {
-    flex: 2; // .nav-bar-home-page
-}
-
-.nav-bar-search-input {
-    margin-left: 18px;
-    width: 90%;
-    height: 46px;
-    box-sizing: border-box;
-    border: 1px solid #57BC90;
-    border-radius: 5px;
-    font-size: 18px;
-    color: white;
-    font-family: sans-serif;
-    background-color: #57BC90;
-    background-image: url('http://res.cloudinary.com/leosoba/image/upload/v1500775377/search-icon_kltuo1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 12px 25px 14px 50px;
-    min-width: 120px;
-}
-
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: white;
 }
