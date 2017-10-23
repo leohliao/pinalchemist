@@ -85,7 +85,7 @@ class Search extends React.Component {
     } // end if
     let dropDown;
     document.addEventListener("click", (e)=> {
-      dropdown = document.getElementByClassName('search-results-container')[0];
+      dropdown = document.getElementById('search-results-container')[0];
       if (e.target.id === 'list-item' || e.target.id === 'list-item-user' || e.target.id === 'search-index-thumbnail') {
         dropdown.style.display = 'none';
       } else if ( e.path.includes(dropdown) || e.target.id === 'search-bar') {
