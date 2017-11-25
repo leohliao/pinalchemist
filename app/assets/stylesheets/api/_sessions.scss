@@ -28,7 +28,7 @@
     position: relative;
     transform-origin: center;
     transform: scale(0.9);
-    margin: -8vh 0px -5vh 0px;
+    margin: -55px 0 -5px 0;
     img {
       margin-top: 35px;
       width: 70%;
@@ -42,7 +42,7 @@
   font-size: 17px;
   font-stretch: extra-condensed;
   width: 250px;
-  margin: -30px auto 10px auto;
+  margin: -30px auto 2px auto;
 }
 
 .session-input {
@@ -94,13 +94,18 @@
 }
 
 .session-form-errors {
-    color: red;
-    font-size: 15px;
     position: relative;
     ul {
       position: absolute;
-      margin: 5px auto 5px auto;
       width: 360px;
+      height: 40px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      li {
+        color: red;
+        font-size: 15px;
+      }
     }
 }
 
@@ -109,7 +114,7 @@
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
-    margin: 40px auto 10px auto;
+    margin: 30px auto 10px auto;
 } // my sign in
 
 .session-form-submit-button {

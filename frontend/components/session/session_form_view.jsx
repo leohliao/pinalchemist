@@ -95,7 +95,7 @@ class SessionForm extends React.Component {
       const usernamePlaceholder = (this.props.formType === 'login') ? "Username" : "Create Username";
       const passwordPlaceholder = (this.props.formType === 'login') ? "Password" : "Create Password";
       const messageConvert = (this.props.formType === 'login') ? "log in" : "sign up";
-      const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
+      const submitText = (this.props.formType === 'login') ? "LOG IN" : "SIGN UP";
 
       return (
         <main className="session-form-view">
