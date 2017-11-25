@@ -7,11 +7,11 @@
 }
 
 .nav-bar-search-input {
-    margin-left: 18px;
     width: 90%;
+    min-width: 120px;
     height: 46px;
     box-sizing: border-box;
-    border: 1px solid #57BC90;
+    border: 1px solid #57BC94;
     border-radius: 5px;
     font-size: 18px;
     color: white;
@@ -21,9 +21,14 @@
     background-size: contain;
     background-repeat: no-repeat;
     padding: 12px 25px 14px 50px;
-    min-width: 120px;
 }
 
 .search-results-container {
-
+  background-color: rgba(117, 186, 147, 0.6);
+  border-radius: 2px;
+  position: absolute;
+  display: block;
+  width: 75%;
+  margin: 2px 0 0 -50px;
+  min-width: 120px;
 }

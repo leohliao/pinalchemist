@@ -15,23 +15,23 @@ user1 = User.create!({username: "guest",
   description: "I am guest, and I think this website looks cool!",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504175717/20ea0e8740c052012543b9c7b250fcfa_typz7g.jpg"})
 # --------------------------------
-user2 = User.create!({username: "leoLiao",
+user2 = User.create!({username: "leoliao",
   password: "password",
   description: "I am a storyboard artist",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1501093275/user_profile_img_ogenba.jpg"})
-user3 = User.create!({username: "ziweiDuanmuArtist",
+user3 = User.create!({username: "zdarts",
   password: "password",
   description: "Illustration artist",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164620/4_Luffy_101909_1256006964_aw7ehf.jpg"})
-user4 = User.create!({username: "mikeloves3DArts",
+user4 = User.create!({username: "mikearts",
   password: "password",
   description: "3D Artist at Leo Studio",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164655/528897_1397877658276_480_300_hsyjag.jpg"})
-user5 = User.create!({username: "josephTheAwesomeDesigner",
+user5 = User.create!({username: "josephdesign",
   password: "password",
   description: "Designer at ILoveDesign.com",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164721/3_Lelouch_101909_1256006940_tcglgz.jpg"})
-user6 = User.create!({username: "jimIsTheFinisher",
+user6 = User.create!({username: "papajim",
   password: "password",
   description: "Freelance Artist",
   image_url: "http://res.cloudinary.com/leosoba/image/upload/v1504164774/5_Vegeta_101909_1256006982_psyiy9.jpg"})
