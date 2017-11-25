@@ -1,12 +1,9 @@
 // Session Actions
-
 import * as sessionAPIUtil from '../util/session_api_util';
-
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const USER_LOG_OUT = 'USER_LOG_OUT';
-// export const RECEIVE_USER = 'RECEIVE_USER';
-export const CLEAR_SESSION_ERRORS = 'CLEAR_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 //action creator
 export const receiveCurrentUser = currentUser => ({
@@ -14,13 +11,8 @@ export const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
-// export const receiveUser = user => ({
-//     type: RECEIVE_USER,
-//     user
-// });
-
 export const clearSessionErrors = () => ({
-    type: CLEAR_SESSION_ERRORS
+    type: CLEAR_ERRORS
 });
 
 //receives an array of errors

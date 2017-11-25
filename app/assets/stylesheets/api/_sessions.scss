@@ -19,7 +19,7 @@
     background-color: white;
     display: flex;
     text-align: center;
-    width: 380px;
+    width: 360px;
     height: 570px;
 } //sign-in box
 
@@ -29,10 +29,10 @@
     transform-origin: center;
     transform: scale(0.9);
     margin: -8vh 0px -5vh 0px;
-}
-
-.session-form-logo-image img {
-    width: 70%;
+    img {
+      margin-top: 35px;
+      width: 70%;
+    }
 }
 
 .session-form-slogan h1 {
@@ -42,7 +42,7 @@
   font-size: 17px;
   font-stretch: extra-condensed;
   width: 250px;
-  margin: -20px auto 15px auto;
+  margin: -30px auto 10px auto;
 }
 
 .session-input {
@@ -56,7 +56,6 @@
     font-weight: 600;
     color: #015249;
     padding-left: 10px;
-
     }
     ::-webkit-input-placeholder { /* Chrome */
       color: #015249;
@@ -98,12 +97,10 @@
     color: red;
     font-size: 15px;
     position: relative;
-    span ul {
+    ul {
       position: absolute;
       margin: 5px auto 5px auto;
-      right: 27%;
-      width: 300px;
-      margin-right: -60px;
+      width: 360px;
     }
 }
 
@@ -112,7 +109,7 @@
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
-    margin: 45px auto 10px auto;
+    margin: 40px auto 10px auto;
 } // my sign in
 
 .session-form-submit-button {
@@ -167,9 +164,7 @@
   border-radius: 3px;
   width: 100px;
   border: none;
-  margin-top: 8px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 0 auto;
   font-size: 14px;
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #015249;
@@ -192,10 +187,8 @@
 .session-form-nav {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
-    margin-top: 5px;
 }
 
 .session-form-nav-link {
-    margin-top: 20px;
     font-size: 15px;
 }

@@ -69,6 +69,7 @@ class SessionForm extends React.Component {
           </div>
       );
       }
+      this.removeErrors();
     }//navLink
 
     //demo Login
@@ -80,22 +81,20 @@ class SessionForm extends React.Component {
     renderErrors(){
       // console.log(this.props);
       return (
-      <ul>
-        {this.props.errors.map((error, idx) => (
-            <li key={`error-${idx}`}>
-              {error}
-            </li>
-        ))}
-      </ul>
+        <ul>
+          {this.props.errors.map((error, idx) => (
+              <li key={`error-${idx}`}>
+                {error}
+              </li>
+          ))}
+        </ul>
     );
     }//renderErrors
 
     render(){
-
       const usernamePlaceholder = (this.props.formType === 'login') ? "Username" : "Create Username";
       const passwordPlaceholder = (this.props.formType === 'login') ? "Password" : "Create Password";
       const messageConvert = (this.props.formType === 'login') ? "log in" : "sign up";
-      const navConvert = (this.props.formType === 'login') ? "sign up" : "log in";
       const submitText = (this.props.formType === 'login') ? "LOG ME IN" : "SIGN UP";
 
       return (
@@ -113,7 +112,7 @@ class SessionForm extends React.Component {
             </div>
 
             <div className="session-form-errors">
-              <span>{this.renderErrors()}</span>
+              {this.renderErrors()}
             </div>
 
             <div className="session-credential-form">
@@ -135,7 +134,7 @@ class SessionForm extends React.Component {
                 <button type="submit"
                         className="session-form-submit-button"><span>{submitText}</span></button>
 
-                      <h3 className="session-form-message">Please { messageConvert } or { navConvert }</h3>
+                      <h3 className="session-form-message">Please { messageConvert }</h3>
                       <div>{this.navLink()}</div>
               </div>{/* session-credential-form */}
 
