@@ -98,14 +98,13 @@
     color: red;
     font-size: 15px;
     position: relative;
-}
-
-.session-form-errors span ul {
-  position: absolute;
-  margin: 5px auto 10px auto;
-  right: 27%;
-  width: 300px;
-  margin-right: -60px;
+    span ul {
+      position: absolute;
+      margin: 5px auto 5px auto;
+      right: 27%;
+      width: 300px;
+      margin-right: -60px;
+    }
 }
 
 .session-credential-form {
@@ -136,41 +135,28 @@
     &:hover {
       background-color: #017366;
       cursor: pointer;
+      span {
+        padding-right: 35px;
+        &:after {
+          opacity: 1;
+          right: 0;
+        }
+      }
     }
-}
-
-
-.session-form-submit-button span {
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-    cursor: pointer;
-    &:after {
-      position: absolute;
-      opacity: 0;
-      top: 0;
-      right: -20px;
+    span {
+      display: inline-block;
+      position: relative;
       transition: 0.5s;
-      content: '\00bb';
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+        content: '\00bb';
+      }
     }
-}
-
-// .session-form-submit-button span:after {
-//     position: absolute;
-//     opacity: 0;
-//     top: 0;
-//     right: -20px;
-//     transition: 0.5s;
-//     content: '\00bb';
-// }
-
-.session-form-submit-button:hover span {
-    padding-right: 35px;
-}
-
-.session-form-submit-button:hover span:after {
-    opacity: 1;
-    right: 0;
 }
 
 .session-form-demo {
@@ -195,11 +181,6 @@
     opacity: 0.8;
   }
 }
-
-// .session-form-demo:hover {
-//   cursor: pointer;
-//   opacity: 1;
-// }
 
 .session-form-message {
     font-family: 'Source Sans Pro', sans-serif;
