@@ -24,11 +24,12 @@
 }
 
 .search-results-container {
-  background-color: rgba(117, 186, 147, 0.6);
+  background-color: rgba(117, 186, 147, 0.9);
   border-radius: 2px;
   position: absolute;
   display: block;
   width: 75%;
   margin: 2px 0 0 -50px;
   min-width: 120px;
+  z-index: 5;
 }
