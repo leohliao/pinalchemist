@@ -9,19 +9,19 @@ class Search extends React.Component {
     super(props);
     this.state = { searchQuery: "" };
     this.handleInput = this.handleInput.bind(this);
-    // this.handleReset = this.handleReset.bind(this);
+    this.handleReset = this.handleReset.bind(this);
     // this.handleSearch = this.handleSearch.bind(this);
   } // end constructor
 
   handleInput(e){
     e.preventDefault();
-    this.setState({ searchQuery: e.target.value},
-      () => this.props.requestSearch(this.state.searchQuery))
+    setTimeout(this.setState({ searchQuery: e.target.value},
+      () => this.props.requestSearch(this.state.searchQuery)), 50)
   }  // end handleInput
 
   handleReset(e){
     e.preventDefault();
-    this.setState({searchQuery: ""});
+    this.setState({searchQuery: "" });
   } // end handleReset
 
   // componentWillMount(){
@@ -31,21 +31,22 @@ class Search extends React.Component {
   searchResults(items, type){
     let {resetSearch} = this.props;
     const resultsList = items.map((item, idx) => {
-          if (type === "Pins") {
+        switch (type){
+          case "Pins":
             return (
               <li key={idx} onClick={this.handleReset}>
                 <PinShowContainer key={item.id} pin={item} />
               </li>
             );
-          } else if ( type === "Boards") {
+          case "Boards":
             return (
               <li key={idx} onClick={this.handleReset}>
                 <Link to={`/boards/${item.id}`}>
-                  <span id="list-item">{item.title}</span>
+                  <span id="list-item">{item.board_name}</span>
                 </Link>
             </li>
             );
-          } else if (type === "Users" ) {
+          case "Users":
             return (
               <li key={idx} onClick={this.handleReset}>
                 <Link to={`/users/${item.id}`}>
@@ -54,26 +55,25 @@ class Search extends React.Component {
                 </Link>
               </li>
             );
-          }
+        }
     }); // resultsList
 
     return (
-      <div className={type === 'Users' ? "user-search-items-container" : "search-items-container"}>
-        <h3 className='search-type'>{type}</h3>
-        <ul className='section-items-container'>{resultsList}</ul>
-        <br/>
+      <div className="search-results-container-return">
+        <h3>{type}</h3>
+        <ul>{resultsList}</ul>
      </div>
     ) // return
   } // searchResults
 
   handleSearch(){
+    let pinsList;
+    let boardsList;
+    let usersList;
     const { search } = this.props;
     const pins = search.pins || [];
     const boards = search.boards || [];
     const users = search.users || [];
-    let pinsList;
-    let boardsList;
-    let usersList;
     if (Object.keys(search).length > 0) {
       pinsList = pins.length > 0 ? this.searchResults(pins, "Pins") : null;
       boardsList = boards.length > 0 ? this.searchResults(boards, "Boards") : null;
@@ -82,7 +82,7 @@ class Search extends React.Component {
     let dropDown;
     document.addEventListener("click", (e)=> {
       dropDown = document.getElementsByClassName('search-results-container')[0];
-      console.log(dropDown);
+      console.log(e.target);
       // if (e.target.id === 'list-item' || e.target.id === 'list-item-user' || e.target.id === 'search-index-thumbnail') {
       //   dropDown.style.display = 'none';
       // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {

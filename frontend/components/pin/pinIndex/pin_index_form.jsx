@@ -41,7 +41,7 @@ class PinIndexForm extends React.Component {
         <div className="pin-index-pin-items-modal-view">view</div>
         <div className="pin-index-pin-items-info">
           <div className="pin-index-pin-items-info-upper">
-            <p>{pin.description ? pin.description : "..." }</p>
+            <p>{pin.description ? pin.description : "(No description)" }</p>
               <div className="pin-index-pin-items-info-author">
                 <img src= {pin.author_image_url} />
               </div>
@@ -65,7 +65,7 @@ class PinIndexForm extends React.Component {
             <Masonry className={'pins-index-form'}
                      elementType={'ul'}
                      options={masonryOptions}
-                     disableImagesLoaded={false}
+                     disableImagesLoaded={true}
                      updateOnEachImageLoad={false}>
               { allThePins }
             </Masonry>
