@@ -8,25 +8,47 @@ class PinIndexForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      loading: true
+      loading: true,
+      end: 20
     }
+    this.handleScroll = this.handleScroll.bind(this);
   }//end constructor
 
   componentDidMount(){
+    window.bottom = false;
+    window.addEventListener("scroll", this.handleScroll);
     this.props.requestAllPins()
     .then(setTimeout(() => this.setState({ loading: false }), 1000))
   }//end componentDidMount
+
+  componentWillUnmount() {
+   window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll() {
+    $(window).scroll( function() {
+       if ($(window).scrollTop() <= $(document).height() - $(window).height()
+          && $(window).scrollTop() >= $(document).height() - $(window).height() - 50) {
+         window.bottom = true;
+       }
+     });
+
+    if (window.bottom) {
+      if (this.state.end < this.props.pins.length) {
+        this.setState({
+          end: this.state.end + 8
+        });
+      }
+      window.bottom = false;
+    }
+  }//end handleScroll
 
   render(){
     const { pins } = this.props;
     const masonryOptions = {
           gutter: 20,
           fitWidth: true,
-          // transitionDuration: 0,
-          // percentPosition: true,
-          // postion: 'center',
-          // right: '10%',
-          // backgroundColor: 'red',
+          transitionDuration: 0.2,
         };
 
     const sortedPins = pins.sort(function(a,b){
@@ -35,7 +57,7 @@ class PinIndexForm extends React.Component {
       return dateB-dateA;
     });
 
-    const allThePins = sortedPins.map( pin => (
+    const allThePins = sortedPins.slice(0, this.state.end).map( pin => (
       <li className="pin-index-pin-items" key={pin.id}>
         <ModalPinItem pin={pin} className="pin-index-pin-items-modal"/>
         <div className="pin-index-pin-items-modal-view">view</div>
@@ -65,7 +87,7 @@ class PinIndexForm extends React.Component {
             <Masonry className={'pins-index-form'}
                      elementType={'ul'}
                      options={masonryOptions}
-                     disableImagesLoaded={true}
+                     disableImagesLoaded={false}
                      updateOnEachImageLoad={false}>
               { allThePins }
             </Masonry>
@@ -76,15 +98,3 @@ class PinIndexForm extends React.Component {
 }//end PinIndexForm
 
 export default withRouter(PinIndexForm);
-// <NavBarForm />
-// <br />
-
-// <Link className="pin-index-pin-items-info-lower" to="/pins">
-//   <div className="pin-index-pin-items-info-author-image">
-//     <img src= {pin.author_image_url} />
-//   </div>
-//   <div className="pin-index-pin-items-info-text" >
-//     <h1>{pin.author}</h1>
-//     <p>{pin.author.description}</p>
-//   </div>
-// </Link>
