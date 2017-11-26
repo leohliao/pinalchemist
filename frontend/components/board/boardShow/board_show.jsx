@@ -47,7 +47,6 @@ class BoardShow extends React.Component {
     const havePins = filteredPins.reverse().map( pin => (
       <div className="board-index-masonry-ul-li" key={pin.id} >
         <div className="modal-board-form-container" >
-
             <div className="modal-board-thumbnail-container-show">
               <div>
                 <ModalPinItem pin={pin}/>

@@ -49,10 +49,10 @@ class MyLibrary extends React.Component {
 
             <div className="my-library-follows">
               <div className="my-library-follow-wrapper">
-                <h1>Following</h1>
+                <h1>Following:</h1>
                 <h3>{this.props.masters.length}</h3>
                 <br />
-                <h1>Followers</h1>
+                <h1>Followers:</h1>
                 <h3>{this.props.disciples.length}</h3>
               </div>
             </div>
