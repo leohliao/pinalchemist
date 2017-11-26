@@ -27,7 +27,7 @@
   background-color: rgba(117, 186, 147, 0.9);
   border-radius: 5px;
   position: absolute;
-  display: block;
+  // display: block;
   width: 75%;
   margin: 2px 0 0 -50px;
   min-width: 120px;
@@ -58,4 +58,25 @@
       overflow: hidden;
     }
   }
+}
+
+
+#list-item {
+  font-size: 18px;
+  color: green;
+}
+
+#list-item-user {
+  display: inline;
+  height: 100px;
+  width: 100px;
+  border-radius: 60%;
+  color: green;
+}
+
+#list-item-user img {
+  display: inline;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }

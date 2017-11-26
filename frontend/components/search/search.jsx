@@ -61,7 +61,7 @@ class Search extends React.Component {
     return (
       <div className="search-results-container-return">
         <h3>{type}</h3>
-        <ul>{resultsList}</ul>
+        <ul className="search-results-container-return-ul">{resultsList}</ul>
      </div>
     ) // return
   } // searchResults
@@ -79,18 +79,21 @@ class Search extends React.Component {
       boardsList = boards.length > 0 ? this.searchResults(boards, "Boards") : null;
       usersList = users.length > 0 ? this.searchResults(users, "Users") : null;
     } // end if
-    let dropDown;
-    document.addEventListener("click", (e)=> {
-      dropDown = document.getElementsByClassName('search-results-container')[0];
-      console.log(e.target);
-      // if (e.target.id === 'list-item' || e.target.id === 'list-item-user' || e.target.id === 'search-index-thumbnail') {
+    // let dropDown;
+    // document.addEventListener("click", (e)=> {
+    //   dropDown = document.getElementsByClassName('search-results-container')[0];
+    //   console.log("e " + e.target.className);
+    //   console.log("dropDown " + dropDown.className);
+    //   console.log("dropDown " + dropDown.style);
+      // console.log(e.path);
+      // if (e.target.id === 'list-item' || e.target.id === 'list-item-user') {
       //   dropDown.style.display = 'none';
       // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {
       //   dropDown.style.dispay = 'block';
       // } else {
       //   dropDown.style.display = 'none';
       // } // end if
-    }); // end document.addEventListener
+    // }); // end document.addEventListener
 
     return (
       <div className='search-results-container'>
