@@ -4,12 +4,10 @@ import { requestAllBoards } from '../../actions/board_actions';
 // import { selectAllBoards } from '../../reducers/selectors';
 import { values } from 'lodash';
 
-const mapStateToProps = ({session, boards, pins}) => ({
+const mapStateToProps = ({session}) => ({
   currentUser: session.currentUser,
   masters: values(session.currentUser.masters),
-  disciples: values(session.currentUser.disciples),
-  boards,
-  pins
+  disciples: values(session.currentUser.disciples)
 });
 
 const mapDispatchToProps = dispatch => ({

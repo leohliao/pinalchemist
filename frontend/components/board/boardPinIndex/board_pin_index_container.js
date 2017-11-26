@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import * as pinActions from '../../../actions/pin_actions';
 import BoardPinIndexForm from './board_pin_index_form';
-import { selectMyPins } from '../../../reducers/selectors';
+import { selectBoardPins } from '../../../reducers/selectors';
 
 const mapStateToProps = state => {
   return {
-    pins: selectMyPins(state),
+    pins: selectBoardPins(state),
   };
 };
 

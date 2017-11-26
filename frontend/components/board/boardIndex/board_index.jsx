@@ -12,7 +12,7 @@ class BoardIndex extends React.Component {
   }//end constructor
 
   componentDidMount(){
-    this.props.requestUserBoards(this.props.currentUserId);
+    this.props.requestUserBoards(this.props.currentUser.id);
   }//end componentDidMount
 
   render(){
@@ -27,9 +27,7 @@ class BoardIndex extends React.Component {
         };
 
     const allTheBoards = boards.reverse().map( board => (
-        <div className="board-index-masonry-ul-li" key={board.id} >
-          <BoardItem board={board} />
-        </div>
+          <BoardItem board={board} key={board.id} />
     ));
 
     return(
@@ -43,7 +41,9 @@ class BoardIndex extends React.Component {
           <div className="modal-board-form-container">
             <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
           </div>
-          { allTheBoards }
+          <div className="board-index-masonry-ul">
+            { allTheBoards }
+          </div>
         </Masonry>
       </div>
     );//end return

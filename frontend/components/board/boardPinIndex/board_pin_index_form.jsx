@@ -19,6 +19,7 @@ class BoardPinIndexForm extends React.Component {
 
   render(){
     const { pins } = this.props;
+    console.log(pins)
     const masonryOptions = {
           gutter: 20,
           fitWidth: true,

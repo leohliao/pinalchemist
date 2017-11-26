@@ -11,9 +11,8 @@ export const selectMyDisciples = (state) => values (state.session.currentUser.di
 export const selectAllBoards = ({ boards }) => values(boards);
 
 export const selectBoardPins = ({boards}, board) => {
-  debugger;
   return board ?
-    boards.id.map (id => boards[id].pin_ids) : [];
+    boards.id.map (id => boards[id].pin) : [];
 }
 
 export const selectAllUsers = (state) => {

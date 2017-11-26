@@ -22,7 +22,7 @@ return (
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/:userId" component={MyLibraryContainer} />
       <ProtectedRoute path="/:userId/boards" component={BoardIndexContainer} />
-      <ProtectedRoute path="/:userId/pins" component={PinIndexContainer} />
+      <ProtectedRoute path="/:userId/pins" component={BoardPinIndexContainer} />
       <ProtectedRoute path="/:userId/followers" component={FollowerShowContainer} />
       <ProtectedRoute path="/:userId/followings" component={FollowingShowContainer} />
       <ProtectedRoute path="/boards/:id" component={BoardShowContainer} />

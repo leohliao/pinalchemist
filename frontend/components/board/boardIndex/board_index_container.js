@@ -6,7 +6,6 @@ import { selectAllBoards } from '../../../reducers/selectors';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.currentUser,
-    currentUserId: state.session.currentUser.id,
     boards: selectAllBoards(state),
   };
 };
