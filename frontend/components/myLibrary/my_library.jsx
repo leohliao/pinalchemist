@@ -5,6 +5,7 @@ import BoardPinIndexContainer from '../board/boardPinIndex/board_pin_index_conta
 import BoardShowContainer from '../board/boardShow/board_show_container';
 import FollowerShowContainer from '../following/follower_show_container';
 import FollowingShowContainer from '../following/following_show_container';
+import PinIndexContainer from '../pin/pinIndex/pin_index_container';
 
 class MyLibrary extends React.Component {
   constructor(props){
@@ -60,7 +61,7 @@ class MyLibrary extends React.Component {
         <div className="my-library-form-board-index">
           <Route exact path="/:userId/boards" component={ BoardIndexContainer }/>
           <Route exact path="/boards/:id" component={ BoardShowContainer }/>
-          <Route exact path="/:userId/pins" component={ BoardPinIndexContainer }/>
+          <Route exact path="/:userId/pins" component={ PinIndexContainer }/>
           <Route exact path="/:userId/followings" component={ FollowingShowContainer } />
           <Route exact path="/:userId/followers" component={ FollowerShowContainer } />
         </div>
