@@ -17,6 +17,7 @@
 .byebug_history
 
 draw/
+production_notes/
 node_modules/
 bundle.js
 bundle.js.map
