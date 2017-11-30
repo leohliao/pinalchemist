@@ -82,18 +82,36 @@ class Search extends React.Component {
     // let dropDown;
     // document.addEventListener("click", (e)=> {
     //   dropDown = document.getElementsByClassName('search-results-container')[0];
-    //   console.log("e " + e.target.className);
-    //   console.log("dropDown " + dropDown.className);
-    //   console.log("dropDown " + dropDown.style);
-      // console.log(e.path);
-      // if (e.target.id === 'list-item' || e.target.id === 'list-item-user') {
-      //   dropDown.style.display = 'none';
-      // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {
-      //   dropDown.style.dispay = 'block';
-      // } else {
-      //   dropDown.style.display = 'none';
-      // } // end if
+    //   console.log(e.target)
+      // console.log(dropDown.textContent);
+
+    //   conosle
+    // //   console.log("e " + e.target.className);
+    // //   console.log("dropDown " + dropDown.className);
+    // //   console.log("dropDown " + dropDown.style);
+    //   // console.log(e.path);
+    //   // if (e.target.id === 'list-item' || e.target.id === 'list-item-user') {
+    //   //   dropDown.style.display = 'none';
+    //   // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {
+    //   //   dropDown.style.dispay = 'block';
+    //   // } else {
+    //   //   dropDown.style.display = 'none';
+    //   // } // end if
     // }); // end document.addEventListener
+    function checkDropDown(e) {
+      const dropDown = document.getElementsByClassName('search-results-container')[0];
+      const dropDownDown = document.getElementsByClassName('search-results-container-return')[0];
+      if dropDown {
+        if (e.path.includes(dropDown)) {
+        console.log("yes");
+      } else {
+        console.log("no");
+        dropDownDown.style.display = "none"
+      }}
+
+    }
+    document.addEventListener('click', checkDropDown)
+
 
     return (
       <div className='search-results-container'>

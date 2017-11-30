@@ -9,7 +9,7 @@ class PinIndexForm extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      end: 20
+      end: 8
     }
     this.handleScroll = this.handleScroll.bind(this);
   }//end constructor
