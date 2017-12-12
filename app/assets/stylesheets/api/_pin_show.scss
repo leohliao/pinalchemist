@@ -142,7 +142,7 @@
 
     &:hover {
       opacity: 1;
-      box-shadow:   0 0 0 4px #57bc90,//rgb(159,57,52),
+      box-shadow:   0 0 0 4px $lightGreen,//rgb(159,57,52),
                     0 0 0 5px white,
                     0 6px 20px 0 rgba(0, 0, 0, 0.7);
       border-radius: 8px;
@@ -208,7 +208,7 @@
 }
 
 .dropdown-content li h6 {
-  background-color: #57bc90;
+  background-color: $lightGreen;
   font-size: 12px;
   border-radius: 4px;
   font-family: sans-serif;
@@ -251,7 +251,7 @@
   background-color: rgb(46,77,70);
   opacity: 1;
   box-shadow: 0 0 0 2px white,
-              0 0 0 4px #57bc90,//rgb(159,57,52),
+              0 0 0 4px $lightGreen,//rgb(159,57,52),
               0 0 0 5px white,
               0 6px 20px 0 rgba(0, 0, 0, 0.7);
   border-radius: 8px;

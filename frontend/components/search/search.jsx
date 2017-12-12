@@ -10,7 +10,7 @@ class Search extends React.Component {
     this.state = { searchQuery: "" };
     this.handleInput = this.handleInput.bind(this);
     this.handleReset = this.handleReset.bind(this);
-    // this.handleSearch = this.handleSearch.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   } // end constructor
 
   handleInput(e){
@@ -23,10 +23,6 @@ class Search extends React.Component {
     e.preventDefault();
     this.setState({searchQuery: "" });
   } // end handleReset
-
-  // componentWillMount(){
-  //   this.props.resetSearch();
-  // } // componentWillMount
 
   searchResults(items, type){
     let {resetSearch} = this.props;
@@ -50,7 +46,7 @@ class Search extends React.Component {
             return (
               <li key={idx} onClick={this.handleReset}>
                 <Link to={`/users/${item.id}`}>
-                  <img id="list-item-user"src={item.image_url}/>
+                  <img id="list-item-user" src={item.image_url}/>
                 <span id="list-item">{item.username}</span>
                 </Link>
               </li>
@@ -93,23 +89,34 @@ class Search extends React.Component {
     //   // if (e.target.id === 'list-item' || e.target.id === 'list-item-user') {
     //   //   dropDown.style.display = 'none';
     //   // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {
-    //   //   dropDown.style.dispay = 'block';
+    //   //   dropDown.style.display = 'block';
     //   // } else {
     //   //   dropDown.style.display = 'none';
     //   // } // end if
     // }); // end document.addEventListener
+    let dropDown;
+    let dropDown1;
+    let dropDown2;
     function checkDropDown(e) {
-      const dropDown = document.getElementsByClassName('search-results-container')[0];
-      const dropDownDown = document.getElementsByClassName('search-results-container-return')[0];
-      if dropDown {
-        if (e.path.includes(dropDown)) {
-        console.log("yes");
-      } else {
-        console.log("no");
-        dropDownDown.style.display = "none"
-      }}
+      dropDown = document.getElementsByClassName('search-results-container')[0];
+
+
+      // console.log(e.target.className);
+      // console.log(e.target.className);
+      if (dropDown) {
+        console.log(dropDown.classList);
+      //   if (e.path.includes(dropDown) || e.target === 'search-results-container-return') {
+      //   console.log("yes");
+      //   console.log(e.target);
+      // e.target.className !== nav-bar-search-input, search-results-container-return-ul
+      }
+      // else {
+      //   console.log("no");
+      //   // dropDown.style.display = "none"
+      // }}
 
     }
+
     document.addEventListener('click', checkDropDown)
 
 

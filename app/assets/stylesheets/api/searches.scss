@@ -16,18 +16,18 @@
     font-size: 18px;
     color: white;
     font-family: sans-serif;
-    background-color: #57BC90;
+    background-color: $lightGreen;
     background-image: url('http://res.cloudinary.com/leosoba/image/upload/v1500775377/search-icon_kltuo1.png');
     background-size: contain;
     background-repeat: no-repeat;
     padding: 12px 25px 14px 50px;
+    display: block;
 }
 
 .search-results-container {
   background-color: rgba(117, 186, 147, 0.9);
   border-radius: 5px;
   position: absolute;
-  
   width: 75%;
   margin: 2px 0 0 -50px;
   min-width: 120px;

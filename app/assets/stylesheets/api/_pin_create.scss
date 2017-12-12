@@ -21,7 +21,7 @@ div .modal-pin-create-button-home {
   cursor: pointer;
   border-radius: 50px;
   box-shadow: 0 0 0 2px white,
-              0 0 0 4px #57bc90,//rgb(159,57,52),
+              0 0 0 4px $lightGreen,//rgb(159,57,52),
               0 0 0 5px white;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -35,7 +35,7 @@ div .modal-pin-create-button-home {
   align-items: center;
   vertical-align: middle;
   min-height: inherit;
-  background-color: #57bc90;
+  background-color: $lightGreen;
   border-radius: 8px;
 }
 
