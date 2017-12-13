@@ -54,11 +54,11 @@
     height: 35px;
     font-size: 14px;
     font-weight: 600;
-    color: #015249;
+    color: $green;
     padding-left: 10px;
     }
     ::-webkit-input-placeholder { /* Chrome */
-      color: #015249;
+      color: $green;
       opacity: .6;
       font-weight: 600;
       transition: opacity 250ms ease-in-out;
@@ -67,7 +67,7 @@
       opacity: 0.3;
     }
     :-ms-input-placeholder { /* IE 10+ */
-      color: #015249;
+      color: $green;
       font-weight: 600;
       transition: opacity 250ms ease-in-out;
     }
@@ -75,7 +75,7 @@
       opacity: 0.5;
     }
     ::-moz-placeholder { /* Firefox 19+ */
-      color: #015249;
+      color: $green;
       font-weight: 600;
       opacity: 1;
       transition: opacity 250ms ease-in-out;
@@ -84,7 +84,7 @@
       opacity: 0.5;
     }
     :-moz-placeholder { /* Firefox 4 - 18 */
-      color: #015249;
+      color: $green;
       font-weight: 600;
       opacity: 1;
       transition: opacity 250ms ease-in-out;
@@ -131,7 +131,7 @@
     font-size: 14px;
     font-family: 'Source Sans Pro', sans-serif;
     // background-color:rgb(124,214,181);
-    background-color: #015249;
+    background-color: $green;
     color: #FFFFFF;
     transition: all 0.5s;
     &:hover {
@@ -172,10 +172,10 @@
   margin: 0 auto 0 auto;
   font-size: 14px;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #015249;
+  background-color: $green;
   color: #FFFFFF;
   box-shadow: 0 0 0 2px white,
-              0 0 0 3px #015249;
+              0 0 0 3px $green;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
