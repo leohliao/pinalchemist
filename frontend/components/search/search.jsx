@@ -17,11 +17,19 @@ class Search extends React.Component {
     e.preventDefault();
     setTimeout(this.setState({ searchQuery: e.target.value},
       () => this.props.requestSearch(this.state.searchQuery)), 50)
+      const dropDown = document.getElementsByClassName('search-results-container')[0];
+      if (dropDown) {
+      dropDown.classList.remove('hide');
+      }
   }  // end handleInput
 
   handleReset(e){
     e.preventDefault();
     this.setState({searchQuery: "" });
+    const dropDown = document.getElementsByClassName('search-results-container')[0];
+    if (dropDown) {
+    dropDown.classList.add('hide');
+    }
   } // end handleReset
 
   searchResults(items, type){
@@ -56,7 +64,7 @@ class Search extends React.Component {
 
     return (
       <div className="search-results-container-return">
-        <h3>{type}</h3>
+        <h3 className="search-results-container-return-type">{type}</h3>
         <ul className="search-results-container-return-ul">{resultsList}</ul>
      </div>
     ) // return
@@ -75,45 +83,23 @@ class Search extends React.Component {
       boardsList = boards.length > 0 ? this.searchResults(boards, "Boards") : null;
       usersList = users.length > 0 ? this.searchResults(users, "Users") : null;
     } // end if
-    // let dropDown;
-    // document.addEventListener("click", (e)=> {
-    //   dropDown = document.getElementsByClassName('search-results-container')[0];
-    //   console.log(e.target)
-      // console.log(dropDown.textContent);
-
-    //   conosle
-    // //   console.log("e " + e.target.className);
-    // //   console.log("dropDown " + dropDown.className);
-    // //   console.log("dropDown " + dropDown.style);
-    //   // console.log(e.path);
-    //   // if (e.target.id === 'list-item' || e.target.id === 'list-item-user') {
-    //   //   dropDown.style.display = 'none';
-    //   // } else if ( e.path.includes(dropDown) || e.target.id === 'search-bar') {
-    //   //   dropDown.style.display = 'block';
-    //   // } else {
-    //   //   dropDown.style.display = 'none';
-    //   // } // end if
-    // }); // end document.addEventListener
     let dropDown;
-    let dropDown1;
-    let dropDown2;
+    let searchInput;
     function checkDropDown(e) {
       dropDown = document.getElementsByClassName('search-results-container')[0];
-
-      if (e.target.className !== 'search-results-container' ||
-          e.target.className !== 'search-results-container-return' ) {
-            dropDown.classList.toggle('hide');
-            console.log(dropDown.classList);
-          } else {
-            dropDown.classList.toggle('hide');
-            console.log(dropDown.classList);
-          }
+      searchInput = document.getElementsByClassName('nav-bar-search-input')[0];
+      // console.log("Current Target " + e.target.className);
+      // console.log(dropDown.classList.contains("hide") );
+      // console.log("DropDown class "+ dropDown.classList);
+      // console.log(searchInput.defaultValue);
+      if (dropDown.classList.contains("hide") && searchInput.defaultValue) {
+        dropDown.classList.remove('hide');
+      } else if ( searchInput.defaultValue && e.target.className === "" ) {
+        dropDown.classList.add('hide');
+      }
 
     }
-
     document.addEventListener('click', checkDropDown)
-
-
     return (
       <div className='search-results-container'>
         {pinsList ? pinsList : null}
