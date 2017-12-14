@@ -100,20 +100,14 @@ class Search extends React.Component {
     function checkDropDown(e) {
       dropDown = document.getElementsByClassName('search-results-container')[0];
 
-
-      // console.log(e.target.className);
-      // console.log(e.target.className);
-      if (dropDown) {
-        console.log(dropDown.classList);
-      //   if (e.path.includes(dropDown) || e.target === 'search-results-container-return') {
-      //   console.log("yes");
-      //   console.log(e.target);
-      // e.target.className !== nav-bar-search-input, search-results-container-return-ul
-      }
-      // else {
-      //   console.log("no");
-      //   // dropDown.style.display = "none"
-      // }}
+      if (e.target.className !== 'search-results-container' ||
+          e.target.className !== 'search-results-container-return' ) {
+            dropDown.classList.toggle('hide');
+            console.log(dropDown.classList);
+          } else {
+            dropDown.classList.toggle('hide');
+            console.log(dropDown.classList);
+          }
 
     }
 
