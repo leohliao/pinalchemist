@@ -35,6 +35,7 @@ div .modal-pin-create-button-home {
   min-height: inherit;
   background-color: $lightGreen;
   border-radius: 8px;
+  
   align-items: center;
   h1 {
     font-size: 30px;
@@ -103,37 +104,34 @@ div .modal-pin-create-button-home {
 
 .pin-create-form-label {
   display: flex;
-}
-
-.pin-create-form-label h3 {
-  font-family: sans-serif;
-  color: white;
-  margin: 10px 0 3px 0;
-}
-
-.pin-create-form-label input {
-  font-size: 14px;
-  min-width: 25vw;
-  height: 20px;
-  border-radius: 4px;
-  margin: 5px auto 5px auto;
-  align-self: baseline;
-  align-content: baseline;
-}
-
-.pin-create-form-label input[type=textarea] {
-  height: 40px;
+  h3 {
+    font-family: sans-serif;
+    color: white;
+    margin: 10px 0 3px 0;
+  }
+  input {
+    font-size: 13px;
+    min-width: 25vw;
+    height: 20px;
+    border-radius: 4px;
+    margin: 5px auto 5px auto;
+    padding: 4px 0 4px 10px;
+    align-self: baseline;
+    align-content: baseline;
+  }
+  input[type=textarea] {
+    height: 50px;
+  }
 }
 
 .pin-create-form-dropzone-submit {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #4CAF50;
+  background-color: darkGreen;
   border: 2px solid $green;
   border-radius: 8px;
-  width: 180px;
-  height: 55px;
-  color: $green;
-  padding: 16px 32px;
+  width: 120px;
+  height: 40px;
+  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -143,9 +141,8 @@ div .modal-pin-create-button-home {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.pin-create-form-dropzone-submit:hover {
+  &:hover{
     background-color: white;
-    color: #4CAF50;
+    color: darkGreen;
+  }
 }
