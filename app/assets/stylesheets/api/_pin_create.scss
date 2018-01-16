@@ -115,7 +115,7 @@ div .modal-pin-create-button-home {
     margin: 5px auto 5px auto;
     padding: 4px 0 4px 10px;
     border-radius: 5px;
-    border: 1px solid lightGreen
+    border: 1px solid $lightGreen
   }
   input[type=textarea] {
     height: 200px;
@@ -124,7 +124,7 @@ div .modal-pin-create-button-home {
 
 .pin-create-form-dropzone-submit {
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: darkGreen;
+  background-color: $darkGreen;
   border: 2px solid $green;
   border-radius: 8px;
   width: 120px;
@@ -141,6 +141,6 @@ div .modal-pin-create-button-home {
   cursor: pointer;
   &:hover{
     background-color: white;
-    color: darkGreen;
+    color: $darkGreen;
   }
 }

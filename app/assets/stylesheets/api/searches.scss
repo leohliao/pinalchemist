@@ -66,7 +66,7 @@
 
 #list-item {
   font-size: 18px;
-  color: green;
+  color: $green;
 }
 
 #list-item-user {
@@ -74,12 +74,11 @@
   height: 100px;
   width: 100px;
   border-radius: 60%;
-  color: green;
-}
-
-#list-item-user img {
-  display: inline;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  color: $green;
+  img {
+    display: inline;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
 }
