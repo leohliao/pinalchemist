@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ModalPinCreate from '../modal/modal_pin_create';
 import Search from '../search/search_container';
-import Discover from '../discover/discover_container';
+import Discover from '../discover/discover_view';
 
 class NavBarForm extends React.Component {
   constructor(props){

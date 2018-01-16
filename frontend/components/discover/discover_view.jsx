@@ -1,17 +1,11 @@
 import React from 'react';
 
-class Discover extends React.Component {
-  constructor(props){
-    super(props);
-  } // end constructor
-
-  render() {
+export const Discover = () => {
     return (
-      <div>
-        <p>Aloha!</p>
+      <div className="discover-container">
+        <img src="https://anibakaost.files.wordpress.com/2012/11/under-construction-anime.png" alt="under-construction"></img>
       </div>
     )//end return
-  }//end render
 }// end class
 
 export default Discover;
