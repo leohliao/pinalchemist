@@ -15,8 +15,6 @@ class PinShow extends React.Component {
     e.preventDefault();
     if (this.props.pin.user_id === this.props.currentUser_id ){
       this.props.deletePin(this.props.pin.id)
-        .then(() => this.props.close())
-        .then(() => this.props.history.go(-1))
         .then(() => this.props.modalSwitch());
     } else {
       alert("You are not authorized to delete this pin!");
@@ -33,7 +31,6 @@ class PinShow extends React.Component {
       [field]: e.currentTarget.value
     });
   }//end update
-
 
   render(){
     const { pin } = this.props;
@@ -77,8 +74,6 @@ class PinShow extends React.Component {
               { deletePinbutton }
             </div>
           </div>
-
-
       </div>
     );//end return
   }//end render
