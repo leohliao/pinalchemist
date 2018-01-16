@@ -111,7 +111,7 @@ class Search extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="nav-bar-search">
         <input className="nav-bar-search-input"
                type="text"
                value={this.state.searchQuery}

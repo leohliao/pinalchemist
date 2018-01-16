@@ -25,28 +25,21 @@ class NavBarForm extends React.Component {
               <img src="http://res.cloudinary.com/leosoba/image/upload/v1500790014/pinalchemist_logo_500x700_jssn0n.png" alt="Home" />
             </Link>
           </div>
-
-          <div className="nav-bar-search">
-            <Search />
-          </div>
-
+          <Search />
           <div className="nav-bar-discover-ideas" >
             <Link to="/discover">
               <p>Discover Ideas</p>
             </Link>
           </div>
-
           <div>
             <Link className="nav-bar-my-board" to={`/${this.props.currentUser.id}/boards`}>
             <img src="http://res.cloudinary.com/leosoba/image/upload/v1500795506/my_board_256_x_256_pzqgyo.png" alt="My Boards" />
             </Link>
           </div>
-
           <div className="nav-bar-log-out"
                onClick={this.currentUserLogOut}>
                <img src="http://res.cloudinary.com/leosoba/image/upload/v1504344856/log_out_mklhiy.png" alt="Log Out" />
           </div>
-
           <ModalPinCreate />
         </div>
       </section>
