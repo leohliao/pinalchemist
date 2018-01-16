@@ -6,6 +6,7 @@ import { selectAllPins } from '../../../reducers/selectors';
 const mapStateToProps = state => {
   return {
     pins: selectAllPins(state),
+    board: state.board,
     state
   };
 };

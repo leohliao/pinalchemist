@@ -3,7 +3,6 @@
 }
 
 .my-library-form-user {
-  margin: auto;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
@@ -21,15 +20,14 @@
   box-shadow: 0 0 0 3px #a5a5af;
   border-radius: 50vw;
   overflow: hidden;
+  img {
+    border-radius: 50px;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }////child for .my-library-form-user
-
-.my-library-user-photo img {
-  border-radius: 50px;
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 
 ////child for .my-library-form-user
 .my-library-user-info {
@@ -42,24 +40,24 @@
   margin: auto auto auto -100px;
 }
 
-.my-library-user-username h1 {
-  font-size: 40px;
-  text-align: center;
-  font-family: 'Arimo', sans-serif;
-}
-
-.my-library-user-username h2 {
-  font-size: 14px;
-  text-align: center;
-  font-family: 'Arimo', sans-serif;
-  margin: 5px auto -10px auto;
-  color: gray;
-}
-
-.my-library-user-username h3 {
-  font-size: 16px;
-  text-align: left;
-  font-family: 'Arimo', sans-serif;
+.my-library-user-username {
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+  h2 {
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    margin: 5px auto -10px auto;
+    color: gray;
+  }
+  h3 {
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Arimo', sans-serif;
+  }
 }
 
 .my-library-user-separator {

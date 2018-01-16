@@ -3,14 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .nav-bar-search {
-    width: 97%;
     flex: 2; // .nav-bar-home-page
     display: flex;
     justify-content: flex-start;
 }
 
 .nav-bar-search-input {
-    width: inherit;
+    width: 97%;
     min-width: 120px;
     height: 46px;
     box-sizing: border-box;
@@ -33,7 +32,6 @@
   position: absolute;
   width: 75%;
   margin: 2px 0 0 -50px;
-  min-width: 120px;
   z-index: 5;
   display: block;
 }
@@ -45,7 +43,6 @@
 .search-results-container-return {
   display: flex;
   flex-flow: column;
-
   h3 {
     display: flex;
     justify-content: center;

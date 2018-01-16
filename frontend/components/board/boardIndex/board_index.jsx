@@ -23,7 +23,7 @@ class BoardIndex extends React.Component {
           fitWidth: true,
           transitionDuration: 1.5,
           postion: 'center',
-          // percentPosition: true,
+          percentPosition: true,
         };
 
     const allTheBoards = boards.reverse().map( board => (
@@ -37,8 +37,7 @@ class BoardIndex extends React.Component {
                  options={masonryOptions}
                  disableImagesLoaded={false}
                  updateOnEachImageLoad={false}>
-
-          <div className="modal-board-form-container">
+          <div className="modal-board-thumbnail-container">
             <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
           </div>
           <div className="board-index-masonry-ul">
