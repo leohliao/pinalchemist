@@ -57,6 +57,7 @@ class MyLibrary extends React.Component {
               </div>
             </div>
         </div>
+        
         <div className="my-library-form-board-index">
           <Route exact path="/:userId/boards" component={ BoardIndexContainer }/>
           <Route exact path="/boards/:id" component={ BoardShowContainer }/>

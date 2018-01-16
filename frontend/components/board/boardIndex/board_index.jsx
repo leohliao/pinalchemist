@@ -1,8 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
-import BoardItem from './board_item';
 import { Link } from 'react-router-dom';
+import { values } from 'lodash';
+import BoardItem from './board_item';
 import ModalBoardForm from '../boardForm/board_form_container';
 
 class BoardIndex extends React.Component {
@@ -11,23 +12,59 @@ class BoardIndex extends React.Component {
 
   }//end constructor
 
-  componentDidMount(){
-    this.props.requestUserBoards(this.props.currentUser.id);
-  }//end componentDidMount
+  // componentWillMount(){
+  //   this.props.requestUserBoards(this.props.currentUser.id);
+  // }
+  //
+  // componentDidMount(){
+  //   this.props.requestUserBoards(this.props.currentUser.id);
+  // }//end componentDidMount
+  handleCreateBoard(){
+    return(
+      <div className="modal-board-thumbnail-container">
+        <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
+      </div>
+    )
+  }
 
   render(){
-    const { boards } = this.props;
+    let { currentUser } = this.props;
+    let boards = values(currentUser.boards);
+    let pins = values(currentUser.pins);
 
+    console.log(boards);
     const masonryOptions = {
-          gutter: 25,
+          gutter: 20,
           fitWidth: true,
-          transitionDuration: 1.5,
-          postion: 'center',
-          percentPosition: true,
+          transitionDuration: 0,
         };
 
-    const allTheBoards = boards.reverse().map( board => (
-          <BoardItem board={board} key={board.id} />
+    const masonryOptionsThumnail = {
+          originTop: true,
+          horizontalOrder: true,
+          fitWidth: true,
+          transitionDuration: 0,
+        };
+
+    const allTheBoards = boards.map((board,idx) => (
+          // <BoardItem board={board} key={board.id} />
+            <div className="modal-board-thumbnail-container" key={idx}>
+              <div className="modal-board-thumbnail-container-title">{board.board_name}</div>
+              <Masonry className={'board-index-masonry'}
+                       elementType={'ul'}
+                       options={masonryOptionsThumnail}
+                       disableImagesLoaded={false}
+                       updateOnEachImageLoad={false}>
+                       { values(board.pins).slice(0,6).map( (pin,idx) => {
+                        return (
+                          <div key={idx} className='board-index-pin-thumbnails'>
+                            <img className='board-index-pin-img'src={pin.image_url}></img>
+                          </div>
+                        )
+                      })
+                    }
+              </Masonry>
+          </div>
     ));
 
     return(
@@ -37,12 +74,8 @@ class BoardIndex extends React.Component {
                  options={masonryOptions}
                  disableImagesLoaded={false}
                  updateOnEachImageLoad={false}>
-          <div className="modal-board-thumbnail-container">
-            <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
-          </div>
-          <div className="board-index-masonry-ul">
+            { this.handleCreateBoard() }
             { allTheBoards }
-          </div>
         </Masonry>
       </div>
     );//end return
@@ -50,3 +83,15 @@ class BoardIndex extends React.Component {
 }//end BoardIndex
 
 export default BoardIndex;
+// <Masonry className={'board-index-masonry'}
+//          elementType={'ul'}
+//          options={masonryOptions}
+//          disableImagesLoaded={false}
+//          updateOnEachImageLoad={false}>
+//   <div className="modal-board-thumbnail-container">
+//     <ModalBoardForm currentUserImage={this.props.currentUser.image_url}/>
+//   </div>
+//   <div className="board-index-masonry-ul">
+//     { allTheBoards }
+//   </div>
+// </Masonry>

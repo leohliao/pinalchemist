@@ -2,14 +2,13 @@
   background-color: $lightGreen;
   border-radius: 8px;
   margin-top: 20vh;
-}
-
-.modal-board-create-all h1 {
+  h1 {
     text-align: center;
     margin-top: 20px;
     font-family: 'Arimo', sans-serif;
     font-size: 30px;
     color: $green;
+  }
 }
 
 .board-create-form-all {
@@ -31,9 +30,7 @@
   height: 140px;
   overflow: hidden;
   align-self: center;
-}
-
-.board-create-form-board-img img {
+  img {
     border-radius: 15vw;
     border: 3px solid white;
     // border-radius: 50px;
@@ -41,7 +38,9 @@
     display: block;
     width: 90%;
     height: 90%;
+  }
 }
+
 
 .board-create-form-all label {
   min-height:inherit;
@@ -71,8 +70,8 @@
 
 .modal-board-thumbnail-container-add {
   display:flex;
-  width: 275px;
-  height: 250px;
+  width: 225px;
+  height: 200px;
   background-color: rgb(225, 225, 225);
   border-radius: 7px;
   align-items: center;
@@ -80,7 +79,7 @@
   background-image: url("http://res.cloudinary.com/leosoba/image/upload/v1501211642/add_board_iw5knx.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 65%;
+  background-size: 85%;
 }
 
 .modal-board-thumbnail-container-add-small {

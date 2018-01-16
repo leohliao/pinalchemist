@@ -1,14 +1,12 @@
 import { connect } from 'react-redux';
 import BoardIndex from './board_index';
 import { requestUserBoards } from '../../../actions/board_actions';
-import { selectAllBoards } from '../../../reducers/selectors';
+// import { selectAllBoards } from '../../../reducers/selectors';
 
-const mapStateToProps = (state) => {
-  return {
-    currentUser: state.session.currentUser,
-    boards: selectAllBoards(state),
-  };
-};
+const mapStateToProps = ({session}) => ({
+  currentUser: session.currentUser
+});
+
 
 const mapDispatchToProps = dispatch => {
   return {
