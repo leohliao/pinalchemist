@@ -35,7 +35,7 @@ div .modal-pin-create-button-home {
   min-height: inherit;
   background-color: $lightGreen;
   border-radius: 8px;
-  
+
   align-items: center;
   h1 {
     font-size: 30px;
@@ -47,12 +47,11 @@ div .modal-pin-create-button-home {
   }
 }
 
-
 .modal-pin-create-img-close {
   width: 23px;
   display: block;
   padding-top: 10px;
-  margin: auto auto auto 90%;
+  margin: 0 0 0 90%;
   opacity: 0.7;
   &:hover {
     cursor: pointer;
@@ -113,14 +112,13 @@ div .modal-pin-create-button-home {
     font-size: 13px;
     min-width: 25vw;
     height: 20px;
-    border-radius: 4px;
     margin: 5px auto 5px auto;
     padding: 4px 0 4px 10px;
-    align-self: baseline;
-    align-content: baseline;
+    border-radius: 5px;
+    border: 1px solid lightGreen
   }
   input[type=textarea] {
-    height: 50px;
+    height: 200px;
   }
 }
 
