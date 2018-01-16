@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import ModalPinCreate from '../modal/modal_pin_create';
 import Search from '../search/search_container';
+import Discover from '../discover/discover_container';
 
 class NavBarForm extends React.Component {
   constructor(props){
@@ -30,7 +31,9 @@ class NavBarForm extends React.Component {
           </div>
 
           <div className="nav-bar-discover-ideas" >
-            <p>Discover Ideas</p>
+            <Link to="/discover">
+              <p>Discover Ideas</p>
+            </Link>
           </div>
 
           <div>

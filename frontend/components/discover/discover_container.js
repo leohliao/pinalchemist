@@ -1,15 +1,17 @@
-// import { connect } from 'react-redux';
-// import DiscoverIdeas from './discover_view';
-//
-// const mapStateToProps = () => ({
-//
-// });
-//
-// const mapDispatchToProps = dispatch => ({
-//
-// });
-//
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(DiscoverIdeas);
+import { connect } from 'react-redux';
+import Discover from './discover_view';
+import { selectAllPins } from '../../reducers/selectors';
+
+const mapStateToProps = ({session}, state) => ({
+  currentUser: session.currentUser,
+  state
+});
+
+const mapDispatchToProps = dispatch => ({
+
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Discover);

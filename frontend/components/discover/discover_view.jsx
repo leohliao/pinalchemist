@@ -1,16 +1,17 @@
-// import React from 'react';
-// import { Link, withRouter } from 'react-router-dom';
-//
-// class DiscoverIdeas extends React.Component {
-//   constructor(props){
-//     super(props);
-//   } // end constructor
-//
-//   render() {
-//     return (
-//       <div>
-//         <h1>This is Discover Ideas</h1>
-//       </div>
-//     )//end return
-//   }//end render
-// }// end class
+import React from 'react';
+
+class Discover extends React.Component {
+  constructor(props){
+    super(props);
+  } // end constructor
+
+  render() {
+    return (
+      <div>
+        <p>Aloha!</p>
+      </div>
+    )//end return
+  }//end render
+}// end class
+
+export default Discover;
