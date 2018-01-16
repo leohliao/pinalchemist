@@ -22,9 +22,10 @@ const style = {
     borderRadius    : '8px',
     padding         : '15px',
     zIndex          : 11,
-    overflow        : 'auto',
+    overflow        : 'hidden',
     opacity         : 0,
     transition      : 'opacity 0.3s'
+
   }
 };
 
