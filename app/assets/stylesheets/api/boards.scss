@@ -2,16 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .board-index-all {
-  background-color: yellow;
+
 }
 
 .board-index-masonry {
   padding-top: 20px;
-  margin: 0 auto 0 auto;
-  background-color: red;
-  display: flex;
-  flex-flow: column;
-  width: inherit;
+
 }
 
 .modal-board-form-container {
@@ -56,4 +52,8 @@
      align-items: center;
      justify-content: center;
   }
+}
+
+.board-index-masonry-ul {
+
 }

@@ -13,12 +13,14 @@ class BoardPinIndexForm extends React.Component {
   }//end constructor
 
   componentDidMount(){
+    console.log("requestAllPins")
     this.props.requestAllPins()
     .then(setTimeout(() => this.setState({ loading: false }), 1000))
   }//end componentDidMount
 
   render(){
     const { pins } = this.props;
+    console.log(this.props);
     const masonryOptions = {
           gutter: 20,
           fitWidth: true,
