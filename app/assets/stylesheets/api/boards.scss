@@ -17,13 +17,14 @@
 .modal-board-thumbnail-container {
   display: flex;
   flex-flow: column;
-  width: 225px;
-  height: 200px;
-  background-color: rgba(235, 235, 235, 0.7);;
+  width: 250px;
+  height: 225px;
+  background-color: rgba(235, 235, 235, 0.7);
+  border: 1px solid $lightGreen;
   border-radius: 7px;
   align-items: center;
   overflow: hidden;
-
+  margin-bottom: 20px;
   .modal-board-thumbnail-container-title {
     margin: 30px auto -10px auto;
     font-family: sans-serif;
@@ -49,6 +50,7 @@
   align-items: center;
   justify-content: center;
 }
+
 // .modal-board-thumbnail-container-show {
 //   display:flex;
 //   width: 275px;
@@ -69,7 +71,3 @@
 //      justify-content: center;
 //   }
 // }
-
-.board-index-masonry-ul {
-
-}
