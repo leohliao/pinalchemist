@@ -24,9 +24,7 @@ class FollowerShow extends React.Component {
           gutter: 25,
           fitWidth: true,
         };
-
-        console.log(this.props.disciples);
-
+        
     const allMasters = this.props.disciples.map ((disciple) => {
         return (
         <li key={disciple.id} className="following-show-li-items">

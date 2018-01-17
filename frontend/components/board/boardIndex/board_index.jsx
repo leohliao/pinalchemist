@@ -33,7 +33,6 @@ class BoardIndex extends React.Component {
     let boards = values(currentUser.boards);
     let pins = values(currentUser.pins);
 
-    console.log(boards);
     const masonryOptions = {
           gutter: 20,
           fitWidth: true,

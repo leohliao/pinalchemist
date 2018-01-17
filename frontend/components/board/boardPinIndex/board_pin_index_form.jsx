@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 import ModalPinItem from '../../modal/modal_pin_item';
 import { RingLoader } from 'react-spinners';
+import { values } from 'lodash';
 
 class BoardPinIndexForm extends React.Component {
   constructor(props){
@@ -13,14 +14,11 @@ class BoardPinIndexForm extends React.Component {
   }//end constructor
 
   componentDidMount(){
-    console.log("requestAllPins")
-    this.props.requestAllPins()
-    .then(setTimeout(() => this.setState({ loading: false }), 1000))
+    this.setState({ loading: false });
   }//end componentDidMount
 
   render(){
-    const { pins } = this.props;
-    console.log(this.props);
+    let pins = values(this.props.pins);
     const masonryOptions = {
           gutter: 20,
           fitWidth: true,
@@ -48,7 +46,6 @@ class BoardPinIndexForm extends React.Component {
                 <img src= {pin.author_image_url} />
               </div>
           </div>
-
         </div>
       </li>
     ));
@@ -60,6 +57,7 @@ class BoardPinIndexForm extends React.Component {
              color={'#57bc90'}
              loading={this.state.loading}
            />
+
         </div>
       )
     } else {
@@ -70,7 +68,7 @@ class BoardPinIndexForm extends React.Component {
                      options={masonryOptions}
                      disableImagesLoaded={false}
                      updateOnEachImageLoad={false}>
-              { allThePins }
+                     {allThePins}
             </Masonry>
         </div>
       );//end return
@@ -79,15 +77,3 @@ class BoardPinIndexForm extends React.Component {
 }//end PinIndexForm
 
 export default withRouter(BoardPinIndexForm);
-// <NavBarForm />
-// <br />
-
-// <Link className="pin-index-pin-items-info-lower" to="/pins">
-//   <div className="pin-index-pin-items-info-author-image">
-//     <img src= {pin.author_image_url} />
-//   </div>
-//   <div className="pin-index-pin-items-info-text" >
-//     <h1>{pin.author}</h1>
-//     <p>{pin.author.description}</p>
-//   </div>
-// </Link>

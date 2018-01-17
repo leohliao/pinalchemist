@@ -3,8 +3,8 @@ import * as pinActions from '../../../actions/pin_actions';
 import BoardPinIndexForm from './board_pin_index_form';
 import { selectBoardPins } from '../../../reducers/selectors';
 
-const mapStateToProps = (state) => ({
-  pins: selectBoardPins(state),
+const mapStateToProps = () => ({
+
 });
 
 const mapDispatchToProps = dispatch => {
